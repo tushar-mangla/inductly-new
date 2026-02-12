@@ -16,7 +16,7 @@ export default function Hero() {
                             {[
                                 'Scrape 1M+ jobs automatically every month',
                                 'Generate 100K qualified leads on autopilot',
-                                'Get verified leads with 6%+ reply rates—guaranteed'
+                                'Get verified leads with proven 6%+ reply rates'
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
                                     <div className="flex-shrink-0">

@@ -1,5 +1,5 @@
 const stats = [
-    { number: '6%+', label: 'Reply Rate' },
+    { number: '6%+', label: 'Reply Rate (Actual Results)' },
     { number: '100K+', label: 'Leads Per Month Capacity' },
     { number: '30%', label: 'Revenue Increase' },
     { number: '$0.50', label: 'Per Quality Lead' },

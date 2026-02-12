@@ -2,7 +2,7 @@ const features = [
     {
         icon: '🎯',
         title: 'Quality-First Lead Generation',
-        description: 'Not just any leads. Every lead is verified, enriched, and guaranteed to hit our 6%+ reply rate standard.',
+        description: 'Not just any leads. Every lead is verified, enriched, and consistently achieves our 6%+ reply rate standard.',
     },
     {
         icon: '⚡',
@@ -28,8 +28,8 @@ const features = [
     },
     {
         icon: '✅',
-        title: 'Performance Guarantee',
-        description: "If your lead batch doesn't hit 6%+ reply rate, you don't pay for it. Simple as that.",
+        title: 'Performance Transparency',
+        description: "Every lead batch comes with verified reply rate data. We show you exactly what's working with full campaign analytics and reporting.",
     },
 ];
 

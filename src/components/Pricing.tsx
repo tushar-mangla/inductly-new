@@ -9,7 +9,7 @@ const plans = [
         features: [
             '<strong>1,000 quality leads/month</strong> included',
             '$0.50 per lead',
-            '6%+ reply rate',
+            'Verified reply rate tracking',
             'Job data + company data',
             'Monthly reporting dashboard',
             'Cancel anytime',
@@ -25,7 +25,7 @@ const plans = [
         features: [
             '<strong>1,000 quality leads/month</strong> (3k total)',
             '$0.40 per lead (20% savings)',
-            '6%+ reply rate',
+            'Verified reply rate tracking',
             'Job data + company data',
             'Weekly performance reports',
             'Dedicated account manager',

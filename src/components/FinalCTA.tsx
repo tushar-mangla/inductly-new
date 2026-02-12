@@ -7,7 +7,7 @@ export default function FinalCTA() {
                 <h2 className="text-[64px] font-black mb-8 tracking-tighter text-[#1E293B] leading-[1.1]">Turn On Your Lead Generation Engine Today</h2>
                 <p className="text-2xl mb-12 text-[#475569] max-w-[800px] mx-auto leading-relaxed font-black">
                     Get 1,000 verified leads delivered automatically every month. <br />
-                    Starting at $0.50 per lead. 6%+ reply rate guaranteed.
+                    Starting at $0.50 per lead. Proven 6%+ reply rates.
                 </p>
                 <Link
                     href="https://cal.com/tusharm/30min?user=tusharm"

@@ -12,7 +12,7 @@ const steps = [
     {
         number: '03',
         title: 'DELIVER (Auto-Pilot)',
-        description: '1,000 verified leads delivered monthly. 6%+ reply rate guaranteed. Complete data package included.',
+        description: '1,000 verified leads delivered monthly. Verified 6%+ reply rates (proven results). Complete data package included.',
     },
 ];
 
