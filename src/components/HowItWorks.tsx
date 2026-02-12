@@ -6,13 +6,13 @@ const steps = [
     },
     {
         number: '02',
-        title: 'Matches Candidates, Outreaches Decision-Makers',
-        description: 'Smart algorithms analyze job requirements, score and prioritize candidates by fit, match your best candidates automatically, and outreaches decision-makers.',
+        title: 'ENRICH (Auto-Pilot)',
+        description: 'Validates contact information, enriches with company intelligence data, and scores lead quality automatically.',
     },
     {
         number: '03',
-        title: 'Automates Job Posting & ATS',
-        description: 'Post jobs to multiple platforms in one click, Attracts more candidates effortlessly with ATS.',
+        title: 'DELIVER (Auto-Pilot)',
+        description: '1,000 verified leads delivered monthly. 6%+ reply rate guaranteed. Complete data package included.',
     },
 ];
 
@@ -21,7 +21,7 @@ export default function HowItWorks() {
         <section className="py-24 bg-[#F7FAFC] border-t-2 border-[#262626]" id="how-it-works">
             <div className="max-w-[1100px] mx-auto px-5">
                 <div className="text-center mb-20">
-                    <h2 className="mb-6 text-[#1E293B] max-md:text-[32px] text-5xl font-extrabold tracking-tight">Three simple steps to scale your agency</h2>
+                    <h2 className="mb-6 text-[#1E293B] max-md:text-[32px] text-5xl font-extrabold tracking-tight">How The Engine Works: Set It & Forget It</h2>
                 </div>
 
                 <div className="space-y-12 max-w-[1000px] mx-auto">

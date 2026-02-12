@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Inductly - Pay Per Lead That Actually Converts",
+    title: "Inductly - The Automated Lead Engine for Recruiting Agencies",
     description: "The only recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
 };
 

@@ -40,7 +40,7 @@ export default function Navbar() {
                         target="_blank"
                         className="bg-[#1E293B] text-white px-6 py-3 rounded-xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-sm"
                     >
-                        Book a Demo
+                        Get Started
                     </Link>
                 </nav>
             </div>

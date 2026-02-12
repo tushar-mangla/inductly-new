@@ -14,9 +14,9 @@ export default function Hero() {
 
                         <div className="space-y-4 mb-10">
                             {[
-                                'Scrape 1M+ jobs across hundreds of boards daily',
-                                'Generate 100K high-intent leads every month',
-                                'Fully autonomous: Set it and forget it'
+                                'Scrape 1M+ jobs automatically every month',
+                                'Generate 100K qualified leads on autopilot',
+                                'Get verified leads with 6%+ reply rates—guaranteed'
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
                                     <div className="flex-shrink-0">
@@ -30,7 +30,7 @@ export default function Hero() {
                         </div>
 
                         <p className="text-xl text-[#475569] mb-12 font-medium max-w-[500px]">
-                            Scrape 1M+ jobs. Generate 100K leads/month. All on autopilot.
+                            Turn it on. Watch it run. Get 1,000 quality leads delivered every month—automatically.
                         </p>
 
                         <div className="flex flex-wrap gap-4 mb-12">

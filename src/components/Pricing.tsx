@@ -40,7 +40,7 @@ export default function Pricing() {
     return (
         <section className="py-32 bg-white" id="pricing">
             <div className="max-w-[1100px] mx-auto px-5 text-center">
-                <h2 className="text-[48px] font-black mb-6 text-[#1E293B] tracking-tight leading-none">Transparent Pricing That Scales</h2>
+                <h2 className="text-[48px] font-black mb-6 text-[#1E293B] tracking-tight leading-none">Simple Pricing. Pay Per Quality Lead.</h2>
                 <p className="text-xl text-[#475569] mb-[80px] max-w-[800px] mx-auto font-medium">Pay per lead, not per seat. No hidden fees. Cancel anytime.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
