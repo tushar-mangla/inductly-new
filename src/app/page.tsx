@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Stats from '@/components/Stats';
+import CaseStudy from '@/components/CaseStudy';
 import Proof from '@/components/Proof';
 import QualityGuarantee from '@/components/QualityGuarantee';
 import HowItWorks from '@/components/HowItWorks';
@@ -16,6 +17,9 @@ export default function Home() {
             <Hero />
             <div className="max-w-[1200px] mx-auto px-5">
                 <Stats />
+            </div>
+            <CaseStudy />
+            <div className="max-w-[1200px] mx-auto px-5">
                 <Proof />
             </div>
             <QualityGuarantee />

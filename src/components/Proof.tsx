@@ -14,13 +14,20 @@ export default function Proof() {
 
                 {/* Dashboard Screenshot Container */}
                 <div className="bg-white p-8 md:p-12 rounded-[3rem] border-4 border-[#1E293B] btn-shadow mb-12 max-w-[1000px] mx-auto">
-                    <div className="relative overflow-hidden rounded-2xl border-2 border-[#1E293B]/20 mb-8">
+                    {/* Screenshot */}
+                    <div className="relative overflow-hidden rounded-2xl border-2 border-[#1E293B]/20 mb-6">
                         <img
                             src="/instantly.png"
                             alt="Instantly.ai campaign showing 6.3% reply rate"
                             className="w-full h-auto"
                         />
                     </div>
+
+                    {/* Caption below screenshot */}
+                    <p className="text-center text-sm text-[#475569] mb-8 font-bold">
+                        <span className="text-[#1E293B]">Live Campaign Dashboard</span> • Updated Daily<br />
+                        <span className="text-xs">3,543 sent • 145 replies • 6.3% rate • Active now</span>
+                    </p>
 
                     {/* Metrics Bar */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
