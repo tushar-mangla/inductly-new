@@ -44,7 +44,7 @@ export default function Proof() {
                             Recruiting agency scaled from struggling pipeline to consistent deal flow in 60 days.
                         </div>
                         <p className="text-[#475569] leading-relaxed font-bold opacity-80">
-                            Achieved through automated lead generation, intelligent job matching, and quality-guaranteed outreach at scale.
+                            Automated their entire lead generation pipeline and scaled from inconsistent deals to predictable growth.
                         </p>
                     </div>
                 </div>

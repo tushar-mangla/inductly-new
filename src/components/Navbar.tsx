@@ -20,7 +20,7 @@ export default function Navbar() {
                     {/* Navigation Links - Desktop */}
                     <div className="hidden md:flex items-center gap-8">
                         {[
-                            { name: 'Solutions', href: '#solutions' },
+                            { name: 'Features', href: '#features' },
                             { name: 'How It Works', href: '#how-it-works' },
                             { name: 'Resources', href: '#resources' },
                         ].map((link) => (
