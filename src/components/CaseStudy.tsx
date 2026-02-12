@@ -1,8 +1,8 @@
 export default function CaseStudy() {
     return (
-        <section className="py-32 bg-gradient-to-br from-[#1E293B] to-[#0F172A]" id="case-study">
+        <section className="py-16 md:py-32 bg-gradient-to-br from-[#1E293B] to-[#0F172A]" id="case-study">
             <div className="max-w-[1200px] mx-auto px-5">
-                <div className="bg-white rounded-[3rem] border-4 border-[#1E293B] btn-shadow p-12 md:p-16">
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border-4 border-[#1E293B] btn-shadow p-6 md:p-12 lg:p-16">
                     {/* Badge */}
                     <div className="inline-block bg-[#FDE047] text-[#1E293B] px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest mb-8 border-2 border-[#1E293B]">
                         ⭐ CLIENT SUCCESS STORY
@@ -10,10 +10,10 @@ export default function CaseStudy() {
 
                     {/* Main Stat */}
                     <div className="mb-8">
-                        <div className="text-[72px] md:text-[96px] font-black text-[#1E293B] mb-2 leading-none tracking-tighter">
+                        <div className="text-6xl md:text-[96px] font-black text-[#1E293B] mb-2 leading-none tracking-tighter">
                             +30%
                         </div>
-                        <div className="text-[32px] md:text-[40px] font-black text-[#1E293B] mb-3 leading-tight">
+                        <div className="text-2xl md:text-[40px] font-black text-[#1E293B] mb-3 leading-tight">
                             Revenue Growth
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-[#475569]">
@@ -25,7 +25,7 @@ export default function CaseStudy() {
                     <div className="h-1 w-24 bg-[#1E293B] mb-8"></div>
 
                     {/* Story */}
-                    <h3 className="text-[32px] md:text-[40px] font-black text-[#1E293B] mb-6 leading-tight">
+                    <h3 className="text-2xl md:text-[40px] font-black text-[#1E293B] mb-6 leading-tight">
                         From Struggling Pipeline to Consistent Deals
                     </h3>
                     <p className="text-xl text-[#475569] mb-10 max-w-[800px] font-bold leading-relaxed">

@@ -18,10 +18,10 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="py-24 bg-[#F7FAFC] border-t-2 border-[#262626]" id="how-it-works">
+        <section className="py-12 md:py-24 bg-[#F7FAFC] border-t-2 border-[#262626]" id="how-it-works">
             <div className="max-w-[1100px] mx-auto px-5">
                 <div className="text-center mb-20">
-                    <h2 className="mb-6 text-[#1E293B] max-md:text-[32px] text-5xl font-extrabold tracking-tight">How The Engine Works: Set It & Forget It</h2>
+                    <h2 className="mb-6 text-[#1E293B] text-3xl md:text-5xl font-extrabold tracking-tight">How The Engine Works: Set It & Forget It</h2>
                 </div>
 
                 <div className="space-y-12 max-w-[1000px] mx-auto">
@@ -33,7 +33,7 @@ export default function HowItWorks() {
                             </div>
 
                             {/* Content Card */}
-                            <div className="flex-grow bg-[#F1F5F9]/50 hover:bg-[#E0F2FE] transition-colors duration-300 p-12 rounded-[2.5rem] border-2 border-[#262626] btn-shadow relative overflow-hidden">
+                            <div className="flex-grow bg-[#F1F5F9]/50 hover:bg-[#E0F2FE] transition-colors duration-300 p-6 md:p-12 rounded-[2.5rem] border-2 border-[#262626] btn-shadow relative overflow-hidden">
                                 <h3 className="text-3xl font-extrabold mb-4 text-[#1E293B] tracking-tight">{step.title}</h3>
                                 <p className="text-[#475569] text-lg leading-relaxed font-medium mb-8 max-w-[600px]">{step.description}</p>
 

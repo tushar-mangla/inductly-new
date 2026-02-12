@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 export default function Hero() {
     return (
-        <section className="pt-20 pb-32 relative overflow-hidden bg-white" id="hero">
+        <section className="pt-12 pb-20 md:pt-20 md:pb-32 relative overflow-hidden bg-white" id="hero">
             <div className="max-w-[1280px] mx-auto px-5">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     {/* Left Content */}
                     <div className="text-left">
-                        <h1 className="text-[56px] font-black leading-[1.1] mb-8 text-[#1E293B] tracking-tight">
+                        <h1 className="text-4xl md:text-6xl lg:text-[56px] font-black leading-tight mb-8 text-[#1E293B] tracking-tight">
                             The Automated Lead <span className="text-orange-500">Engine</span> for Recruiting Agencies
                         </h1>
 

@@ -38,16 +38,16 @@ const plans = [
 
 export default function Pricing() {
     return (
-        <section className="py-32 bg-white" id="pricing">
+        <section className="py-16 md:py-32 bg-white" id="pricing">
             <div className="max-w-[1100px] mx-auto px-5 text-center">
-                <h2 className="text-[48px] font-black mb-6 text-[#1E293B] tracking-tight leading-none">Simple Pricing. Pay Per Quality Lead.</h2>
+                <h2 className="text-4xl md:text-[48px] font-black mb-6 text-[#1E293B] tracking-tight leading-none">Simple Pricing. Pay Per Quality Lead.</h2>
                 <p className="text-xl text-[#475569] mb-[80px] max-w-[800px] mx-auto font-medium">Pay per lead, not per seat. No hidden fees. Cancel anytime.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {plans.map((plan, index) => (
                         <div
                             key={index}
-                            className={`bg-white border-2 border-[#1E293B] rounded-[3rem] p-12 relative transition-all duration-300 text-left btn-shadow ${plan.featured ? 'bg-[#E0F2FE]/20' : ''
+                            className={`bg-white border-2 border-[#1E293B] rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 relative transition-all duration-300 text-left btn-shadow ${plan.featured ? 'bg-[#E0F2FE]/20' : ''
                                 }`}
                         >
                             {plan.featured && (
@@ -56,7 +56,7 @@ export default function Pricing() {
                                 </div>
                             )}
                             <div className="text-[32px] font-black mb-2 text-[#1E293B] tracking-tighter">{plan.title}</div>
-                            <div className="text-[64px] font-black text-[#1E293B] my-8 leading-none tracking-tighter">
+                            <div className="text-[42px] md:text-[64px] font-black text-[#1E293B] my-8 leading-none tracking-tighter">
                                 {plan.price}
                                 <span className="text-xl text-[#475569] font-bold ml-1">{plan.period}</span>
                             </div>

@@ -35,14 +35,14 @@ const features = [
 
 export default function Features() {
     return (
-        <section className="py-32 bg-[#F8FAFC]" id="features">
+        <section className="py-16 md:py-32 bg-[#F8FAFC]" id="features">
             <div className="max-w-[1200px] mx-auto px-5 text-center">
-                <h2 className="text-[48px] font-black mb-6 text-[#1E293B] tracking-tight">Built for Scale, Priced for Growth</h2>
+                <h2 className="text-4xl md:text-[48px] font-black mb-6 text-[#1E293B] tracking-tight">Built for Scale, Priced for Growth</h2>
                 <p className="text-xl text-[#475569] mb-[80px] max-w-[800px] mx-auto font-medium">Everything you need to build a predictable recruiting pipeline</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
-                        <div key={index} className="bg-white p-12 rounded-[2.5rem] border-2 border-[#1E293B] text-left btn-shadow hover:bg-[#E0F2FE]/50 transition-colors">
+                        <div key={index} className="bg-white p-8 md:p-12 rounded-[2.5rem] border-2 border-[#1E293B] text-left btn-shadow hover:bg-[#E0F2FE]/50 transition-colors">
                             <div className="text-5xl mb-8">{feature.icon}</div>
                             <h3 className="text-2xl font-black mb-4 text-[#1E293B] tracking-tight leading-tight">{feature.title}</h3>
                             <p className="text-[#475569] leading-relaxed font-medium mb-8">{feature.description}</p>
