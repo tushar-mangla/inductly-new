@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTM Link Generator - LinkedIn DM Campaigns</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #1a202c;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #718096;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .helper-text {
+            font-size: 13px;
+            color: #718096;
+            margin-top: 6px;
+        }
+
+        .generated-url {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .url-label {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .url-display {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            word-break: break-all;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            color: #667eea;
+            border: 1px solid #cbd5e0;
+        }
+
+        .copy-btn {
+            margin-top: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .copy-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .copy-btn:active {
+            transform: translateY(0);
+        }
+
+        .copy-btn.copied {
+            background: #48bb78;
+        }
+
+        .example {
+            background: #ebf4ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+
+        .example-title {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 8px;
+        }
+
+        .example-text {
+            color: #2d3748;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔗 UTM Link Generator</h1>
+        <p class="subtitle">Create personalized tracking links for LinkedIn DM campaigns</p>
+
+        <div class="form-group">
+            <label for="baseUrl">Base URL</label>
+            <input type="text" id="baseUrl" value="https://inductly-new.vercel.app"
+                placeholder="https://yourwebsite.com">
+            <div class="helper-text">Your landing page URL</div>
+        </div>
+
+        <div class="form-group">
+            <label for="campaign">Campaign Name</label>
+            <input type="text" id="campaign" placeholder="jan2026_agencies" value="jan2026_agencies">
+            <div class="helper-text">Example: jan2026_agencies, q1_founders, test_message_v1</div>
+        </div>
+
+        <div class="form-group">
+            <label for="prospectId">Prospect ID</label>
+            <input type="text" id="prospectId" placeholder="john_smith_techcorp">
+            <div class="helper-text">Format: firstname_lastname_company (lowercase, underscores only)</div>
+        </div>
+
+        <div class="generated-url">
+            <div class="url-label">📎 Your Personalized URL</div>
+            <div class="url-display" id="generatedUrl">Fill in the fields above to generate your URL</div>
+            <button class="copy-btn" id="copyBtn" onclick="copyUrl()">Copy to Clipboard</button>
+        </div>
+
+        <div class="example">
+            <div class="example-title">💡 Quick Tips</div>
+            <div class="example-text">
+                <strong>Campaign naming:</strong> Use descriptive names like "jan2026_agencies" or "q1_founders"<br>
+                <strong>Prospect ID:</strong> Keep it simple but recognizable: "john_smith_acme"<br>
+                <strong>Analytics:</strong> You'll see each prospect's journey in Google Analytics and Clarity
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const baseUrlInput = document.getElementById('baseUrl');
+        const campaignInput = document.getElementById('campaign');
+        const prospectIdInput = document.getElementById('prospectId');
+        const generatedUrlDiv = document.getElementById('generatedUrl');
+        const copyBtn = document.getElementById('copyBtn');
+
+        function generateUrl() {
+            const baseUrl = baseUrlInput.value.trim();
+            const campaign = campaignInput.value.trim();
+            const prospectId = prospectIdInput.value.trim();
+
+            if (!baseUrl) {
+                generatedUrlDiv.textContent = 'Please enter a base URL';
+                return;
+            }
+
+            // Build URL with UTM parameters
+            const url = new URL(baseUrl);
+            url.searchParams.set('utm_source', 'linkedin');
+            url.searchParams.set('utm_medium', 'dm');
+
+            if (campaign) {
+                url.searchParams.set('utm_campaign', campaign);
+            }
+
+            if (prospectId) {
+                url.searchParams.set('utm_content', prospectId);
+            }
+
+            generatedUrlDiv.textContent = url.toString();
+        }
+
+        function copyUrl() {
+            const url = generatedUrlDiv.textContent;
+            navigator.clipboard.writeText(url).then(() => {
+                copyBtn.textContent = '✓ Copied!';
+                copyBtn.classList.add('copied');
+
+                setTimeout(() => {
+                    copyBtn.textContent = 'Copy to Clipboard';
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Update URL on input
+        baseUrlInput.addEventListener('input', generateUrl);
+        campaignInput.addEventListener('input', generateUrl);
+        prospectIdInput.addEventListener('input', generateUrl);
+
+        // Generate initial URL
+        generateUrl();
+    </script>
+</body>
+
+</html>

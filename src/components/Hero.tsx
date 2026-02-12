@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { trackCTAClick } from '@/lib/analytics';
 
 export default function Hero() {
     return (
@@ -37,10 +40,12 @@ export default function Hero() {
                             <Link
                                 href="https://cal.com/tusharm/30min?user=tusharm"
                                 target="_blank"
+                                onClick={() => trackCTAClick('Start Your Engine', 'Hero')}
                                 className="bg-orange-500 text-white px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-lg flex items-center gap-2"
                             >
                                 Start Your Engine <span className="text-xl">→</span>
                             </Link>
+
                         </div>
 
                         <div className="text-[#1E293B] font-bold text-sm tracking-tight flex items-center gap-2 flex-wrap">
