@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+    --background: #F7FAFC;
+    --foreground: #1E293B;
+    --primary: #1A365D;
+    --primary-hover: #1A365D;
+    --secondary: #0D3D32;
+    --accent: #2563eb;
+    --border: #e2e8f0;
+    --border-strong: #262626;
+    --slate-gray: #475569;
+    --shadow-color: #1E293B;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.btn-shadow {
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-shadow:hover {
+    box-shadow: 8px 8px 0px 0px var(--shadow-color);
+    transform: translate(-2px, -2px);
+}
+
+.section-border {
+    border-bottom: 2px solid var(--border);
+}
