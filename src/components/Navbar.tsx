@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Navbar() {
     return (
         <header className="sticky top-0 z-[100] bg-white/80 backdrop-blur-md border-b-2 border-[#1E293B]/10 py-4">
-            <div className="max-w-[1240px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-6">
                 <nav className="flex items-center justify-between gap-8">
                     {/* Logo Area */}
                     <Link href="/" className="flex items-center gap-3 group">
@@ -20,7 +20,6 @@ export default function Navbar() {
                     {/* Navigation Links - Desktop */}
                     <div className="hidden md:flex items-center gap-8">
                         {[
-                            { name: 'Join Webinar', href: '#webinar', color: 'text-orange-500' },
                             { name: 'Solutions', href: '#solutions' },
                             { name: 'How It Works', href: '#how-it-works' },
                             { name: 'Resources', href: '#resources' },
@@ -28,7 +27,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`text-[15px] font-bold ${link.color || 'text-[#475569]'} hover:text-[#1E293B] transition-colors tracking-tight`}
+                                className={`text-[15px] font-bold text-[#475569] hover:text-[#1E293B] transition-colors tracking-tight`}
                             >
                                 {link.name}
                             </Link>

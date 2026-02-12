@@ -4,23 +4,23 @@ import Image from 'next/image';
 export default function Hero() {
     return (
         <section className="pt-20 pb-32 relative overflow-hidden bg-white" id="hero">
-            <div className="max-w-[1200px] mx-auto px-5">
+            <div className="max-w-[1280px] mx-auto px-5">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Left Content */}
                     <div className="text-left">
                         <h1 className="text-[56px] font-black leading-[1.1] mb-8 text-[#1E293B] tracking-tight">
-                            3x your placement without hiring more recruiters.
+                            The Automated Lead <span className="text-orange-500">Engine</span> for Recruiting Agencies
                         </h1>
 
                         <div className="space-y-4 mb-10">
                             {[
-                                'Automate lead generation and outreach at scale',
-                                'Match candidates to jobs with AI-powered scoring',
-                                'Save 20+ hours per week with intelligent automations'
+                                'Scrape 1M+ jobs across hundreds of boards daily',
+                                'Generate 100K high-intent leads every month',
+                                'Fully autonomous: Set it and forget it'
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
                                     <div className="flex-shrink-0">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-[#1E293B]">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500">
                                             <polyline points="20 6 9 17 4 12"></polyline>
                                         </svg>
                                     </div>
@@ -30,21 +30,21 @@ export default function Hero() {
                         </div>
 
                         <p className="text-xl text-[#475569] mb-12 font-medium max-w-[500px]">
-                            Inductly is an AI-powered smart recruiting platform built for recruiters.
+                            Scrape 1M+ jobs. Generate 100K leads/month. All on autopilot.
                         </p>
 
                         <div className="flex flex-wrap gap-4 mb-12">
                             <Link
                                 href="https://cal.com/tusharm/30min?user=tusharm"
                                 target="_blank"
-                                className="bg-[#1E293B] text-white px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-lg flex items-center gap-2"
+                                className="bg-orange-500 text-white px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-lg flex items-center gap-2"
                             >
-                                Book a Demo <span className="text-xl">→</span>
+                                Start Your Engine <span className="text-xl">→</span>
                             </Link>
                         </div>
 
                         <div className="text-[#1E293B] font-bold text-sm tracking-tight flex items-center gap-2 flex-wrap">
-                            Join inductly <span className="text-[#CBD5E1]">●</span> Save 8+ hours per role <span className="text-[#CBD5E1]">●</span> 30% personalization response
+                            100% Autopilot <span className="text-[#CBD5E1]">●</span> No Manual Scraping <span className="text-[#CBD5E1]">●</span> Infinite Scalability
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@ export default function Hero() {
                             <div className="relative aspect-[1.6/1] bg-slate-100 overflow-hidden">
                                 <Image
                                     src="/campaign.png"
-                                    alt="Inductly Lead Machine Dashboard"
+                                    alt="Inductly Lead Engine Dashboard"
                                     fill
                                     className="object-cover"
                                     priority
@@ -74,9 +74,9 @@ export default function Hero() {
                         {/* Social Proof Text Below Mockup */}
                         <div className="mt-6 text-center lg:text-left">
                             <p className="text-[#1E293B] font-bold text-sm tracking-tight px-4">
-                                Join <span className="text-[#1E293B] font-black underline decoration-[4px] decoration-[#E0F2FE] underline-offset-4">inductly</span> •
-                                Save <span className="text-[#1E293B] font-black italic">8+ hours per role</span> •
-                                <span className="text-orange-600 font-extrabold ml-1">30% personalization response</span>
+                                Join <span className="text-[#1E293B] font-black underline decoration-[4px] decoration-orange-200 underline-offset-4">inductly</span> •
+                                Scale <span className="text-[#1E293B] font-black italic">100K leads/month</span> •
+                                <span className="text-orange-600 font-extrabold ml-1">Infinite Autopilot Scalability</span>
                             </p>
                         </div>
 
