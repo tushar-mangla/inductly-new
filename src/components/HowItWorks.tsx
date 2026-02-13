@@ -20,25 +20,25 @@ export default function HowItWorks() {
     return (
         <section className="py-12 md:py-24 bg-[#F7FAFC] border-t-2 border-[#262626]" id="how-it-works">
             <div className="max-w-[1100px] mx-auto px-5">
-                <div className="text-center mb-20">
-                    <h2 className="mb-6 text-[#1E293B] text-3xl md:text-5xl font-extrabold tracking-tight">How The Engine Works: Set It & Forget It</h2>
+                <div className="text-center mb-12 sm:mb-20">
+                    <h2 className="mb-4 sm:mb-6 text-[#1E293B] text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">How The Engine Works: Set It & Forget It</h2>
                 </div>
 
-                <div className="space-y-12 max-w-[1000px] mx-auto">
+                <div className="space-y-8 sm:space-y-12 max-w-[1000px] mx-auto">
                     {steps.map((step, index) => (
-                        <div key={index} className="flex gap-8 max-md:flex-col items-center group">
+                        <div key={index} className="flex gap-6 sm:gap-8 flex-col md:flex-row items-center group">
                             {/* Number Box */}
-                            <div className="flex-shrink-0 w-[90px] h-[90px] bg-[#E0F2FE] border-2 border-[#262626] rounded-2xl flex items-center justify-center text-3xl font-black text-[#1E293B] btn-shadow">
+                            <div className="flex-shrink-0 w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] bg-[#E0F2FE] border-2 border-[#262626] rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl font-black text-[#1E293B] btn-shadow">
                                 {step.number}
                             </div>
 
                             {/* Content Card */}
-                            <div className="flex-grow bg-[#F1F5F9]/50 hover:bg-[#E0F2FE] transition-colors duration-300 p-6 md:p-12 rounded-[2.5rem] border-2 border-[#262626] btn-shadow relative overflow-hidden">
-                                <h3 className="text-3xl font-extrabold mb-4 text-[#1E293B] tracking-tight">{step.title}</h3>
-                                <p className="text-[#475569] text-lg leading-relaxed font-medium mb-8 max-w-[600px]">{step.description}</p>
+                            <div className="flex-grow bg-[#F1F5F9]/50 hover:bg-[#E0F2FE] transition-colors duration-300 p-6 sm:p-10 md:p-12 rounded-[2rem] sm:rounded-[2.5rem] border-2 border-[#262626] btn-shadow relative overflow-hidden w-full">
+                                <h3 className="text-2xl sm:text-3xl font-extrabold mb-3 sm:mb-4 text-[#1E293B] tracking-tight">{step.title}</h3>
+                                <p className="text-[#475569] text-base sm:text-lg leading-relaxed font-medium mb-6 sm:mb-8 max-w-[600px]">{step.description}</p>
 
                                 {/* Accent Bar */}
-                                <div className="h-2 w-32 bg-[#1E293B] rounded-full"></div>
+                                <div className="h-1.5 sm:h-2 w-24 sm:w-32 bg-[#1E293B] rounded-full"></div>
                             </div>
                         </div>
                     ))}

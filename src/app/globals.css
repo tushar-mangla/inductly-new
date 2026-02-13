@@ -22,10 +22,19 @@ body {
 
 h1,
 h2 {
-    font-size: clamp(2rem, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -1.2px;
+    font-size: clamp(1.75rem, 6vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: clamp(1.5rem, 10vw, 2.5rem);
+    }
+    h2 {
+        font-size: clamp(1.25rem, 8vw, 2.25rem);
+    }
 }
 
 .btn-shadow {

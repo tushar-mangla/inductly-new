@@ -2,15 +2,15 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="py-20 bg-white text-[#1E293B] text-center border-t-2 border-[#1E293B]/10">
+        <footer className="py-12 sm:py-20 bg-white text-[#1E293B] text-center border-t-2 border-[#1E293B]/10">
             <div className="max-w-[1200px] mx-auto px-5">
-                <div className="flex flex-col items-center gap-8">
+                <div className="flex flex-col items-center gap-6 sm:gap-8">
                     <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-[#1E293B] rounded-lg flex items-center justify-center text-white text-md font-black">I</div>
                         <span className="text-xl font-black tracking-tighter">Inductly</span>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-8 text-sm font-black uppercase tracking-widest text-[#475569]">
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-[11px] sm:text-sm font-black uppercase tracking-widest text-[#475569]">
                         <Link href="#features" className="hover:text-[#1E293B]">Features</Link>
                         <Link href="#how-it-works" className="hover:text-[#1E293B]">How It Works</Link>
                         <Link href="#pricing" className="hover:text-[#1E293B]">Pricing</Link>
@@ -19,7 +19,7 @@ export default function Footer() {
 
                     <div className="w-full h-px bg-[#1E293B]/10"></div>
 
-                    <div className="flex flex-col md:flex-row justify-between w-full items-center gap-4 text-[#475569] font-bold">
+                    <div className="flex flex-col md:flex-row justify-between w-full items-center gap-4 text-[#475569] font-bold text-xs sm:text-sm">
                         <p>&copy; {new Date().getFullYear()} Inductly. All rights reserved.</p>
                         <p>Built by <Link href="https://smallgrp.com" className="text-[#1E293B] hover:underline">Small Group</Link></p>
                     </div>
