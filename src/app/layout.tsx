@@ -29,6 +29,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${inter.className} antialiased`}>
                 <Analytics />
+                <UTMTracker />
                 {children}
             </body>
         </html>
