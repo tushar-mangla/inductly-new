@@ -16,7 +16,7 @@ export default function Navbar() {
                             I
                         </div>
                         <div className="flex flex-col leading-none">
-                            <span className="text-xl sm:text-2xl font-black text-[#1E293B] tracking-tighter">Inductly</span>
+                            <span className="text-xl sm:text-2xl font-black text-[#1E293B] tracking-tighter">Inductly AI</span>
                             <span className="text-[10px] text-[#475569] font-bold uppercase tracking-widest mt-0.5 hidden sm:inline">by Small Group</span>
                         </div>
                     </Link>

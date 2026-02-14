@@ -69,7 +69,7 @@ export default function Hero() {
                             <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
                                 <Image
                                     src="/campaign.png"
-                                    alt="Inductly Lead Engine Dashboard"
+                                    alt="Inductly AI Lead Engine Dashboard"
                                     fill
                                     className="object-cover"
                                     priority

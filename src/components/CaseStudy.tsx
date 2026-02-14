@@ -29,7 +29,7 @@ export default function CaseStudy() {
                         From Struggling Pipeline to Consistent Deals
                     </h3>
                     <p className="text-lg sm:text-xl text-[#475569] mb-8 sm:mb-10 max-w-[800px] font-bold leading-relaxed">
-                        One recruiting agency automated their entire lead generation pipeline with Inductly
+                        One recruiting agency automated their entire lead generation pipeline with Inductly AI
                         and scaled from inconsistent deals to predictable growth in just 2 months.
                     </p>
 

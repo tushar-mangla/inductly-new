@@ -7,7 +7,7 @@ import QuickFAQ from '@/components/outreach/QuickFAQ';
 import Analytics from '@/components/Analytics';
 
 export const metadata = {
-    title: 'Get 1,000 Quality Leads Every Month | Inductly',
+    title: 'Get 1,000 Quality Leads Every Month | Inductly AI',
     description: 'Automated lead generation for recruiting agencies. Verified 6%+ reply rates. 1,000 quality leads delivered monthly on autopilot.',
 };
 
