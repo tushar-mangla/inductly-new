@@ -7,6 +7,7 @@ import QualityGuarantee from '@/components/QualityGuarantee';
 import HowItWorks from '@/components/HowItWorks';
 import Pricing from '@/components/Pricing';
 import Features from '@/components/Features';
+import Integrations from '@/components/Integrations';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
@@ -26,6 +27,7 @@ export default function Home() {
             <HowItWorks />
             <Pricing />
             <Features />
+            <Integrations />
             <FinalCTA />
             <Footer />
         </main>
