@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import TrustedBy from '@/components/TrustedBy';
 import Stats from '@/components/Stats';
-import BeforeAfter from '@/components/BeforeAfter';
 import ComparisonTable from '@/components/ComparisonTable';
 import HowItWorks from '@/components/HowItWorks';
 import SystemDiagram from '@/components/SystemDiagram';
@@ -28,32 +27,31 @@ export default function Home() {
                 <Stats />
             </div>
 
-            {/* 3. Pain — Before/After */}
-            <BeforeAfter />
+            {/* 3. Proof — Case Study */}
+            <CaseStudy />
 
-            {/* 4. Logic — Us vs Them Comparison */}
-            <ComparisonTable />
-
-            {/* 5. System — How It Works */}
-            <HowItWorks />
-
-            {/* 5b. Aha Moment — System Diagram */}
-            <SystemDiagram />
-
-            {/* 6. Proof — Real Email + Instantly Dashboard + Case Study */}
-            <EmailMockup />
+            {/* 4. Proof — Dashboard Screenshot */}
             <div className="max-w-[1200px] mx-auto px-5">
                 <Proof />
             </div>
-            <CaseStudy />
 
-            {/* 7. Credibility — 6%+ Reply Rate */}
+            {/* 5. Proof — Proven Reply Rates Guarantee */}
             <QualityGuarantee />
 
-            {/* 8. Offer — Pricing */}
+            {/* 6. System — How It Works (Diagram + Steps) */}
+            <SystemDiagram />
+            <HowItWorks />
+
+            {/* 7. Logic — Us vs Them Comparison */}
+            <ComparisonTable />
+
+            {/* 8. Proof — Real Email Example (Why It Works) */}
+            <EmailMockup />
+
+            {/* 9. Offer — Pricing */}
             <Pricing />
 
-            {/* 9. Close — Final CTA */}
+            {/* 10. Close — Final CTA */}
             <FinalCTA />
             <Footer />
         </main>
