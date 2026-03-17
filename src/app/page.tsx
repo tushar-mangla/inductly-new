@@ -2,15 +2,14 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import TrustedBy from '@/components/TrustedBy';
 import Stats from '@/components/Stats';
-import CaseStudy from '@/components/CaseStudy';
-import Proof from '@/components/Proof';
 import BeforeAfter from '@/components/BeforeAfter';
-import QualityGuarantee from '@/components/QualityGuarantee';
+import ComparisonTable from '@/components/ComparisonTable';
 import HowItWorks from '@/components/HowItWorks';
 import EmailMockup from '@/components/EmailMockup';
+import CaseStudy from '@/components/CaseStudy';
+import Proof from '@/components/Proof';
+import QualityGuarantee from '@/components/QualityGuarantee';
 import Pricing from '@/components/Pricing';
-import Features from '@/components/Features';
-import Integrations from '@/components/Integrations';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
@@ -18,22 +17,39 @@ export default function Home() {
     return (
         <main className="min-h-screen">
             <Navbar />
+
+            {/* 1. Hook — Hero */}
             <Hero />
+
+            {/* 2. Trust — Logo + Stats */}
             <TrustedBy />
             <div className="max-w-[1200px] mx-auto px-5">
                 <Stats />
             </div>
-            <CaseStudy />
+
+            {/* 3. Pain — Before/After */}
+            <BeforeAfter />
+
+            {/* 4. Logic — Us vs Them Comparison */}
+            <ComparisonTable />
+
+            {/* 5. System — How It Works */}
+            <HowItWorks />
+
+            {/* 6. Proof — Real Email + Instantly Dashboard + Case Study */}
+            <EmailMockup />
             <div className="max-w-[1200px] mx-auto px-5">
                 <Proof />
             </div>
-            <BeforeAfter />
+            <CaseStudy />
+
+            {/* 7. Credibility — 6%+ Reply Rate */}
             <QualityGuarantee />
-            <HowItWorks />
-            <EmailMockup />
+
+            {/* 8. Offer — Pricing */}
             <Pricing />
-            <Features />
-            <Integrations />
+
+            {/* 9. Close — Final CTA */}
             <FinalCTA />
             <Footer />
         </main>

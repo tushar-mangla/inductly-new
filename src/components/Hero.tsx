@@ -11,58 +11,77 @@ export default function Hero() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left Content */}
                     <div className="text-left">
+                        {/* Badge */}
                         <div className="inline-flex items-center gap-2 bg-[#7C6EF5]/10 border border-[#7C6EF5]/30 rounded-full px-4 py-1.5 text-xs font-bold text-[#7C6EF5] uppercase tracking-wider mb-8">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#10D98A] shadow-[0_0_8px_#10D98A] animate-pulse"></span>
-                            Now with AI Candidate Matching
+                            AI Placement Engine — Live
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[64px] font-black leading-[1.1] mb-6 sm:mb-8 text-[#1E293B] tracking-tight">
-                            Stop Pitching.<br />
-                            <span className="text-orange-500">Start Placing.</span>
+                        {/* Headline */}
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[64px] font-black leading-[1.05] mb-6 sm:mb-8 text-[#1E293B] tracking-tight">
+                            5x Placements<br />
+                            Per Recruiter.<br />
+                            <span className="text-orange-500">Zero Extra Hires.</span>
                         </h1>
 
-                        <p className="text-lg sm:text-xl text-[#475569] mb-8 font-medium max-w-[560px] leading-relaxed">
-                            Inductly finds companies that are actively hiring, instantly matches your candidates to their open roles, and emails the hiring manager — before your competitors even know the job exists.
+                        {/* Sub */}
+                        <p className="text-lg sm:text-xl text-[#475569] mb-8 font-medium max-w-[540px] leading-relaxed">
+                            AI system that automates sourcing, matching, and outreach end-to-end — so your recruiters close deals instead of chasing leads.
                         </p>
 
-                        <div className="space-y-3 sm:space-y-4 mb-10 sm:mb-12">
+                        {/* Bullet triggers */}
+                        <div className="space-y-3 mb-8">
                             {[
-                                'Scrape 1M+ active jobs monthly',
-                                'Instant candidate-to-job matching',
-                                'Sent on autopilot with 6%+ replies'
+                                '✓  Scrape 1M+ active jobs monthly — automatically',
+                                '✓  AI matches candidates to open roles in seconds',
+                                '✓  Outreach sent for you — proven 6.3% reply rate',
                             ].map((item, i) => (
-                                <div key={i} className="flex items-start sm:items-center gap-3">
-                                    <div className="flex-shrink-0 mt-1 sm:mt-0">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 sm:w-6 sm:h-6">
-                                            <polyline points="20 6 9 17 4 12"></polyline>
-                                        </svg>
-                                    </div>
-                                    <span className="text-base sm:text-lg font-semibold text-[#1E293B] leading-tight">{item}</span>
+                                <div key={i} className="text-base sm:text-lg font-semibold text-[#1E293B]">
+                                    {item}
                                 </div>
                             ))}
                         </div>
 
-                        <div className="flex flex-wrap gap-4 mb-10 sm:mb-12">
+                        {/* Speed trigger */}
+                        <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2 text-xs font-black text-green-700 uppercase tracking-wider mb-8">
+                            ⚡ Setup in &lt;7 days · No extra hires needed
+                        </div>
+
+                        {/* Dual CTA */}
+                        <div className="flex flex-col sm:flex-row gap-4 mb-8">
                             <Link
                                 href="https://cal.com/tusharm/30min?user=tusharm"
                                 target="_blank"
-                                onClick={() => trackCTAClick('Start Your Engine', 'Hero')}
-                                className="w-full sm:w-auto bg-orange-500 text-white px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-lg flex items-center justify-center gap-2"
+                                onClick={() => trackCTAClick('See Live Demo', 'Hero')}
+                                className="bg-orange-500 text-white px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-lg flex items-center justify-center gap-2 whitespace-nowrap"
                             >
-                                Start Your Engine <span className="text-xl">→</span>
+                                See Live Demo →
+                            </Link>
+                            <Link
+                                href="https://cal.com/tusharm/30min?user=tusharm"
+                                target="_blank"
+                                onClick={() => trackCTAClick('Watch System Breakdown', 'Hero')}
+                                className="bg-white text-[#1E293B] px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] border-2 border-[#1E293B] text-lg flex items-center justify-center gap-2 whitespace-nowrap"
+                            >
+                                ▶ Watch System Breakdown
                             </Link>
                         </div>
+
+                        {/* Micro-proof */}
+                        <p className="text-sm text-[#94A3B8] font-medium">
+                            🔒 No long-term contract · Cancel anytime · First warm reply in &lt;7 days
+                        </p>
                     </div>
 
                     {/* Right Mockup */}
                     <div className="relative mt-8 lg:mt-0">
-                        {/* Traffic Light Dots Mockup Frame */}
                         <div className="relative bg-white border-2 border-[#1E293B] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden btn-shadow">
                             {/* Browser Top Bar */}
                             <div className="bg-white border-b-2 border-[#1E293B] px-4 py-3 sm:px-6 sm:py-4 flex items-center gap-2">
                                 <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
                                 <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
                                 <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                                <span className="ml-3 text-xs text-[#94A3B8] font-bold">inductly.ai — Live Campaign</span>
                             </div>
 
                             {/* Image Mockup */}
@@ -77,16 +96,18 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        {/* Social Proof Text Below Mockup */}
-                        <div className="mt-6 text-center lg:text-left">
-                            <p className="text-[#1E293B] font-bold text-xs sm:text-sm tracking-tight px-4 leading-relaxed">
-                                Join <span className="text-[#1E293B] font-black underline decoration-[3px] sm:decoration-[4px] decoration-orange-200 underline-offset-4">inductly</span> •
-                                Scale <span className="text-[#1E293B] font-black italic">100K leads/month</span> •
-                                <span className="text-orange-600 font-extrabold block sm:inline mt-1 sm:mt-0 ml-0 sm:ml-1">Infinite Autopilot</span>
-                            </p>
+                        {/* Floating stat badge */}
+                        <div className="absolute -bottom-4 -left-4 sm:-bottom-5 sm:-left-5 bg-[#1E293B] text-white rounded-2xl px-4 py-3 sm:px-5 sm:py-4 btn-shadow border-2 border-white">
+                            <div className="text-xl sm:text-2xl font-black leading-none">6.3%</div>
+                            <div className="text-[10px] font-bold text-slate-300 uppercase tracking-widest mt-0.5">Reply Rate</div>
                         </div>
 
-                        {/* Shadow Glow Effect */}
+                        {/* Floating badge top-right */}
+                        <div className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 bg-orange-500 text-white rounded-2xl px-4 py-3 sm:px-5 sm:py-4 btn-shadow border-2 border-white">
+                            <div className="text-xl sm:text-2xl font-black leading-none">1M+</div>
+                            <div className="text-[10px] font-bold text-orange-100 uppercase tracking-widest mt-0.5">Jobs/Month</div>
+                        </div>
+
                         <div className="absolute -inset-4 bg-[#1E293B]/5 blur-3xl -z-10 rounded-full"></div>
                     </div>
                 </div>
@@ -94,3 +115,4 @@ export default function Hero() {
         </section>
     );
 }
+

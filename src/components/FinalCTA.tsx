@@ -8,23 +8,31 @@ export default function FinalCTA() {
                     🚀 Ready to Scale?
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-[64px] font-black mb-6 sm:mb-8 tracking-tighter text-[#1E293B] leading-[1.1]">
-                    Turn On Your<br className="hidden md:inline" /> Placement Engine Today
+                    We find. We match. We outreach.<br className="hidden md:inline" />
+                    <span className="text-orange-500"> You just close the deal.</span>
                 </h2>
-                <p className="text-base sm:text-lg md:text-2xl mb-4 text-[#475569] max-w-[700px] mx-auto leading-relaxed font-bold">
-                    We find companies hiring in your niche, match your candidates, and email the hiring manager.
-                    <br className="hidden md:inline" />
-                    <span className="text-[#1E293B]"> You just close the deal.</span>
+                <p className="text-base sm:text-lg md:text-xl mb-3 text-[#475569] max-w-[640px] mx-auto leading-relaxed font-medium">
+                    Setup in under 7 days. No extra hires. First warm reply this week.
                 </p>
                 <p className="text-sm sm:text-base text-[#94A3B8] font-medium mb-10 sm:mb-12">
                     Starting at $0.50 per lead · Proven 6%+ reply rates · Cancel anytime
                 </p>
-                <Link
-                    href="https://cal.com/tusharm/30min?user=tusharm"
-                    target="_blank"
-                    className="w-full sm:w-auto bg-orange-500 text-white px-8 py-4 md:px-12 md:py-6 rounded-[1.5rem] sm:rounded-[2rem] font-black transition-all hover:translate-y-[-4px] btn-shadow text-lg sm:text-xl md:text-2xl inline-flex items-center gap-3 justify-center"
-                >
-                    Get Your First Warm Reply This Week →
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link
+                        href="https://cal.com/tusharm/30min?user=tusharm"
+                        target="_blank"
+                        className="bg-orange-500 text-white px-8 py-4 md:px-12 md:py-6 rounded-[1.5rem] sm:rounded-[2rem] font-black transition-all hover:translate-y-[-4px] btn-shadow text-lg sm:text-xl inline-flex items-center gap-3 justify-center"
+                    >
+                        See Live Demo →
+                    </Link>
+                    <Link
+                        href="https://cal.com/tusharm/30min?user=tusharm"
+                        target="_blank"
+                        className="bg-white text-[#1E293B] px-8 py-4 md:px-12 md:py-6 rounded-[1.5rem] sm:rounded-[2rem] font-black transition-all hover:translate-y-[-4px] border-2 border-[#1E293B] text-lg sm:text-xl inline-flex items-center gap-3 justify-center"
+                    >
+                        ▶ Watch System Breakdown
+                    </Link>
+                </div>
             </div>
         </section>
     );
