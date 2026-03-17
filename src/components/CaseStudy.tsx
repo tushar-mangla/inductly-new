@@ -57,9 +57,17 @@ export default function CaseStudy() {
 
                     {/* Quote */}
                     <div className="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t-2 border-[#1E293B]/10">
-                        <div className="text-lg sm:text-2xl md:text-3xl font-black text-[#1E293B] italic leading-relaxed">
-                            "We automated our entire lead generation pipeline and scaled from
-                            inconsistent deals to predictable growth."
+                        <div className="text-lg sm:text-2xl md:text-3xl font-black text-[#1E293B] italic leading-relaxed mb-6">
+                            "We stopped cold calling. Inductly now sends matched candidate pitches to hiring managers on autopilot. We went from inconsistent deals to a predictable pipeline — revenue is up 30% in just 60 days."
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-black text-xl">
+                                M
+                            </div>
+                            <div>
+                                <div className="font-bold text-[#1E293B] text-lg">Marcus</div>
+                                <div className="text-[#475569] text-sm">Tech Recruiting, Berlin — Inductly Client</div>
+                            </div>
                         </div>
                     </div>
                 </div>

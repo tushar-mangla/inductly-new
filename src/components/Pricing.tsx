@@ -2,48 +2,73 @@ import Link from 'next/link';
 
 const plans = [
     {
-        title: 'Monthly',
+        title: '🎯 Lead Engine',
         price: '$500',
         period: '/month',
-        subtitle: 'Minimum monthly commitment',
+        subtitle: '$0.50 per lead — for teams that handle their own outreach',
         features: [
-            '<strong>1,000 quality leads/month</strong> included',
-            '$0.50 per lead',
-            'Verified reply rate tracking',
-            'Job data + company data',
+            '<strong>1,000 verified leads/month</strong>',
+            'Scraped from LinkedIn, Indeed, Stepstone & more',
+            'Hiring manager name, email + title',
+            'Job data + company intelligence',
             'Monthly reporting dashboard',
             'Cancel anytime',
+        ],
+        negatives: [
+            'No outreach sent',
+            'No resume screening',
         ],
         buttonText: 'Get Started',
         featured: false,
     },
     {
-        title: '3-Month Partnership',
-        price: '$400',
+        title: '📬 Outreach Engine',
+        price: '$594',
         period: '/month',
-        subtitle: '$1,200 total for 3 months',
+        subtitle: 'Leads + cold outreach we built in-house — proven 6%+ reply rate',
         features: [
-            '<strong>1,000 quality leads/month</strong> (3k total)',
-            '$0.40 per lead (20% savings)',
-            'Verified reply rate tracking',
-            'Job data + company data',
+            '<strong>1,000 verified leads/month</strong>',
+            'Hiring manager direct contacts',
+            '<strong class="text-orange-500">We built the cold email system</strong> — fully done for you',
+            'Up to 30,000 active contacts in outreach',
+            '<strong class="text-orange-500">Proven 6.3% reply rate</strong> — live campaign data',
+            'Dedicated sending infrastructure included',
             'Weekly performance reports',
-            'Dedicated account manager',
-            'Priority support',
         ],
-        buttonText: 'Start Saving Now',
+        negatives: [
+            'No resume screening',
+        ],
+        buttonText: 'Start Outreaching →',
         featured: true,
+    },
+    {
+        title: '⚡ Full Autopilot',
+        price: '$694',
+        period: '/month',
+        subtitle: 'Everything included — we find, match, and pitch for you',
+        features: [
+            '<strong>1,000 verified leads/month</strong>',
+            'Hiring manager direct contacts',
+            'Cold outreach system — fully done for you',
+            '6%+ reply rate on autopilot',
+            '<strong class="text-orange-500">AI Resume Screening</strong> — candidates matched to open roles',
+            '<strong class="text-orange-500">Hyper-personalized pitch</strong> per candidate match',
+            'Weekly reports + priority support',
+        ],
+        negatives: [],
+        buttonText: 'Get Full Autopilot →',
+        featured: false,
     },
 ];
 
 export default function Pricing() {
     return (
         <section className="py-16 md:py-32 bg-white" id="pricing">
-            <div className="max-w-[1100px] mx-auto px-5 text-center">
-                <h2 className="text-3xl sm:text-4xl md:text-[48px] font-black mb-4 sm:mb-6 text-[#1E293B] tracking-tight leading-none">Simple Pricing. Pay Per Quality Lead.</h2>
-                <p className="text-lg sm:text-xl text-[#475569] mb-12 sm:mb-[80px] max-w-[800px] mx-auto font-medium">Pay per lead, not per seat. No hidden fees. Cancel anytime.</p>
+            <div className="max-w-[1300px] mx-auto px-5 text-center">
+                <h2 className="text-3xl sm:text-4xl md:text-[48px] font-black mb-4 sm:mb-6 text-[#1E293B] tracking-tight leading-none">Pick Your Engine.</h2>
+                <p className="text-lg sm:text-xl text-[#475569] mb-12 sm:mb-[80px] max-w-[800px] mx-auto font-medium">Start with leads. Add our outreach system. Unlock resume screening. Each plan stacks on the last.</p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
                     {plans.map((plan, index) => (
                         <div
                             key={index}
@@ -63,20 +88,32 @@ export default function Pricing() {
                             <div className="mb-8 sm:mb-10">
                                 <p className="text-[#475569] text-base sm:text-lg font-bold">{plan.subtitle}</p>
                             </div>
-                            <div className="space-y-3 sm:space-y-4 mb-10 sm:mb-12">
+                            <div className="space-y-3 sm:space-y-4 mb-6">
                                 {plan.features.map((feature, fIndex) => (
-                                    <div key={fIndex} className="flex items-start gap-3 sm:gap-4">
-                                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#1E293B] flex items-center justify-center shrink-0 mt-0.5">
-                                            <span className="text-white text-[8px] sm:text-[10px] font-bold">✓</span>
+                                    <div key={fIndex} className="flex items-start gap-3">
+                                        <div className="w-5 h-5 rounded-full bg-[#1E293B] flex items-center justify-center shrink-0 mt-0.5">
+                                            <span className="text-white text-[8px] font-bold">✓</span>
                                         </div>
-                                        <span className="text-[#1E293B] text-sm sm:text-base leading-relaxed font-bold" dangerouslySetInnerHTML={{ __html: feature }} />
+                                        <span className="text-[#1E293B] text-sm leading-relaxed font-bold" dangerouslySetInnerHTML={{ __html: feature }} />
+                                    </div>
+                                ))}
+                                {plan.negatives && plan.negatives.length > 0 && plan.negatives.map((neg, nIndex) => (
+                                    <div key={`neg-${nIndex}`} className="flex items-start gap-3">
+                                        <div className="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center shrink-0 mt-0.5">
+                                            <span className="text-slate-400 text-[8px] font-bold">✗</span>
+                                        </div>
+                                        <span className="text-slate-400 text-sm leading-relaxed font-medium">{neg}</span>
                                     </div>
                                 ))}
                             </div>
                             <Link
                                 href="https://cal.com/tusharm/30min?user=tusharm"
                                 target="_blank"
-                                className="bg-[#1E293B] text-white px-6 py-4 sm:px-10 sm:py-5 rounded-2xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-center block text-base sm:text-lg"
+                                className={`mt-auto px-6 py-4 rounded-2xl font-black transition-all hover:translate-y-[-2px] btn-shadow text-center block text-base ${
+                                    plan.featured
+                                        ? 'bg-orange-500 text-white'
+                                        : 'bg-[#1E293B] text-white'
+                                }`}
                             >
                                 {plan.buttonText}
                             </Link>
