@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import TrustedBy from '@/components/TrustedBy';
 import Stats from '@/components/Stats';
 import CaseStudy from '@/components/CaseStudy';
 import Proof from '@/components/Proof';
@@ -18,6 +19,7 @@ export default function Home() {
         <main className="min-h-screen">
             <Navbar />
             <Hero />
+            <TrustedBy />
             <div className="max-w-[1200px] mx-auto px-5">
                 <Stats />
             </div>
