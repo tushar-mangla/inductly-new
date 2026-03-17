@@ -42,10 +42,10 @@ export default function ComparisonTable() {
                         📊 Side by Side
                     </div>
                     <h2 className="text-2xl sm:text-3xl md:text-[48px] font-black mb-4 text-[#1E293B] tracking-tight leading-tight">
-                        The Old Way vs. The Inductly Way
+                        The Real Cost of Doing It Manually
                     </h2>
                     <p className="text-lg text-[#475569] font-medium max-w-[560px] mx-auto">
-                        Your competitors are still doing it manually. Here&apos;s what you get when you don&apos;t.
+                        Your competitors are still hiring recruiters. Here&apos;s what you save.
                     </p>
                 </div>
 
@@ -79,6 +79,20 @@ export default function ComparisonTable() {
                             </div>
                         </div>
                     ))}
+
+                    {/* ROI Summary Row */}
+                    <div className="grid grid-cols-3 border-t-4 border-[#1E293B] bg-[#E0F2FE]">
+                        <div className="px-5 py-5 text-sm sm:text-base font-black text-[#1E293B] uppercase tracking-wider border-r-2 border-[#1E293B]/10 flex flex-col justify-center">
+                            Total Cost & Savings
+                        </div>
+                        <div className="px-5 py-5 text-sm sm:text-base text-[#475569] font-bold leading-snug border-r-2 border-[#1E293B]/10 flex flex-col justify-center">
+                            $60,000+ /year per recruiter
+                        </div>
+                        <div className="px-5 py-5 text-sm sm:text-base text-[#1E293B] font-black leading-snug flex flex-col justify-center gap-1">
+                            <div>$6,000-$8,328/year (Full Autopilot)</div>
+                            <div className="text-orange-500 text-base sm:text-lg">Save $52,000+/year (87% reduction)</div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* CTA below table */}
@@ -95,7 +109,7 @@ export default function ComparisonTable() {
                         target="_blank"
                         className="bg-white text-[#1E293B] px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] border-2 border-[#1E293B] text-lg inline-flex items-center justify-center gap-2"
                     >
-                        ▶ Watch System Breakdown
+                        Get 5x Placement System
                     </Link>
                 </div>
             </div>
