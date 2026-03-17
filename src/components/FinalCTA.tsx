@@ -16,7 +16,7 @@ export default function FinalCTA() {
                     <span className="text-[#1E293B]"> You just close the deal.</span>
                 </p>
                 <p className="text-sm sm:text-base text-[#94A3B8] font-medium mb-10 sm:mb-12">
-                    Starting at $0.50 per lead · 6%+ reply rate guarantee · Cancel anytime
+                    Starting at $0.50 per lead · Proven 6%+ reply rates · Cancel anytime
                 </p>
                 <Link
                     href="https://cal.com/tusharm/30min?user=tusharm"
