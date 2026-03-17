@@ -19,14 +19,14 @@ export default function Hero() {
 
                         {/* Headline */}
                         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[64px] font-black leading-[1.05] mb-6 sm:mb-8 text-[#1E293B] tracking-tight">
-                            5x Placements<br />
-                            Per Recruiter.<br />
-                            <span className="text-orange-500">Zero Extra Hires.</span>
+                            Your recruiters<br />
+                            are bottlenecked.<br />
+                            <span className="text-orange-500">This system fixes it.</span>
                         </h1>
 
                         {/* Sub */}
                         <p className="text-lg sm:text-xl text-[#475569] mb-8 font-medium max-w-[540px] leading-relaxed">
-                            AI system that automates sourcing, matching, and outreach end-to-end — so your recruiters close deals instead of chasing leads.
+                            5x placements per recruiter — without hiring more people. AI that scrapes jobs, matches candidates, and sends personalized outreach while you sleep.
                         </p>
 
                         {/* Bullet triggers */}
@@ -60,16 +60,20 @@ export default function Hero() {
                             <Link
                                 href="https://cal.com/tusharm/30min?user=tusharm"
                                 target="_blank"
-                                onClick={() => trackCTAClick('Watch System Breakdown', 'Hero')}
+                                onClick={() => trackCTAClick('Get 5x Placement System', 'Hero')}
                                 className="bg-white text-[#1E293B] px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] border-2 border-[#1E293B] text-lg flex items-center justify-center gap-2 whitespace-nowrap"
                             >
-                                ▶ Watch System Breakdown
+                                Get 5x Placement System
                             </Link>
                         </div>
 
                         {/* Micro-proof */}
-                        <p className="text-sm text-[#94A3B8] font-medium">
+                        <p className="text-sm text-[#94A3B8] font-medium mb-4">
                             🔒 No long-term contract · Cancel anytime · First warm reply in &lt;7 days
+                        </p>
+                        {/* Urgency */}
+                        <p className="text-sm font-black text-red-600">
+                            ⚠ Agencies using this are already replacing manual recruiters with systems.
                         </p>
                     </div>
 

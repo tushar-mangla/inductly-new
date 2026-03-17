@@ -5,6 +5,7 @@ import Stats from '@/components/Stats';
 import BeforeAfter from '@/components/BeforeAfter';
 import ComparisonTable from '@/components/ComparisonTable';
 import HowItWorks from '@/components/HowItWorks';
+import SystemDiagram from '@/components/SystemDiagram';
 import EmailMockup from '@/components/EmailMockup';
 import CaseStudy from '@/components/CaseStudy';
 import Proof from '@/components/Proof';
@@ -35,6 +36,9 @@ export default function Home() {
 
             {/* 5. System — How It Works */}
             <HowItWorks />
+
+            {/* 5b. Aha Moment — System Diagram */}
+            <SystemDiagram />
 
             {/* 6. Proof — Real Email + Instantly Dashboard + Case Study */}
             <EmailMockup />
