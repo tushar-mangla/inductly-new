@@ -3,8 +3,10 @@ import Hero from '@/components/Hero';
 import Stats from '@/components/Stats';
 import CaseStudy from '@/components/CaseStudy';
 import Proof from '@/components/Proof';
+import BeforeAfter from '@/components/BeforeAfter';
 import QualityGuarantee from '@/components/QualityGuarantee';
 import HowItWorks from '@/components/HowItWorks';
+import EmailMockup from '@/components/EmailMockup';
 import Pricing from '@/components/Pricing';
 import Features from '@/components/Features';
 import Integrations from '@/components/Integrations';
@@ -23,8 +25,10 @@ export default function Home() {
             <div className="max-w-[1200px] mx-auto px-5">
                 <Proof />
             </div>
+            <BeforeAfter />
             <QualityGuarantee />
             <HowItWorks />
+            <EmailMockup />
             <Pricing />
             <Features />
             <Integrations />
