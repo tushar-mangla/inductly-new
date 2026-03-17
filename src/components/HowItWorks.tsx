@@ -1,18 +1,18 @@
 const steps = [
     {
         number: '01',
-        title: 'System Scrapes Jobs & Generates Leads',
-        description: 'Our AI scans job boards, extracts companies, enriches data, and identifies key decision-makers.',
+        title: 'Find Who\'s Hiring Right Now',
+        description: 'Our AI scrapes job boards for 1M+ active roles monthly. The moment a company posts a role in your niche, we grab the hiring manager\'s direct contact.',
     },
     {
         number: '02',
-        title: 'ENRICH (Auto-Pilot)',
-        description: 'Validates contact information, enriches with company intelligence data, and scores lead quality automatically.',
+        title: 'Instant Candidate-to-Job Matching',
+        description: 'The AI reads the job description and scores it against every candidate in your database. In seconds, you know exactly who fits.',
     },
     {
         number: '03',
-        title: 'DELIVER (Auto-Pilot)',
-        description: '1,000 verified leads delivered monthly. Verified 6%+ reply rates (proven results). Complete data package included.',
+        title: 'Hyper-Personalized Outreach Sent',
+        description: 'A tailored cold email goes to the hiring manager: "We already have a candidate who fits your role exactly." Not a pitch. A solution.',
     },
 ];
 

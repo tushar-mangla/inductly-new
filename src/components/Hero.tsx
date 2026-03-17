@@ -11,15 +11,25 @@ export default function Hero() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left Content */}
                     <div className="text-left">
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[56px] font-black leading-tight mb-6 sm:mb-8 text-[#1E293B] tracking-tight">
-                            The Automated Lead <span className="text-orange-500">Engine</span> for Recruiting Agencies
+                        <div className="inline-flex items-center gap-2 bg-[#7C6EF5]/10 border border-[#7C6EF5]/30 rounded-full px-4 py-1.5 text-xs font-bold text-[#7C6EF5] uppercase tracking-wider mb-8">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#10D98A] shadow-[0_0_8px_#10D98A] animate-pulse"></span>
+                            Now with AI Candidate Matching
+                        </div>
+
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[64px] font-black leading-[1.1] mb-6 sm:mb-8 text-[#1E293B] tracking-tight">
+                            Stop Pitching.<br />
+                            <span className="text-orange-500">Start Placing.</span>
                         </h1>
 
-                        <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
+                        <p className="text-lg sm:text-xl text-[#475569] mb-8 font-medium max-w-[560px] leading-relaxed">
+                            Inductly finds companies that are actively hiring, instantly matches your candidates to their open roles, and emails the hiring manager — before your competitors even know the job exists.
+                        </p>
+
+                        <div className="space-y-3 sm:space-y-4 mb-10 sm:mb-12">
                             {[
-                                'Scrape 1M+ jobs automatically every month',
-                                'Generate 100K qualified leads on autopilot',
-                                'Get verified leads with proven 6%+ reply rates'
+                                'Scrape 1M+ active jobs monthly',
+                                'Instant candidate-to-job matching',
+                                'Sent on autopilot with 6%+ replies'
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start sm:items-center gap-3">
                                     <div className="flex-shrink-0 mt-1 sm:mt-0">
@@ -32,10 +42,6 @@ export default function Hero() {
                             ))}
                         </div>
 
-                        <p className="text-lg sm:text-xl text-[#475569] mb-10 sm:mb-12 font-medium max-w-[500px] leading-relaxed">
-                            Turn it on. Watch it run. Get 1,000 quality leads delivered every month—automatically.
-                        </p>
-
                         <div className="flex flex-wrap gap-4 mb-10 sm:mb-12">
                             <Link
                                 href="https://cal.com/tusharm/30min?user=tusharm"
@@ -45,12 +51,6 @@ export default function Hero() {
                             >
                                 Start Your Engine <span className="text-xl">→</span>
                             </Link>
-                        </div>
-
-                        <div className="text-[#1E293B] font-bold text-xs sm:text-sm tracking-tight flex items-center gap-2 flex-wrap">
-                            100% Autopilot <span className="text-[#CBD5E1] hidden sm:inline">●</span> <span className="sm:hidden w-full h-[1px] bg-slate-100 my-1"></span>
-                            No Manual Scraping <span className="text-[#CBD5E1] hidden sm:inline">●</span> <span className="sm:hidden w-full h-[1px] bg-slate-100 my-1"></span>
-                            Infinite Scalability
                         </div>
                     </div>
 
