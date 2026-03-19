@@ -4,32 +4,32 @@ const rows = [
     {
         aspect: 'Lead Sourcing',
         oldWay: '4+ hrs/day manually searching LinkedIn & job boards',
-        inductly: 'AI scrapes 1M+ jobs automatically — every single day',
+        RecruitmentOS: 'AI scrapes 1M+ jobs automatically — every single day',
     },
     {
         aspect: 'Candidate Matching',
         oldWay: 'Hours cross-referencing CVs with open roles manually',
-        inductly: 'Instant AI match from your candidate database in seconds',
+        RecruitmentOS: 'Instant AI match from your candidate database in seconds',
     },
     {
         aspect: 'Cold Outreach',
         oldWay: 'Generic "Hi, we\'re a great agency" emails — 1% reply rate',
-        inductly: '"We already have your hire" — hyper-personalized, 6.3% reply rate',
+        RecruitmentOS: '"We already have your hire" — hyper-personalized, 6.3% reply rate',
     },
     {
         aspect: 'Cost',
         oldWay: '$60,000+/year per senior recruiter + commission',
-        inductly: 'From $500/mo — a fraction of one recruiter\'s salary',
+        RecruitmentOS: 'From $500/mo — a fraction of one recruiter\'s salary',
     },
     {
         aspect: 'Working Hours',
         oldWay: '8 hours/day, 5 days/week — misses weekend job postings',
-        inductly: '24/7/365 autopilot — catches every role the moment it posts',
+        RecruitmentOS: '24/7/365 autopilot — catches every role the moment it posts',
     },
     {
         aspect: 'Scalability',
         oldWay: 'Want 2x volume? Hire 2x recruiters',
-        inductly: 'Turn up the dial — no headcount increase required',
+        RecruitmentOS: 'Turn up the dial — no headcount increase required',
     },
 ];
 
@@ -58,7 +58,7 @@ export default function ComparisonTable() {
                             ❌ The Old Way
                         </div>
                         <div className="px-5 py-4 text-xs font-black uppercase tracking-widest text-orange-300 border-l border-white/10">
-                            ✅ Inductly
+                            ✅ RecruitmentOS
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@ export default function ComparisonTable() {
                                 {row.oldWay}
                             </div>
                             <div className="px-5 py-5 text-sm text-[#1E293B] font-bold leading-snug flex items-center">
-                                {row.inductly}
+                                {row.RecruitmentOS}
                             </div>
                         </div>
                     ))}

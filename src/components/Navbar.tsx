@@ -13,10 +13,10 @@ export default function Navbar() {
                     {/* Logo Area */}
                     <Link href="/" className="flex items-center gap-3 group">
                         <div className="w-10 h-10 bg-[#1E293B] rounded-xl flex items-center justify-center text-white text-2xl font-black btn-shadow group-hover:translate-y-[-2px] transition-transform">
-                            I
+                            R
                         </div>
                         <div className="flex flex-col leading-none">
-                            <span className="text-xl sm:text-2xl font-black text-[#1E293B] tracking-tighter">Inductly AI</span>
+                            <span className="text-xl sm:text-2xl font-black text-[#1E293B] tracking-tighter">RecruitmentOS</span>
                             <span className="text-[10px] text-[#475569] font-bold uppercase tracking-widest mt-0.5 hidden sm:inline">by Small Group</span>
                         </div>
                     </Link>
