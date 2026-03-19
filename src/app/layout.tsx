@@ -7,16 +7,16 @@ import UTMTracker from "@/components/UTMTracker";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Inductly AI - The Automated Lead Engine for Recruiting Agencies",
+    title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
     description: "The only recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
     icons: {
         icon: "/favicon.svg",
-        apple: "/logos/inductly_logo.png",
+        apple: "/logos/recruitmentos_logo.png",
     },
     openGraph: {
-        title: "Inductly AI - The Automated Lead Engine for Recruiting Agencies",
+        title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
         description: "The only recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
-        images: ["/logos/inductly_logo.png"],
+        images: ["/logos/recruitmentos_logo.png"],
     },
 };
 

@@ -23,7 +23,7 @@ export default function BeforeAfter() {
                         ⚡ The Transformation
                     </div>
                     <h2 className="text-2xl sm:text-3xl md:text-[48px] font-black mb-4 sm:mb-6 text-[#1E293B] tracking-tight leading-tight">
-                        What Changes When You Use Inductly
+                        What Changes When You Use RecruitmentOS
                     </h2>
                 </div>
 
@@ -31,7 +31,7 @@ export default function BeforeAfter() {
                     {/* BEFORE */}
                     <div className="bg-red-50 border-2 border-red-200 rounded-[2rem] p-8 sm:p-10">
                         <div className="inline-block bg-red-100 text-red-600 text-[10px] sm:text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full border border-red-200 mb-6">
-                            ❌ Without Inductly
+                            ❌ Without RecruitmentOS
                         </div>
                         <h3 className="text-xl sm:text-2xl font-black text-[#1E293B] mb-6 tracking-tight">Manual. Inconsistent. Expensive.</h3>
                         <ul className="space-y-4">
@@ -47,7 +47,7 @@ export default function BeforeAfter() {
                     {/* AFTER */}
                     <div className="bg-green-50 border-2 border-green-300 rounded-[2rem] p-8 sm:p-10">
                         <div className="inline-block bg-green-100 text-green-700 text-[10px] sm:text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full border border-green-200 mb-6">
-                            ✅ With Inductly
+                            ✅ With RecruitmentOS
                         </div>
                         <h3 className="text-xl sm:text-2xl font-black text-[#1E293B] mb-6 tracking-tight">Automated. Predictable. Profitable.</h3>
                         <ul className="space-y-4">

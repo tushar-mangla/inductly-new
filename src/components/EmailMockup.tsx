@@ -30,7 +30,7 @@ export default function EmailMockup() {
                         <div className="px-6 sm:px-10 pt-8 pb-2">
                             <div className="flex gap-3 text-sm border-b border-slate-100 pb-3 mb-3">
                                 <span className="text-slate-400 font-bold w-14 shrink-0">FROM</span>
-                                <span className="text-[#1E293B] font-semibold">Sarah @ Inductly Agency &lt;sarah@agencyname.com&gt;</span>
+                                <span className="text-[#1E293B] font-semibold">Sarah @ RecruitmentOS Agency &lt;sarah@agencyname.com&gt;</span>
                             </div>
                             <div className="flex gap-3 text-sm border-b border-slate-100 pb-3 mb-3">
                                 <span className="text-slate-400 font-bold w-14 shrink-0">TO</span>
@@ -58,7 +58,7 @@ export default function EmailMockup() {
                             {/* Tag */}
                             <div className="pt-2">
                                 <span className="inline-flex items-center gap-2 bg-[#DCFCE7] border border-[#86EFAC] text-[#166534] text-xs font-black px-4 py-2 rounded-full uppercase tracking-wider">
-                                    <span>✓</span> AI-generated from candidate match · sent automatically by Inductly
+                                    <span>✓</span> AI-generated from candidate match · sent automatically by RecruitmentOS
                                 </span>
                             </div>
                         </div>

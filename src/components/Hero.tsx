@@ -85,14 +85,14 @@ export default function Hero() {
                                 <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
                                 <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
                                 <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
-                                <span className="ml-3 text-xs text-[#94A3B8] font-bold">inductly.ai — Live Campaign</span>
+                                <span className="ml-3 text-xs text-[#94A3B8] font-bold">recruitmentos.com — Live Campaign</span>
                             </div>
 
                             {/* Image Mockup */}
                             <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
                                 <Image
                                     src="/campaign.png"
-                                    alt="Inductly AI Lead Engine Dashboard"
+                                    alt="RecruitmentOS Lead Engine Dashboard"
                                     fill
                                     className="object-cover"
                                     priority

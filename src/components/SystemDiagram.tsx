@@ -12,7 +12,7 @@ const steps = [
     {
         icon: '🤖',
         label: 'AI Engine',
-        title: 'Inductly Runs 24/7',
+        title: 'RecruitmentOS Runs 24/7',
         desc: 'Scrapes 500+ jobs/day, matches your candidates, and writes hyper-personalized emails.',
         color: 'bg-[#1E293B] border-[#1E293B]',
         textColor: 'text-white',
@@ -75,7 +75,7 @@ export default function SystemDiagram() {
                 {/* Result callout */}
                 <div className="mt-10 sm:mt-12 p-6 sm:p-8 bg-[#E0F2FE] rounded-[2rem] border-2 border-[#1E293B] text-center">
                     <p className="text-lg sm:text-2xl font-black text-[#1E293B] mb-2">
-                        Result: Agencies running Inductly see <span className="text-orange-500">5x more placements</span> per recruiter — with zero new headcount.
+                        Result: Agencies running RecruitmentOS see <span className="text-orange-500">5x more placements</span> per recruiter — with zero new headcount.
                     </p>
                     <p className="text-sm text-[#475569] font-medium">
                         Setup in &lt;7 days · Works with your existing ATS · No hiring required
