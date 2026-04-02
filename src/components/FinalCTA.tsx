@@ -2,37 +2,40 @@ import Link from 'next/link';
 
 export default function FinalCTA() {
     return (
-        <section className="py-16 md:py-32 bg-[#E0F2FE] border-y-4 border-[#1E293B] text-center" id="contact">
-            <div className="max-w-[1200px] mx-auto px-5">
-                <div className="inline-block bg-[#1E293B] text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-black text-[10px] sm:text-xs uppercase tracking-widest mb-6 sm:mb-8">
-                    🚀 Ready to Scale?
+        <section className="py-20 md:py-28 bg-[#FAFAFA] border-t border-[#e5e5e5]" id="contact">
+            <div className="max-w-[680px] mx-auto px-6 text-center">
+                <div className="inline-flex items-center gap-2 bg-[#e8f5ef] rounded-full px-3.5 py-1 text-[11px] font-semibold text-[#1a6b4a] uppercase tracking-wider mb-6">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1a6b4a]" />
+                    Ready to scale?
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-[64px] font-black mb-6 sm:mb-8 tracking-tighter text-[#1E293B] leading-[1.1]">
-                    We find. We match. We outreach.<br className="hidden md:inline" />
-                    <span className="text-orange-500"> You just close the deal.</span>
-                </h2>
-                <p className="text-base sm:text-lg md:text-xl mb-3 text-[#475569] max-w-[640px] mx-auto leading-relaxed font-medium">
-                    Setup in under 7 days. No extra hires. First warm reply this week.
+
+                <h2 className="text-[#0A0A0A] mb-4">Stop sourcing manually.<br />Start closing more deals.</h2>
+                <p className="text-sm text-[#6b7280] mb-8 max-w-[400px] mx-auto leading-relaxed">
+                    Join 10+ agencies already using RecruitmentOS to automate their pipeline and grow revenue — without hiring more people.
                 </p>
-                <p className="text-sm sm:text-base text-[#94A3B8] font-medium mb-10 sm:mb-12">
-                    Starting at $0.50 per lead · Proven 6%+ reply rates · Cancel anytime
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
                     <Link
                         href="https://cal.com/tusharm/30min?user=tusharm"
                         target="_blank"
-                        className="bg-orange-500 text-white px-8 py-4 md:px-12 md:py-6 rounded-[1.5rem] sm:rounded-[2rem] font-black transition-all hover:translate-y-[-4px] btn-shadow text-lg sm:text-xl inline-flex items-center gap-3 justify-center"
+                        className="inline-flex items-center bg-[#0A0A0A] text-white px-7 py-3.5 rounded-lg font-medium hover:bg-[#1a1a1a] transition-colors text-base"
                     >
-                        See Live Demo →
+                        Book a Demo
+                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
                     </Link>
                     <Link
-                        href="https://cal.com/tusharm/30min?user=tusharm"
-                        target="_blank"
-                        className="bg-white text-[#1E293B] px-8 py-4 md:px-12 md:py-6 rounded-[1.5rem] sm:rounded-[2rem] font-black transition-all hover:translate-y-[-4px] border-2 border-[#1E293B] text-lg sm:text-xl inline-flex items-center gap-3 justify-center"
+                        href="mailto:tushar.mangla1120@gmail.com"
+                        className="inline-flex items-center text-sm text-[#6b7280] hover:text-[#0A0A0A] transition-colors px-4 py-3.5 font-medium"
                     >
-                        ▶ Watch System Breakdown
+                        Or email us directly
                     </Link>
                 </div>
+
+                <p className="text-xs text-[#9ca3af]">
+                    Setup in &lt;7 days &middot; No long-term contract &middot; First warm reply within a week
+                </p>
             </div>
         </section>
     );

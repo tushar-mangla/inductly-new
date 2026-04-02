@@ -1,72 +1,74 @@
 export default function CaseStudy() {
     return (
-        <section className="py-16 md:py-32 bg-gradient-to-br from-[#1E293B] to-[#0F172A]" id="case-study">
-            <div className="max-w-[1200px] mx-auto px-5">
-                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border-4 border-[#1E293B] btn-shadow p-6 md:p-12 lg:p-16">
-                    {/* Badge */}
-                    <div className="inline-block bg-[#FDE047] text-[#1E293B] px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-black text-[10px] sm:text-xs uppercase tracking-widest mb-6 sm:mb-8 border-2 border-[#1E293B]">
-                        ⭐ CLIENT SUCCESS STORY
-                    </div>
+        <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="case-study">
+            <div className="max-w-[1100px] mx-auto px-6">
+                <div className="mb-12 md:mb-16">
+                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Case Study</p>
+                    <h2 className="text-[#0A0A0A] max-w-[500px]">From struggling pipeline to predictable revenue.</h2>
+                </div>
 
-                    {/* Main Stat */}
-                    <div className="mb-8">
-                        <div className="text-5xl sm:text-6xl md:text-[96px] font-black text-[#1E293B] mb-2 leading-none tracking-tighter">
-                            +30%
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
+                    {/* Left — Results */}
+                    <div>
+                        <div className="mb-8">
+                            <div className="text-6xl md:text-7xl font-bold text-[#0A0A0A] tracking-tight leading-none">+30%</div>
+                            <div className="text-xl text-[#0A0A0A] font-medium mt-2">Revenue Growth</div>
+                            <div className="text-sm text-[#9ca3af]">In just 60 days</div>
                         </div>
-                        <div className="text-xl sm:text-2xl md:text-[40px] font-black text-[#1E293B] mb-2 sm:mb-3 leading-tight">
-                            Revenue Growth
-                        </div>
-                        <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#475569]">
-                            In Just 60 Days
-                        </div>
-                    </div>
 
-                    {/* Divider */}
-                    <div className="h-1.5 w-16 sm:w-24 bg-[#1E293B] mb-8"></div>
-
-                    {/* Story */}
-                    <h3 className="text-xl sm:text-2xl md:text-[40px] font-black text-[#1E293B] mb-4 sm:mb-6 leading-tight">
-                        From Struggling Pipeline to Consistent Deals
-                    </h3>
-                    <p className="text-lg sm:text-xl text-[#475569] mb-8 sm:mb-10 max-w-[800px] font-bold leading-relaxed">
-                        One recruiting agency automated their entire lead generation pipeline with RecruitmentOS
-                        and scaled from inconsistent deals to predictable growth in just 2 months.
-                    </p>
-
-                    {/* Results Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-                        <div className="bg-[#E0F2FE] p-5 sm:p-6 rounded-2xl border-2 border-[#1E293B]">
-                            <div className="text-3xl sm:text-[40px] mb-2">✓</div>
-                            <div className="text-base sm:text-lg font-black text-[#1E293B] leading-tight">
-                                100% Automated Lead Generation
-                            </div>
-                        </div>
-                        <div className="bg-[#E0F2FE] p-5 sm:p-6 rounded-2xl border-2 border-[#1E293B]">
-                            <div className="text-3xl sm:text-[40px] mb-2">✓</div>
-                            <div className="text-base sm:text-lg font-black text-[#1E293B] leading-tight">
-                                Predictable Pipeline For First Time
-                            </div>
-                        </div>
-                        <div className="bg-[#FDE047] p-5 sm:p-6 rounded-2xl border-2 border-[#1E293B]">
-                            <div className="text-3xl sm:text-[40px] mb-2">💰</div>
-                            <div className="text-base sm:text-lg font-black text-[#1E293B] leading-tight">
-                                30% Revenue Increase in 60 Days
-                            </div>
+                        <div className="space-y-0">
+                            {[
+                                { label: 'Lead Generation', result: '100% automated' },
+                                { label: 'Pipeline Predictability', result: 'First time achieved' },
+                                { label: 'Recruiter Time Saved', result: '4+ hrs/day per person' },
+                                { label: 'Reply Rate', result: '6.3% (from <1%)' },
+                            ].map((item) => (
+                                <div key={item.label} className="flex items-center justify-between py-4 border-b border-[#f0f0f0] last:border-0">
+                                    <span className="text-sm text-[#6b7280]">{item.label}</span>
+                                    <span className="text-sm font-semibold text-[#0A0A0A]">{item.result}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Quote */}
-                    <div className="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t-2 border-[#1E293B]/10">
-                        <div className="text-lg sm:text-2xl md:text-3xl font-black text-[#1E293B] italic leading-relaxed mb-6">
-                            "We stopped cold calling. RecruitmentOS now sends matched candidate pitches to hiring managers on autopilot. We went from inconsistent deals to a predictable pipeline — revenue is up 30% in just 60 days."
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-black text-xl">
+                    {/* Right — Testimonial */}
+                    <div className="bg-[#FAFAFA] border border-[#e5e5e5] rounded-xl p-8 md:p-10">
+                        <svg className="w-8 h-8 text-[#e5e5e5] mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+
+                        <blockquote className="text-xl md:text-2xl text-[#0A0A0A] leading-relaxed mb-8 font-light tracking-tight">
+                            We stopped cold calling. RecruitmentOS now sends matched candidate pitches to hiring managers on autopilot. We went from inconsistent deals to a predictable pipeline — revenue is up 30% in just 60 days.
+                        </blockquote>
+
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="w-10 h-10 bg-[#0A0A0A] rounded-full flex items-center justify-center text-white text-sm font-semibold">
                                 M
                             </div>
                             <div>
-                                <div className="font-bold text-[#1E293B] text-lg">Marcus</div>
-                                <div className="text-[#475569] text-sm">Tech Recruiting, Berlin — RecruitmentOS Client</div>
+                                <div className="text-sm font-semibold text-[#0A0A0A]">Marcus</div>
+                                <div className="text-xs text-[#9ca3af]">Tech Recruiting Agency, Berlin</div>
+                            </div>
+                        </div>
+
+                        <div className="border-t border-[#e5e5e5] pt-6">
+                            <p className="text-[11px] text-[#9ca3af] mb-5 uppercase tracking-widest font-medium">Timeline</p>
+                            <div className="space-y-0">
+                                {[
+                                    { day: 'Day 0', event: 'Manual sourcing eating 4+ hours/day' },
+                                    { day: 'Day 1–7', event: 'RecruitmentOS deployed and configured' },
+                                    { day: 'Week 1', event: 'First warm replies received' },
+                                    { day: 'Day 30', event: 'Predictable pipeline established' },
+                                    { day: 'Day 60', event: '+30% revenue growth achieved' },
+                                ].map((step, i) => (
+                                    <div key={i} className="flex items-start gap-4 py-2.5">
+                                        <span className="text-[11px] font-mono text-[#9ca3af] w-16 shrink-0 pt-0.5">{step.day}</span>
+                                        <div className="flex items-start gap-2.5">
+                                            <div className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 ${i === 4 ? 'bg-[#1a6b4a]' : 'bg-[#d4d4d4]'}`} />
+                                            <span className={`text-sm ${i === 4 ? 'text-[#1a6b4a] font-medium' : 'text-[#6b7280]'}`}>{step.event}</span>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

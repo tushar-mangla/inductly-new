@@ -1,56 +1,116 @@
+import Link from 'next/link';
+
 const features = [
     {
-        icon: '🎯',
-        title: 'Quality-First Lead Generation',
-        description: 'Not just any leads. Every lead is verified, enriched, and consistently achieves our 6%+ reply rate standard.',
+        tag: 'Lead Generation',
+        tagColor: 'bg-[#e8f5ef] text-[#1a6b4a]',
+        title: 'Find every hiring manager in your niche — automatically',
+        description: 'RecruitmentOS scrapes LinkedIn, Indeed, Stepstone and 50+ job boards to surface active job postings in your target market. You get the hiring manager\'s name, email, title, and company intel — delivered daily.',
+        metrics: [
+            { value: '1M+', label: 'Jobs scraped monthly' },
+            { value: '50+', label: 'Job boards monitored' },
+        ],
     },
     {
-        icon: '⚡',
-        title: 'Massive Scale Capacity',
-        description: 'Need more volume? We can scrape up to 1 million jobs per month and deliver 100,000+ qualified leads monthly.',
-        stat: '1M+ jobs/month',
+        tag: 'Candidate Matching',
+        tagColor: 'bg-[#eeebfb] text-[#3d2e7c]',
+        title: 'AI matches your candidates to open roles in seconds',
+        description: 'Upload your candidate database. The AI reads every job description, scores fit against your candidates, and surfaces the top matches — instantly. No more manual CV cross-referencing.',
+        metrics: [
+            { value: '<5s', label: 'Matching speed' },
+            { value: '95%', label: 'Match accuracy' },
+        ],
     },
     {
-        icon: '📊',
-        title: 'Complete Data Package',
-        description: 'Get the full picture: job posting data, company intelligence, and enriched lead profiles all in one platform.',
+        tag: 'Outreach Engine',
+        tagColor: 'bg-[#fcecea] text-[#c0412b]',
+        title: 'Hyper-personalized emails that hiring managers actually reply to',
+        description: 'Each email references a specific candidate who fits their open role. "We already have your Senior Python Engineer." Not a pitch — a solution. That\'s why the reply rate is 6x the industry average.',
+        metrics: [
+            { value: '6.3%', label: 'Avg. reply rate' },
+            { value: '30K+', label: 'Active contacts' },
+        ],
     },
     {
-        icon: '🔄',
-        title: 'Automated Pipeline',
-        description: 'Stop wasting time on manual prospecting. Our AI-powered system finds, qualifies, and enriches leads 24/7.',
-    },
-    {
-        icon: '📈',
-        title: 'Proven Results',
-        description: 'We helped one agency increase revenue by 30% in just 60 days. Real metrics, real growth, real ROI.',
-        stat: '+30% revenue',
-    },
-    {
-        icon: '✅',
-        title: 'Performance Transparency',
-        description: "Every lead batch comes with verified reply rate data. We show you exactly what's working with full campaign analytics and reporting.",
+        tag: 'Resume Screening',
+        tagColor: 'bg-[#fdf6e8] text-[#b8862a]',
+        title: 'Screen thousands of resumes in minutes, not days',
+        description: 'AI-powered screening eliminates manual review for high-volume positions. Candidates are ranked by fit, flagged for interview readiness, and matched to multiple open roles simultaneously.',
+        metrics: [
+            { value: '1,000+', label: 'Resumes per batch' },
+            { value: '80%', label: 'Time saved' },
+        ],
     },
 ];
 
 export default function Features() {
     return (
-        <section className="py-16 md:py-32 bg-[#F8FAFC]" id="features">
-            <div className="max-w-[1200px] mx-auto px-5 text-center">
-                <h2 className="text-3xl sm:text-4xl md:text-[48px] font-black mb-4 sm:mb-6 text-[#1E293B] tracking-tight">Built for Scale, Priced for Growth</h2>
-                <p className="text-lg sm:text-xl text-[#475569] mb-12 sm:mb-[80px] max-w-[800px] mx-auto font-medium">Everything you need to build a predictable recruiting pipeline</p>
+        <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="features">
+            <div className="max-w-[1100px] mx-auto px-6">
+                <div className="mb-12 md:mb-16">
+                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Capabilities</p>
+                    <h2 className="text-[#0A0A0A] max-w-[500px]">Everything your team needs to place more candidates, faster.</h2>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div className="space-y-4">
                     {features.map((feature, index) => (
-                        <div key={index} className="bg-white p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] border-2 border-[#1E293B] text-left btn-shadow hover:bg-[#E0F2FE]/50 transition-colors">
-                            <div className="text-4xl sm:text-5xl mb-6 sm:mb-8">{feature.icon}</div>
-                            <h3 className="text-xl sm:text-2xl font-black mb-3 sm:mb-4 text-[#1E293B] tracking-tight leading-tight">{feature.title}</h3>
-                            <p className="text-[#475569] text-sm sm:text-base leading-relaxed font-medium mb-6 sm:mb-8">{feature.description}</p>
-                            {feature.stat && (
-                                <div className="text-2xl sm:text-3xl font-black text-[#1E293B] tracking-tighter">{feature.stat}</div>
-                            )}
+                        <div
+                            key={feature.title}
+                            className="border border-[#e5e5e5] rounded-xl p-8 md:p-10 hover:border-[#d4d4d4] transition-all hover:shadow-sm bg-white"
+                        >
+                            <div className={`grid grid-cols-1 md:grid-cols-[1fr_240px] gap-8 items-start ${index % 2 !== 0 ? 'md:grid-cols-[240px_1fr]' : ''}`}>
+                                {index % 2 !== 0 && (
+                                    <div className="hidden md:flex flex-col gap-4">
+                                        {feature.metrics.map((metric) => (
+                                            <div key={metric.label} className="bg-[#FAFAFA] border border-[#e5e5e5] rounded-lg p-4">
+                                                <div className="text-2xl font-bold text-[#0A0A0A] tracking-tight">{metric.value}</div>
+                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider mt-0.5">{metric.label}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                                <div>
+                                    <span className={`inline-block text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded w-fit mb-4 ${feature.tagColor}`}>
+                                        {feature.tag}
+                                    </span>
+                                    <h3 className="text-xl font-semibold text-[#0A0A0A] mb-3 max-w-[480px]">{feature.title}</h3>
+                                    <p className="text-sm text-[#6b7280] leading-relaxed max-w-[520px]">{feature.description}</p>
+                                    {/* Mobile metrics */}
+                                    <div className="flex gap-6 mt-6 md:hidden">
+                                        {feature.metrics.map((metric) => (
+                                            <div key={metric.label}>
+                                                <div className="text-xl font-bold text-[#0A0A0A]">{metric.value}</div>
+                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider">{metric.label}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                {index % 2 === 0 && (
+                                    <div className="hidden md:flex flex-col gap-4">
+                                        {feature.metrics.map((metric) => (
+                                            <div key={metric.label} className="bg-[#FAFAFA] border border-[#e5e5e5] rounded-lg p-4">
+                                                <div className="text-2xl font-bold text-[#0A0A0A] tracking-tight">{metric.value}</div>
+                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider mt-0.5">{metric.label}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <Link
+                        href="https://cal.com/tusharm/30min?user=tusharm"
+                        target="_blank"
+                        className="inline-flex items-center text-sm font-medium text-[#0A0A0A] hover:text-[#6b7280] transition-colors"
+                    >
+                        See all capabilities in a live demo
+                        <svg className="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </Link>
                 </div>
             </div>
         </section>
