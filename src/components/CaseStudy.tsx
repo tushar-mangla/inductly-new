@@ -13,7 +13,7 @@ export default function CaseStudy() {
                         <div className="mb-8">
                             <div className="text-6xl md:text-7xl font-bold text-[#0A0A0A] tracking-tight leading-none">+30%</div>
                             <div className="text-xl text-[#0A0A0A] font-medium mt-2">Revenue Growth</div>
-                            <div className="text-sm text-[#9ca3af]">In just 60 days</div>
+                            <div className="text-sm text-[#9ca3af]">In just 90 days</div>
                         </div>
 
                         <div className="space-y-0">
