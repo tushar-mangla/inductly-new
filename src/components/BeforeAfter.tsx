@@ -1,63 +1,63 @@
-const beforeItems = [
-    { icon: '😩', text: 'Manually search job boards every morning to find who\'s hiring' },
-    { icon: '⏱️', text: 'Hours cross-referencing CVs against open roles in your ATS' },
-    { icon: '📧', text: 'Generic cold emails that get ignored — "Hi, we\'re a great agency..."' },
-    { icon: '💸', text: 'Paying for Apollo, Lemlist, and extra sourcing tools separately' },
-    { icon: '📉', text: 'Unpredictable pipeline — feast or famine every month' },
+const oldWay = [
+    { text: 'Growth requires hiring more recruiters', icon: '✕' },
+    { text: 'Relies on job boards and blind outreach', icon: '✕' },
+    { text: 'Hours spent manually screening candidates', icon: '✕' },
+    { text: 'Generic emails lost in hiring manager inboxes', icon: '✕' },
+    { text: 'Always one step behind competitors', icon: '✕' },
+    { text: 'Revenue is unpredictable, pipeline is inconsistent', icon: '✕' },
 ];
 
-const afterItems = [
-    { icon: '🚀', text: 'AI monitors 1M+ jobs and alerts you to new opportunities instantly' },
-    { icon: '⚡', text: 'Candidates matched to open roles in seconds — zero manual work' },
-    { icon: '💌', text: '"We already have your hire" emails — hyper-relevant, 6%+ reply rate' },
-    { icon: '💰', text: 'One platform replaces your entire lead gen and outreach stack' },
-    { icon: '📈', text: 'Predictable pipeline with consistent placements every month' },
+const newWay = [
+    { text: 'Same team = 5x sourcing capacity', icon: '✓' },
+    { text: 'AI detects hiring signals before jobs go public', icon: '✓' },
+    { text: 'Screen thousands of resumes in minutes', icon: '✓' },
+    { text: 'Personalized pitches with candidate match — 6.3% reply rate', icon: '✓' },
+    { text: 'First recruiter to reach decision makers', icon: '✓' },
+    { text: 'Predictable pipeline, compounding revenue growth', icon: '✓' },
 ];
 
 export default function BeforeAfter() {
     return (
-        <section className="py-16 md:py-32 bg-[#F8FAFC] border-t-2 border-[#1E293B]/10" id="transformation">
-            <div className="max-w-[1100px] mx-auto px-5">
-                <div className="text-center mb-12 sm:mb-20">
-                    <div className="inline-block bg-[#1E293B] text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-black text-[10px] sm:text-xs uppercase tracking-widest mb-6 sm:mb-8">
-                        ⚡ The Transformation
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl md:text-[48px] font-black mb-4 sm:mb-6 text-[#1E293B] tracking-tight leading-tight">
-                        What Changes When You Use RecruitmentOS
-                    </h2>
+        <section className="py-20 md:py-28 bg-[#FAFAFA] border-t border-[#e5e5e5]">
+            <div className="max-w-[1100px] mx-auto px-6">
+                <div className="mb-12 md:mb-16 max-w-[520px]">
+                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">The Shift</p>
+                    <h2 className="text-[#0A0A0A]">Recruiting has changed. Your systems should too.</h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                    {/* BEFORE */}
-                    <div className="bg-red-50 border-2 border-red-200 rounded-[2rem] p-8 sm:p-10">
-                        <div className="inline-block bg-red-100 text-red-600 text-[10px] sm:text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full border border-red-200 mb-6">
-                            ❌ Without RecruitmentOS
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Old Way */}
+                    <div className="bg-white border border-[#e5e5e5] rounded-xl p-8 md:p-10">
+                        <div className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-[#9ca3af] bg-[#f5f5f5] px-3 py-1 rounded mb-6">
+                            The old way
                         </div>
-                        <h3 className="text-xl sm:text-2xl font-black text-[#1E293B] mb-6 tracking-tight">Manual. Inconsistent. Expensive.</h3>
-                        <ul className="space-y-4">
-                            {beforeItems.map((item, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
-                                    <span className="text-[#475569] text-sm sm:text-base font-medium leading-snug">{item.text}</span>
-                                </li>
+                        <div className="space-y-4">
+                            {oldWay.map((item) => (
+                                <div key={item.text} className="flex items-start gap-3">
+                                    <div className="w-5 h-5 rounded-full bg-[#fef2f2] flex items-center justify-center shrink-0 mt-0.5">
+                                        <span className="text-[#ef4444] text-[10px] font-bold">{item.icon}</span>
+                                    </div>
+                                    <span className="text-sm text-[#9ca3af]">{item.text}</span>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
 
-                    {/* AFTER */}
-                    <div className="bg-green-50 border-2 border-green-300 rounded-[2rem] p-8 sm:p-10">
-                        <div className="inline-block bg-green-100 text-green-700 text-[10px] sm:text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full border border-green-200 mb-6">
-                            ✅ With RecruitmentOS
+                    {/* New Way */}
+                    <div className="bg-[#0A0A0A] border border-white/[0.06] rounded-xl p-8 md:p-10">
+                        <div className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-[#1a6b4a] bg-[#e8f5ef] px-3 py-1 rounded mb-6">
+                            With RecruitmentOS
                         </div>
-                        <h3 className="text-xl sm:text-2xl font-black text-[#1E293B] mb-6 tracking-tight">Automated. Predictable. Profitable.</h3>
-                        <ul className="space-y-4">
-                            {afterItems.map((item, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
-                                    <span className="text-[#1E293B] text-sm sm:text-base font-semibold leading-snug">{item.text}</span>
-                                </li>
+                        <div className="space-y-4">
+                            {newWay.map((item) => (
+                                <div key={item.text} className="flex items-start gap-3">
+                                    <div className="w-5 h-5 rounded-full bg-[#e8f5ef] flex items-center justify-center shrink-0 mt-0.5">
+                                        <span className="text-[#1a6b4a] text-[10px] font-bold">{item.icon}</span>
+                                    </div>
+                                    <span className="text-sm text-white/90">{item.text}</span>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>

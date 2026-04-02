@@ -1,98 +1,38 @@
-"use client";
-
-import Image from 'next/image';
+const platforms = [
+    'LinkedIn',
+    'Indeed',
+    'Stepstone',
+    'Glassdoor',
+    'Monster',
+    'ZipRecruiter',
+    'CareerBuilder',
+    'Google Jobs',
+];
 
 export default function Integrations() {
-    const integrations = [
-        { name: 'Hunter', logo: '/logos/hunter.png' },
-        { name: 'Lusha', logo: '/logos/lusha.png' },
-        { name: 'Recruitee', logo: '/logos/recruitee.png' },
-        { name: 'LinkedIn', logo: '/logos/linkedin.png' },
-        { name: 'Indeed', logo: '/logos/indeed.png' },
-        { name: 'Stepstone', logo: '/logos/stepstone.png' },
-        { name: 'Instantly', logo: '/logos/instantly.png' },
-        { name: 'Apollo', logo: '/logos/apollo.png' },
-    ];
-
     return (
-        <section className="py-16 sm:py-24 bg-[#F7FAFC] overflow-hidden">
-            <div className="max-w-[1200px] mx-auto px-5">
-                <div className="text-center mb-12 sm:mb-16">
-                    <h2 className="text-4xl sm:text-5xl font-black text-[#1E293B] mb-4">
-                        Seamless Integrations
-                    </h2>
-                    <p className="text-lg sm:text-xl text-[#475569] font-bold">
-                        Works with the tools you already use
-                    </p>
-                </div>
-
-                {/* Marquee Container */}
-                <div className="relative mb-8 overflow-hidden">
-                    <div className="flex gap-6 animate-marquee">
-                        {/* First set of logos */}
-                        {integrations.map((integration, index) => (
+        <section className="py-16 md:py-20 bg-[#FAFAFA] border-t border-[#e5e5e5]">
+            <div className="max-w-[1100px] mx-auto px-6">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div className="md:w-[240px] shrink-0">
+                        <p className="text-xs font-medium text-[#9ca3af] uppercase tracking-widest mb-1">Integrations</p>
+                        <p className="text-sm text-[#6b7280]">We scrape from <span className="font-semibold text-[#0A0A0A]">50+</span> job boards including</p>
+                    </div>
+                    <div className="flex flex-wrap justify-center md:justify-start gap-3">
+                        {platforms.map((name) => (
                             <div
-                                key={`first-${index}`}
-                                className="flex-shrink-0 w-[140px] h-[140px] bg-white border border-[#262626] rounded-2xl flex flex-col items-center justify-center gap-3 p-4"
+                                key={name}
+                                className="bg-white border border-[#e5e5e5] rounded-lg px-4 py-2 text-sm text-[#6b7280] font-medium hover:border-[#d4d4d4] hover:text-[#0A0A0A] transition-all cursor-default"
                             >
-                                <div className="relative w-16 h-16">
-                                    <Image
-                                        src={integration.logo}
-                                        alt={integration.name}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <span className="text-sm font-bold text-[#1E293B]">
-                                    {integration.name}
-                                </span>
+                                {name}
                             </div>
                         ))}
-                        {/* Duplicate set for seamless loop */}
-                        {integrations.map((integration, index) => (
-                            <div
-                                key={`second-${index}`}
-                                className="flex-shrink-0 w-[140px] h-[140px] bg-white border border-[#262626] rounded-2xl flex flex-col items-center justify-center gap-3 p-4"
-                            >
-                                <div className="relative w-16 h-16">
-                                    <Image
-                                        src={integration.logo}
-                                        alt={integration.name}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <span className="text-sm font-bold text-[#1E293B]">
-                                    {integration.name}
-                                </span>
-                            </div>
-                        ))}
+                        <div className="bg-[#FAFAFA] border border-dashed border-[#d4d4d4] rounded-lg px-4 py-2 text-sm text-[#9ca3af] font-medium">
+                            +42 more
+                        </div>
                     </div>
                 </div>
-
-                <p className="text-center text-sm sm:text-base text-[#475569] font-bold">
-                    + Many more integrations available via API
-                </p>
             </div>
-
-            <style jsx>{`
-                @keyframes marquee {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-
-                .animate-marquee {
-                    animation: marquee 30s linear infinite;
-                }
-
-                .animate-marquee:hover {
-                    animation-play-state: paused;
-                }
-            `}</style>
         </section>
     );
 }
