@@ -7,11 +7,11 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: 'How It Works', href: '#how-it-works' },
-        { name: 'Features', href: '#features' },
-        { name: 'Results', href: '#results' },
+        { name: 'How It Works', href: '/#how-it-works' },
+        { name: 'Features', href: '/#features' },
+        { name: 'Results', href: '/#results' },
         { name: 'Pricing', href: '/pricing' },
-        { name: 'FAQ', href: '#faq' },
+        { name: 'FAQ', href: '/#faq' },
     ];
 
     return (
