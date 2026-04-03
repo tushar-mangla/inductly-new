@@ -9,7 +9,7 @@ const faqs = [
     },
     {
         question: 'How long does setup take?',
-        answer: 'Under 7 days. We do a single onboarding call to understand your niche, configure the engine, connect your candidate data, and launch. Most agencies see their first warm reply within the first week.',
+        answer: 'Under 7 days. We do a single onboarding call to understand your niche, configure the engine, connect your candidate data, and launch. Most agencies see their first warm reply within 2–3 weeks.',
     },
     {
         question: 'What if I only need one module — not the full suite?',
@@ -21,7 +21,7 @@ const faqs = [
     },
     {
         question: 'Why is there a 3-month minimum?',
-        answer: 'Building a high-performing outreach pipeline takes time — warming up sending infrastructure, optimizing targeting, and iterating on messaging. In our experience, agencies start seeing consistent, compounding results around the 60–90 day mark. The 3-month minimum ensures you give the system enough runway to deliver real ROI, not just early signals. After that, cancel anytime.',
+        answer: 'Building a high-performing outreach pipeline takes time — warming up sending infrastructure, optimizing targeting, and iterating on messaging. In our experience, agencies start seeing consistent, compounding results around the 60–90 day mark. The 3-month minimum ensures you give the system enough runway to deliver real ROI, not just early signals. ',
     },
     {
         question: 'What data do I get with each lead?',

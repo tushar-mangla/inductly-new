@@ -10,7 +10,7 @@ export default function Navbar() {
         { name: 'How It Works', href: '#how-it-works' },
         { name: 'Features', href: '#features' },
         { name: 'Results', href: '#results' },
-        { name: 'Pricing', href: 'https://recruitmentos-pricing.netlify.app/', external: true },
+        { name: 'Pricing', href: '/pricing' },
         { name: 'FAQ', href: '#faq' },
     ];
 

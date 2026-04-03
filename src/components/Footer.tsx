@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className="flex items-center gap-6 text-[0.8rem] text-[var(--muted)] font-sans">
                         <Link href="#features" className="hover:text-[var(--ink)] transition-colors">Features</Link>
                         <Link href="#results" className="hover:text-[var(--ink)] transition-colors">Results</Link>
-                        <Link href="https://recruitmentos-pricing.netlify.app/" target="_blank" className="hover:text-[var(--ink)] transition-colors">Pricing</Link>
+                        <Link href="/pricing" className="hover:text-[var(--ink)] transition-colors">Pricing</Link>
                         <Link href="#faq" className="hover:text-[var(--ink)] transition-colors">FAQ</Link>
                         <Link href="https://smallgrp.com" target="_blank" className="hover:text-[var(--ink)] transition-colors">About</Link>
                     </div>

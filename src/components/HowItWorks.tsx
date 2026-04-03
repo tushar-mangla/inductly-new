@@ -17,7 +17,7 @@ const steps = [
         number: '03',
         title: 'You Get Warm Replies',
         description: 'Hiring managers receive emails that reference a qualified candidate for their open role. Not a pitch — a solution. Replies land in your inbox, ready to close.',
-        outcome: 'First warm reply within 7 days',
+        outcome: 'First warm reply within 2–3 weeks',
     },
 ];
 

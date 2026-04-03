@@ -70,7 +70,7 @@ export default function Hero() {
                         </div>
 
                         <p className="label-mono text-[var(--muted)]">
-                            Setup in &lt;7 days &middot; No contract &middot; Cancel anytime
+                            Setup in &lt;7 days &middot; No long-term contract
                         </p>
                     </div>
 

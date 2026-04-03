@@ -7,7 +7,7 @@ export default function SocialProof() {
                         <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Results</p>
                         <div className="text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight">+30%</div>
                         <div className="text-xl text-white/90 font-medium mb-2">Revenue Growth</div>
-                        <div className="text-sm text-[#6b7280] mb-8">In just 60 days</div>
+                        <div className="text-sm text-[#6b7280] mb-8">In just 90 days</div>
 
                         <div className="grid grid-cols-3 gap-4">
                             <div className="border border-white/10 rounded-lg p-4">
@@ -27,7 +27,7 @@ export default function SocialProof() {
 
                     <div className="border border-white/10 rounded-xl p-8 md:p-10">
                         <blockquote className="text-lg text-white/90 leading-relaxed mb-8 font-light italic">
-                            &ldquo;We stopped cold calling. RecruitmentOS now sends matched candidate pitches to hiring managers on autopilot. Revenue is up 30% in just 60 days.&rdquo;
+                            &ldquo;We stopped cold calling. RecruitmentOS now sends matched candidate pitches to hiring managers on autopilot. Revenue is up 30% in just 90 days.&rdquo;
                         </blockquote>
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 bg-[#1a6b4a] rounded-full flex items-center justify-center text-white text-sm font-semibold">

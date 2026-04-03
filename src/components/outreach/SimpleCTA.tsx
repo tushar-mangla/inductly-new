@@ -56,7 +56,7 @@ export default function SimpleCTA() {
 
                 {/* Trust Line */}
                 <p className="text-xs sm:text-sm text-slate-400 font-bold">
-                    No credit card required • Cancel anytime • 100% transparent pricing
+                    No credit card required • 3-month minimum • 100% transparent pricing
                 </p>
             </div>
         </section>

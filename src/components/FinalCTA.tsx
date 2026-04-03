@@ -38,7 +38,7 @@ export default function FinalCTA() {
                 </div>
 
                 <p className="label-mono text-[var(--paper)]/40">
-                    Setup in &lt;7 days &middot; No long-term contract &middot; First warm reply within a week
+                    Setup in &lt;7 days &middot; No long-term contract &middot; First warm reply within 2–3 weeks
                 </p>
             </div>
         </section>

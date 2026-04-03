@@ -16,8 +16,8 @@ const faqs = [
         answer: 'We can scale to 100,000+ leads per month. Our system scrapes 1M+ jobs monthly, so volume is never an issue. Just let us know your target, and we\'ll deliver.'
     },
     {
-        question: 'Can I cancel anytime?',
-        answer: 'Yes. No long-term contracts. Cancel anytime with 30 days notice. We earn your business every month by delivering quality leads that actually convert.'
+        question: 'What is the minimum commitment?',
+        answer: '3-month minimum. We earn your business every month by delivering quality leads that actually convert.'
     }
 ];
 
