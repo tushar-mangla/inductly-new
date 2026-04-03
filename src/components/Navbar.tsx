@@ -17,11 +17,12 @@ export default function Navbar() {
         <header className="sticky top-0 z-[100] bg-white/90 backdrop-blur-md border-b border-[#e5e5e5]">
             <div className="max-w-[1100px] mx-auto px-6 py-4">
                 <nav className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 bg-[#0A0A0A] rounded-lg flex items-center justify-center text-white text-sm font-bold">
-                            R
-                        </div>
-                        <span className="text-lg font-bold text-[#0A0A0A] tracking-tight">RecruitmentOS</span>
+                    <Link href="/" className="flex items-center font-black text-3xl tracking-tight">
+                        <span className="text-[#0A0A0A]">Recruitment</span>
+                        <span className="flex items-center text-orange-500 ml-2">
+                            <span className="animate-[spin_4s_linear_infinite] inline-block leading-none">O</span>
+                            <span>S</span>
+                        </span>
                     </Link>
 
                     <div className="hidden md:flex items-center gap-8">

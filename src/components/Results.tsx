@@ -18,39 +18,39 @@ const metrics = [
 
 export default function Results() {
     return (
-        <section className="py-20 md:py-28 bg-[#0A0A0A]" id="results">
+        <section className="py-20 md:py-28 bg-[#FAFAFA]" id="results">
             <div className="max-w-[1100px] mx-auto px-6">
                 <div className="mb-12 md:mb-16">
                     <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Results</p>
-                    <h2 className="text-white max-w-[500px]">The numbers your recruiters can&apos;t match manually.</h2>
+                    <h2 className="text-[#0A0A0A] max-w-[500px]">The numbers your recruiters can&apos;t match manually.</h2>
                 </div>
 
                 {/* Key outcome metrics */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
                     {metrics.map((metric) => (
-                        <div key={metric.label} className={`bg-[#141414] border border-white/[0.06] border-t-2 ${metric.accent} rounded-xl p-6 text-center`}>
-                            <div className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-1">{metric.value}</div>
+                        <div key={metric.label} className={`bg-white border border-[#e5e5e5] shadow-sm border-t-2 ${metric.accent} rounded-xl p-6 text-center`}>
+                            <div className="text-3xl md:text-4xl font-bold text-[#0A0A0A] tracking-tight mb-1">{metric.value}</div>
                             <div className="text-[11px] text-[#6b7280] uppercase tracking-wider leading-tight">{metric.label}</div>
                         </div>
                     ))}
                 </div>
 
                 {/* Comparison table */}
-                <div className="overflow-x-auto border border-white/[0.06] rounded-xl bg-[#141414]">
+                <div className="overflow-x-auto border border-[#e5e5e5] rounded-xl bg-white shadow-sm">
                     <table className="w-full text-sm">
                         <thead>
-                            <tr className="border-b border-white/[0.06]">
+                            <tr className="border-b border-[#e5e5e5]">
                                 <th className="text-left p-5 text-[10px] font-medium text-[#6b7280] uppercase tracking-wider w-[22%]">Aspect</th>
-                                <th className="text-left p-5 text-[10px] font-medium text-white/30 uppercase tracking-wider">Manual Recruiting</th>
+                                <th className="text-left p-5 text-[10px] font-medium text-[#9ca3af] uppercase tracking-wider">Manual Recruiting</th>
                                 <th className="text-left p-5 text-[10px] font-medium text-[#1a6b4a] uppercase tracking-wider">With RecruitmentOS</th>
                             </tr>
                         </thead>
                         <tbody>
                             {comparisons.map((row) => (
-                                <tr key={row.aspect} className="border-b border-white/[0.04] last:border-0 hover:bg-white/[0.02] transition-colors">
-                                    <td className="p-5 text-xs font-medium text-white/60">{row.aspect}</td>
-                                    <td className="p-5 text-xs text-white/25">{row.manual}</td>
-                                    <td className="p-5 text-xs text-white font-medium">{row.ros}</td>
+                                <tr key={row.aspect} className="border-b border-[#e5e5e5] last:border-0 hover:bg-[#f9fafb] transition-colors">
+                                    <td className="p-5 text-xs font-medium text-[#6b7280]">{row.aspect}</td>
+                                    <td className="p-5 text-xs text-[#9ca3af]">{row.manual}</td>
+                                    <td className="p-5 text-xs text-[#0A0A0A] font-medium">{row.ros}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -61,7 +61,7 @@ export default function Results() {
                     <Link
                         href="https://cal.com/tusharm/30min?user=tusharm"
                         target="_blank"
-                        className="inline-flex items-center bg-white text-[#0A0A0A] px-7 py-3.5 rounded-lg font-medium hover:bg-[#f5f5f5] transition-colors text-sm"
+                        className="inline-flex items-center bg-[#0A0A0A] text-white px-7 py-3.5 rounded-lg font-medium hover:bg-[#222222] transition-colors text-sm shadow-md"
                     >
                         See It In Action
                         <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

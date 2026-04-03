@@ -67,3 +67,13 @@ a {
 .section-border {
     border-bottom: 1px solid var(--border);
 }
+
+@keyframes grid-move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40px); }
+}
+
+.animate-grid-move {
+    animation: grid-move 3s linear infinite;
+    will-change: transform;
+}

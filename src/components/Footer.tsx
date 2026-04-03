@@ -5,9 +5,12 @@ export default function Footer() {
         <footer className="py-8 bg-white border-t border-[#e5e5e5]">
             <div className="max-w-[1100px] mx-auto px-6">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 bg-[#0A0A0A] rounded flex items-center justify-center text-white text-[10px] font-bold">R</div>
-                        <span className="text-sm font-semibold text-[#0A0A0A] tracking-tight">RecruitmentOS</span>
+                    <div className="flex items-center font-black text-xl tracking-tight">
+                        <span className="text-[#0A0A0A]">Recruitment</span>
+                        <span className="flex items-center text-orange-500 ml-1.5">
+                            <span className="animate-[spin_4s_linear_infinite] inline-block leading-none">O</span>
+                            <span>S</span>
+                        </span>
                     </div>
 
                     <div className="flex items-center gap-6 text-xs text-[#9ca3af]">
