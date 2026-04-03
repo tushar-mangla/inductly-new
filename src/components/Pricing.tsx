@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { trackCTAClick } from '@/lib/analytics';
 
 const customModules = [
     {
@@ -279,6 +282,7 @@ export default function Pricing() {
                     <Link
                         href="https://cal.com/tusharm/30min?user=tusharm"
                         target="_blank"
+                        onClick={() => trackCTAClick('Get a Custom Quote', 'Pricing')}
                         className="inline-flex items-center bg-[var(--accent)] text-white px-6 py-3 rounded-[4px] font-medium hover:bg-[#0f6e56] transition-colors text-sm tracking-wide"
                     >
                         Get a Custom Quote

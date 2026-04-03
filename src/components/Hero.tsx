@@ -17,7 +17,7 @@ export default function Hero() {
             if (i > fullText.length) {
                 clearInterval(interval);
             }
-        }, 80);
+        }, 55);
 
         return () => clearInterval(interval);
     }, []);

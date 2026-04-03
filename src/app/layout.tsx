@@ -38,6 +38,23 @@ export const metadata: Metadata = {
     },
 };
 
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'RecruitmentOS',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    description:
+        'The only recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.',
+    offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'USD',
+        lowPrice: '300',
+        highPrice: '10000',
+        offerCount: '4',
+    },
+};
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -45,6 +62,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+            </head>
             <body className={`${dmSerif.variable} ${outfit.variable} ${dmMono.variable} font-sans antialiased`}>
                 <Analytics />
                 <UTMTracker />

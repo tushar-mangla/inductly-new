@@ -19,7 +19,6 @@ export default function SystemDiagramGif() {
                         width={1456}
                         height={816}
                         className="w-full h-auto rounded-[10px]"
-                        unoptimized
                     />
                 </div>
             </div>

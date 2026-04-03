@@ -8,6 +8,12 @@ export const metadata: Metadata = {
     title: 'Pricing — RecruitmentOS',
     description:
         'Four specialized modules built for recruitment agencies — available as a custom build or as a scalable SaaS subscription.',
+    openGraph: {
+        title: 'Pricing — RecruitmentOS',
+        description:
+            'Four specialized modules built for recruitment agencies — available as a custom build or as a scalable SaaS subscription.',
+        images: ['/logos/recruitmentos_logo.png'],
+    },
 };
 
 export default function PricingPage() {
