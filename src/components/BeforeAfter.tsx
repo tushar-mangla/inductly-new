@@ -1,3 +1,5 @@
+'use client';
+
 const oldWay = [
     { text: 'Growth requires hiring more recruiters', icon: '✕' },
     { text: 'Relies on job boards and blind outreach', icon: '✕' },
@@ -18,43 +20,43 @@ const newWay = [
 
 export default function BeforeAfter() {
     return (
-        <section className="py-20 md:py-28 bg-[#FAFAFA] border-t border-[#e5e5e5]">
-            <div className="max-w-[1100px] mx-auto px-6">
-                <div className="mb-12 md:mb-16 max-w-[520px]">
-                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">The Shift</p>
-                    <h2 className="text-[#0A0A0A]">Recruiting has changed. Your systems should too.</h2>
+        <section className="py-16 md:py-20 bg-[var(--paper)]">
+            <div className="max-w-[1100px] mx-auto px-8">
+                <div className="mb-10 md:mb-14 max-w-[520px]">
+                    <p className="label-mono text-[var(--muted)] mb-3">The Shift</p>
+                    <h2 className="text-[var(--ink)]">Recruiting has changed. Your systems should too.</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Old Way */}
-                    <div className="bg-white border border-[#e5e5e5] rounded-xl p-8 md:p-10">
-                        <div className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-[#9ca3af] bg-[#f5f5f5] px-3 py-1 rounded mb-6">
+                    <div className="bg-white border border-[var(--border-strong)] rounded-[10px] p-8 md:p-10 card-hover">
+                        <span className="inline-block label-mono bg-[var(--paper-dark)] text-[var(--muted)] px-2.5 py-[4px] rounded-[2px] mb-6">
                             The old way
-                        </div>
+                        </span>
                         <div className="space-y-4">
                             {oldWay.map((item) => (
                                 <div key={item.text} className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full bg-[#fef2f2] flex items-center justify-center shrink-0 mt-0.5">
-                                        <span className="text-[#ef4444] text-[10px] font-bold">{item.icon}</span>
+                                    <div className="w-5 h-5 rounded-full bg-[var(--coral-light)] flex items-center justify-center shrink-0 mt-0.5">
+                                        <span className="text-[var(--coral)] text-[10px] font-bold font-mono">{item.icon}</span>
                                     </div>
-                                    <span className="text-sm text-[#9ca3af]">{item.text}</span>
+                                    <span className="text-[0.85rem] text-[var(--muted)] leading-relaxed">{item.text}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     {/* New Way */}
-                    <div className="bg-[#0A0A0A] border border-white/[0.06] rounded-xl p-8 md:p-10">
-                        <div className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-[#1a6b4a] bg-[#e8f5ef] px-3 py-1 rounded mb-6">
+                    <div className="bg-[var(--ink)] border border-[var(--ink)] rounded-[10px] p-8 md:p-10 card-hover hover:bg-[var(--ink)]">
+                        <span className="inline-block label-mono bg-[var(--accent-light)] text-[var(--accent)] px-2.5 py-[4px] rounded-[2px] mb-6">
                             With RecruitmentOS
-                        </div>
+                        </span>
                         <div className="space-y-4">
                             {newWay.map((item) => (
                                 <div key={item.text} className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full bg-[#e8f5ef] flex items-center justify-center shrink-0 mt-0.5">
-                                        <span className="text-[#1a6b4a] text-[10px] font-bold">{item.icon}</span>
+                                    <div className="w-5 h-5 rounded-full bg-[var(--accent-light)] flex items-center justify-center shrink-0 mt-0.5">
+                                        <span className="text-[var(--accent)] text-[10px] font-bold font-mono">{item.icon}</span>
                                     </div>
-                                    <span className="text-sm text-white/90">{item.text}</span>
+                                    <span className="text-[0.85rem] text-[var(--paper)] leading-relaxed">{item.text}</span>
                                 </div>
                             ))}
                         </div>

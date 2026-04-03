@@ -1,9 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 
 const features = [
     {
         tag: 'Lead Generation',
-        tagColor: 'bg-[#e8f5ef] text-[#1a6b4a]',
+        tagColor: 'bg-[var(--accent-light)] text-[var(--accent)]',
+        accentBorder: 'border-l-[var(--accent)]',
         title: 'Find every hiring manager in your niche — automatically',
         description: 'RecruitmentOS scrapes LinkedIn, Indeed, Stepstone and 50+ job boards to surface active job postings in your target market. You get the hiring manager\'s name, email, title, and company intel — delivered daily.',
         metrics: [
@@ -13,7 +16,8 @@ const features = [
     },
     {
         tag: 'Candidate Matching',
-        tagColor: 'bg-[#eeebfb] text-[#3d2e7c]',
+        tagColor: 'bg-[var(--purple-light)] text-[var(--purple)]',
+        accentBorder: 'border-l-[var(--purple)]',
         title: 'AI matches your candidates to open roles in seconds',
         description: 'Upload your candidate database. The AI reads every job description, scores fit against your candidates, and surfaces the top matches — instantly. No more manual CV cross-referencing.',
         metrics: [
@@ -23,7 +27,8 @@ const features = [
     },
     {
         tag: 'Outreach Engine',
-        tagColor: 'bg-[#fcecea] text-[#c0412b]',
+        tagColor: 'bg-[var(--coral-light)] text-[var(--coral)]',
+        accentBorder: 'border-l-[var(--coral)]',
         title: 'Hyper-personalized emails that hiring managers actually reply to',
         description: 'Each email references a specific candidate who fits their open role. "We already have your Senior Python Engineer." Not a pitch — a solution. That\'s why the reply rate is 6x the industry average.',
         metrics: [
@@ -33,7 +38,8 @@ const features = [
     },
     {
         tag: 'Resume Screening',
-        tagColor: 'bg-[#fdf6e8] text-[#b8862a]',
+        tagColor: 'bg-[var(--gold-light)] text-[var(--gold)]',
+        accentBorder: 'border-l-[var(--gold)]',
         title: 'Screen thousands of resumes in minutes, not days',
         description: 'AI-powered screening eliminates manual review for high-volume positions. Candidates are ranked by fit, flagged for interview readiness, and matched to multiple open roles simultaneously.',
         metrics: [
@@ -45,66 +51,42 @@ const features = [
 
 export default function Features() {
     return (
-        <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="features">
-            <div className="max-w-[1100px] mx-auto px-6">
-                <div className="mb-12 md:mb-16">
-                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Capabilities</p>
-                    <h2 className="text-[#0A0A0A] max-w-[500px]">Everything your team needs to place more candidates, faster.</h2>
+        <section className="py-16 md:py-20 bg-[var(--paper)]" id="features">
+            <div className="max-w-[1100px] mx-auto px-8">
+                <div className="mb-10 md:mb-14">
+                    <p className="label-mono text-[var(--muted)] mb-3">Capabilities</p>
+                    <h2 className="text-[var(--ink)] max-w-[500px]">Everything your team needs to place more candidates, faster.</h2>
                 </div>
 
-                <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[var(--border-strong)] rounded-[10px] overflow-hidden">
                     {features.map((feature, index) => (
                         <div
                             key={feature.title}
-                            className="border border-[#e5e5e5] rounded-xl p-8 md:p-10 hover:border-[#d4d4d4] transition-all hover:shadow-sm bg-white"
+                            className={`bg-white p-7 md:p-8 card-hover border-l-[3px] ${feature.accentBorder} fade-up delay-${(index % 4) + 1}`}
                         >
-                            <div className={`grid grid-cols-1 md:grid-cols-[1fr_240px] gap-8 items-start ${index % 2 !== 0 ? 'md:grid-cols-[240px_1fr]' : ''}`}>
-                                {index % 2 !== 0 && (
-                                    <div className="hidden md:flex flex-col gap-4">
-                                        {feature.metrics.map((metric) => (
-                                            <div key={metric.label} className="bg-[#FAFAFA] border border-[#e5e5e5] rounded-lg p-4">
-                                                <div className="text-2xl font-bold text-[#0A0A0A] tracking-tight">{metric.value}</div>
-                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider mt-0.5">{metric.label}</div>
-                                            </div>
-                                        ))}
+                            <span className={`inline-block label-mono px-2.5 py-[4px] rounded-[2px] w-fit mb-4 ${feature.tagColor}`}>
+                                {feature.tag}
+                            </span>
+                            <h3 className="text-[1.1rem] text-[var(--ink)] mb-3 leading-snug">{feature.title}</h3>
+                            <p className="text-[0.85rem] text-[var(--muted)] leading-relaxed mb-6">{feature.description}</p>
+
+                            <div className="flex gap-6 pt-4 border-t border-[var(--border)]">
+                                {feature.metrics.map((metric) => (
+                                    <div key={metric.label}>
+                                        <div className="text-[1.3rem] font-serif text-[var(--ink)]">{metric.value}</div>
+                                        <div className="label-mono text-[var(--muted)] mt-0.5">{metric.label}</div>
                                     </div>
-                                )}
-                                <div>
-                                    <span className={`inline-block text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded w-fit mb-4 ${feature.tagColor}`}>
-                                        {feature.tag}
-                                    </span>
-                                    <h3 className="text-xl font-semibold text-[#0A0A0A] mb-3 max-w-[480px]">{feature.title}</h3>
-                                    <p className="text-sm text-[#6b7280] leading-relaxed max-w-[520px]">{feature.description}</p>
-                                    {/* Mobile metrics */}
-                                    <div className="flex gap-6 mt-6 md:hidden">
-                                        {feature.metrics.map((metric) => (
-                                            <div key={metric.label}>
-                                                <div className="text-xl font-bold text-[#0A0A0A]">{metric.value}</div>
-                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider">{metric.label}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                {index % 2 === 0 && (
-                                    <div className="hidden md:flex flex-col gap-4">
-                                        {feature.metrics.map((metric) => (
-                                            <div key={metric.label} className="bg-[#FAFAFA] border border-[#e5e5e5] rounded-lg p-4">
-                                                <div className="text-2xl font-bold text-[#0A0A0A] tracking-tight">{metric.value}</div>
-                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider mt-0.5">{metric.label}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
+                                ))}
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="text-center mt-12">
+                <div className="text-center mt-10">
                     <Link
                         href="https://cal.com/tusharm/30min?user=tusharm"
                         target="_blank"
-                        className="inline-flex items-center text-sm font-medium text-[#0A0A0A] hover:text-[#6b7280] transition-colors"
+                        className="inline-flex items-center text-[0.85rem] font-medium font-sans text-[var(--ink)] hover:text-[var(--muted)] transition-colors"
                     >
                         See all capabilities in a live demo
                         <svg className="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

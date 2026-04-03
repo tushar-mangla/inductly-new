@@ -1,3 +1,5 @@
+'use client';
+
 const platforms = [
     'LinkedIn',
     'Indeed',
@@ -11,25 +13,23 @@ const platforms = [
 
 export default function Integrations() {
     return (
-        <section className="py-16 md:py-20 bg-[#FAFAFA] border-t border-[#e5e5e5]">
-            <div className="max-w-[1100px] mx-auto px-6">
-                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                    <div className="md:w-[240px] shrink-0">
-                        <p className="text-xs font-medium text-[#9ca3af] uppercase tracking-widest mb-1">Integrations</p>
-                        <p className="text-sm text-[#6b7280]">We scrape from <span className="font-semibold text-[#0A0A0A]">50+</span> job boards including</p>
-                    </div>
-                    <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                        {platforms.map((name) => (
-                            <div
-                                key={name}
-                                className="bg-white border border-[#e5e5e5] rounded-lg px-4 py-2 text-sm text-[#6b7280] font-medium hover:border-[#d4d4d4] hover:text-[#0A0A0A] transition-all cursor-default"
-                            >
-                                {name}
-                            </div>
-                        ))}
-                        <div className="bg-[#FAFAFA] border border-dashed border-[#d4d4d4] rounded-lg px-4 py-2 text-sm text-[#9ca3af] font-medium">
-                            +42 more
+        <section className="py-14 md:py-16 bg-[var(--paper-dark)] border-y border-[var(--border)]">
+            <div className="max-w-[1100px] mx-auto px-8">
+                <div className="mb-8">
+                    <p className="label-mono text-[var(--muted)] mb-3">Integrations</p>
+                    <h2 className="text-[var(--ink)] max-w-[400px]">We scrape from 50+ job boards so you don&apos;t have to.</h2>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                    {platforms.map((name) => (
+                        <div
+                            key={name}
+                            className="bg-white border border-[var(--border-strong)] rounded-[6px] px-5 py-2.5 text-[0.85rem] text-[var(--muted)] font-medium font-sans hover:border-[var(--ink)] hover:text-[var(--ink)] hover:shadow-[0_2px_8px_rgba(13,13,13,0.06)] transition-all cursor-default"
+                        >
+                            {name}
                         </div>
+                    ))}
+                    <div className="bg-[var(--paper)] border-2 border-dashed border-[var(--border-strong)] rounded-[6px] px-5 py-2.5 text-[0.85rem] text-[var(--muted)] font-medium font-sans">
+                        +42 more
                     </div>
                 </div>
             </div>

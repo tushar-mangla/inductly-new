@@ -33,24 +33,24 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="faq">
-            <div className="max-w-[720px] mx-auto px-6">
-                <div className="mb-12">
-                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">FAQ</p>
-                    <h2 className="text-[#0A0A0A]">Common questions</h2>
+        <section className="py-16 md:py-20 bg-[var(--paper)]" id="faq">
+            <div className="max-w-[720px] mx-auto px-8">
+                <div className="mb-10">
+                    <p className="label-mono text-[var(--muted)] mb-3">FAQ</p>
+                    <h2 className="text-[var(--ink)]">Common questions</h2>
                 </div>
 
                 <div>
                     {faqs.map((faq, index) => (
-                        <div key={index} className="border-b border-[#e5e5e5]">
+                        <div key={index} className="border-b border-[var(--border)]">
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                 className="w-full flex items-center justify-between py-5 text-left group"
                             >
-                                <span className="text-[15px] font-medium text-[#0A0A0A] pr-4 group-hover:text-[#6b7280] transition-colors">
+                                <span className="text-[0.95rem] font-medium text-[var(--ink)] pr-4 group-hover:text-[var(--muted)] transition-colors font-sans">
                                     {faq.question}
                                 </span>
-                                <span className="text-[#9ca3af] text-xl shrink-0 w-6 h-6 flex items-center justify-center rounded-full border border-[#e5e5e5] group-hover:border-[#d4d4d4] transition-colors">
+                                <span className="text-[var(--muted)] shrink-0 w-6 h-6 flex items-center justify-center rounded-[4px] border border-[var(--border-strong)] group-hover:border-[var(--ink)] group-hover:text-[var(--ink)] transition-all duration-200">
                                     <svg
                                         className={`w-3 h-3 transition-transform duration-200 ${openIndex === index ? 'rotate-45' : ''}`}
                                         fill="none"
@@ -68,7 +68,7 @@ export default function FAQ() {
                                     openIndex === index ? 'max-h-[500px] pb-5' : 'max-h-0'
                                 }`}
                             >
-                                <p className="text-sm text-[#6b7280] leading-relaxed pr-10">{faq.answer}</p>
+                                <p className="text-[0.85rem] text-[var(--muted)] leading-relaxed pr-10 font-sans">{faq.answer}</p>
                             </div>
                         </div>
                     ))}

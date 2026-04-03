@@ -10,27 +10,26 @@ export default function Navbar() {
         { name: 'How It Works', href: '#how-it-works' },
         { name: 'Features', href: '#features' },
         { name: 'Results', href: '#results' },
+        { name: 'Pricing', href: 'https://recruitmentos-pricing.netlify.app/', external: true },
         { name: 'FAQ', href: '#faq' },
     ];
 
     return (
-        <header className="sticky top-0 z-[100] bg-white/90 backdrop-blur-md border-b border-[#e5e5e5]">
-            <div className="max-w-[1100px] mx-auto px-6 py-4">
+        <header className="sticky top-0 z-[100] nav-bg backdrop-blur-md border-b border-[var(--border-strong)]">
+            <div className="max-w-[1100px] mx-auto px-8 py-3">
                 <nav className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center font-black text-3xl tracking-tight">
-                        <span className="text-[#0A0A0A]">Recruitment</span>
-                        <span className="flex items-center text-orange-500 ml-2">
-                            <span className="animate-[spin_4s_linear_infinite] inline-block leading-none">O</span>
-                            <span>S</span>
-                        </span>
+                    <Link href="/" className="flex items-center font-serif text-[1.5rem] leading-none tracking-[-0.02em]">
+                        <span className="text-[var(--ink)]">Recruitment</span>
+                        <span className="text-[var(--coral)] ml-0.5">OS</span>
                     </Link>
 
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-7">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm text-[#6b7280] hover:text-[#0A0A0A] transition-colors"
+                                {...('external' in link && link.external ? { target: '_blank' } : {})}
+                                className="text-[0.85rem] font-sans text-[var(--muted)] hover:text-[var(--ink)] transition-colors"
                             >
                                 {link.name}
                             </Link>
@@ -38,7 +37,7 @@ export default function Navbar() {
                         <Link
                             href="https://cal.com/tusharm/30min?user=tusharm"
                             target="_blank"
-                            className="bg-[#0A0A0A] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#1a1a1a] transition-colors"
+                            className="bg-[var(--accent)] text-white px-[22px] py-[10px] rounded-[4px] text-[0.85rem] font-medium hover:bg-[#0f6e56] transition-colors font-sans"
                         >
                             Book a Demo
                         </Link>
@@ -46,7 +45,7 @@ export default function Navbar() {
 
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="p-2 md:hidden text-[#0A0A0A]"
+                        className="p-2 md:hidden text-[var(--ink)]"
                         aria-label="Toggle menu"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -66,13 +65,14 @@ export default function Navbar() {
                 </nav>
 
                 {isMenuOpen && (
-                    <div className="md:hidden pt-4 pb-2 space-y-3 border-t border-[#e5e5e5] mt-4">
+                    <div className="md:hidden pt-4 pb-2 space-y-3 border-t border-[var(--border-strong)] mt-3">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
+                                {...('external' in link && link.external ? { target: '_blank' } : {})}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="block text-sm text-[#6b7280] hover:text-[#0A0A0A] transition-colors py-1"
+                                className="block text-[0.85rem] font-sans text-[var(--muted)] hover:text-[var(--ink)] transition-colors py-1"
                             >
                                 {link.name}
                             </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
                         <Link
                             href="https://cal.com/tusharm/30min?user=tusharm"
                             target="_blank"
-                            className="block bg-[#0A0A0A] text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center mt-2"
+                            className="block bg-[var(--accent)] text-white px-5 py-2.5 rounded-[4px] text-[0.85rem] font-medium text-center mt-2 font-sans"
                         >
                             Book a Demo
                         </Link>

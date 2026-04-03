@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import SystemDiagramGif from '@/components/SystemDiagramGif';
 import TrustBar from '@/components/TrustBar';
 import Problem from '@/components/Problem';
 import BeforeAfter from '@/components/BeforeAfter';
@@ -12,14 +13,17 @@ import Integrations from '@/components/Integrations';
 import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function Home() {
     return (
         <main className="min-h-screen">
+            <ScrollReveal />
             <Navbar />
             <Hero />
-            <TrustBar />
+            <SystemDiagramGif />
             <Problem />
+            <TrustBar />
             <BeforeAfter />
             <HowItWorks />
             <Features />

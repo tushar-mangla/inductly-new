@@ -1,28 +1,28 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="py-8 bg-white border-t border-[#e5e5e5]">
-            <div className="max-w-[1100px] mx-auto px-6">
+        <footer className="py-8 bg-[var(--paper)] border-t border-[var(--border-strong)]">
+            <div className="max-w-[1100px] mx-auto px-8">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="flex items-center font-black text-xl tracking-tight">
-                        <span className="text-[#0A0A0A]">Recruitment</span>
-                        <span className="flex items-center text-orange-500 ml-1.5">
-                            <span className="animate-[spin_4s_linear_infinite] inline-block leading-none">O</span>
-                            <span>S</span>
-                        </span>
+                    <Link href="/" className="flex items-center font-serif text-[1.3rem] tracking-tight">
+                        <span className="text-[var(--ink)]">Recruitment</span>
+                        <span className="text-[var(--coral)] ml-0.5">OS</span>
+                    </Link>
+
+                    <div className="flex items-center gap-6 text-[0.8rem] text-[var(--muted)] font-sans">
+                        <Link href="#features" className="hover:text-[var(--ink)] transition-colors">Features</Link>
+                        <Link href="#results" className="hover:text-[var(--ink)] transition-colors">Results</Link>
+                        <Link href="https://recruitmentos-pricing.netlify.app/" target="_blank" className="hover:text-[var(--ink)] transition-colors">Pricing</Link>
+                        <Link href="#faq" className="hover:text-[var(--ink)] transition-colors">FAQ</Link>
+                        <Link href="https://smallgrp.com" target="_blank" className="hover:text-[var(--ink)] transition-colors">About</Link>
                     </div>
 
-                    <div className="flex items-center gap-6 text-xs text-[#9ca3af]">
-                        <Link href="#features" className="hover:text-[#0A0A0A] transition-colors">Features</Link>
-                        <Link href="#results" className="hover:text-[#0A0A0A] transition-colors">Results</Link>
-                        <Link href="#faq" className="hover:text-[#0A0A0A] transition-colors">FAQ</Link>
-                        <Link href="https://smallgrp.com" target="_blank" className="hover:text-[#0A0A0A] transition-colors">About</Link>
-                    </div>
-
-                    <p className="text-xs text-[#9ca3af]">
+                    <p className="text-[0.8rem] text-[var(--muted)] font-sans">
                         &copy; {new Date().getFullYear()} RecruitmentOS by{' '}
-                        <Link href="https://smallgrp.com" target="_blank" className="text-[#6b7280] hover:text-[#0A0A0A] transition-colors">
+                        <Link href="https://smallgrp.com" target="_blank" className="text-[var(--ink)] hover:text-[var(--muted)] transition-colors">
                             Small Group
                         </Link>
                     </p>
