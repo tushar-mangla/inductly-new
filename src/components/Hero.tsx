@@ -6,6 +6,36 @@ import { useState, useEffect } from 'react';
 import RetroGrid from './RetroGrid';
 
 export default function Hero() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isFading, setIsFading] = useState(false);
+
+    const slides = [
+        {
+            line1: "5x your placements per Recruiter",
+            line2: "without Hiring more people.",
+            line1Color: "#000000",
+            line2Color: "#FF6A00"
+        },
+        {
+            line1: "We Build AI Systems",
+            line2: "That Scale Revenue",
+            line1Color: "#000000",
+            line2Color: "#FF6A00"
+        }
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsFading(true);
+            setTimeout(() => {
+                setCurrentSlide((prev) => (prev + 1) % slides.length);
+                setIsFading(false);
+            }, 500);
+        }, 4500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     const fullText = "AI-Powered Placement Engine";
     const [typedText, setTypedText] = useState("");
 
@@ -23,7 +53,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative overflow-hidden pt-20 pb-24 md:pt-32 md:pb-40 bg-white" id="hero">
+        <section className="relative overflow-hidden pt-12 pb-24 md:pt-20 md:pb-40 bg-[#F9FAFB]" id="hero">
             <RetroGrid />
             <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
                 <div className="flex flex-col items-center justify-center">
@@ -35,16 +65,31 @@ export default function Hero() {
                         </span>
                     </div>
 
-                    <h1 
-                        className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A0A0A] mb-8 leading-tight max-w-5xl mx-auto"
-                        style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+                    <div
+                        className={`transition-all duration-700 ease-in-out transform ${isFading ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}
+                        style={{ minHeight: 'auto' }}
                     >
-                        5x your placements per Recruiter{' '}
-                        <span className="text-orange-500 block sm:inline">without Hiring more people.</span>
-                    </h1>
+                        <h1
+                            className="text-7xl md:text-[7.6rem] lg:text-[8.3rem] tracking-[-0.04em] mb-6 leading-[0.9] mx-auto"
+                            style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+                        >
+                            <span
+                                className="block mb-2 font-bold transition-colors duration-500"
+                                style={{ color: slides[currentSlide].line1Color }}
+                            >
+                                {slides[currentSlide].line1}
+                            </span>
+                            <span
+                                className="block font-black scale-y-105 transition-colors duration-500"
+                                style={{ color: slides[currentSlide].line2Color }}
+                            >
+                                {slides[currentSlide].line2}
+                            </span>
+                        </h1>
+                    </div>
 
-                    <p className="text-xl md:text-2xl text-[#0A0A0A] mb-12 max-w-3xl mx-auto leading-relaxed">
-                        RecruitmentOS scrapes 1M+ jobs, matches candidates to open roles, and sends personalized outreach to Hiring managers all on autopilot.
+                    <p className="text-lg md:text-xl text-[#000000] font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
+                        RecruitmentOS scrapes 1M+ jobs, matches candidates to open roles, and sends personalized outreach to Hiring managers all on Autopilot.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

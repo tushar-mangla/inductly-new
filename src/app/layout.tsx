@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, DM_Serif_Display, DM_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
 import UTMTracker from "@/components/UTMTracker";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const dmSerif = DM_Serif_Display({ weight: '400', subsets: ["latin"], variable: '--font-serif' });
+const dmMono = DM_Mono({ weight: '400', subsets: ["latin"], variable: '--font-mono' });
+const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
     title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
@@ -27,7 +30,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} antialiased`}>
+            <body className={`${inter.variable} ${dmSerif.variable} ${dmMono.variable} ${outfit.variable} antialiased font-sans`}>
                 <Analytics />
                 <UTMTracker />
                 {children}

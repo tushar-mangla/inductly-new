@@ -1,238 +1,548 @@
-import Link from 'next/link';
+'use client';
 
-const customModules = [
-    {
-        tag: 'Lead Generation',
-        tagColor: 'bg-[#e8f5ef] text-[#1a6b4a]',
-        name: 'Find Qualified Leads',
-        description: 'Automated sourcing and targeting for warm prospects at scale.',
-        price: '$4,000',
-    },
-    {
-        tag: 'Candidate to Customer',
-        tagColor: 'bg-[#eeebfb] text-[#3d2e7c]',
-        name: 'Hybrid Model',
-        description: 'Lead generation + resume screening in a single integrated system.',
-        price: '$2,500',
-    },
-    {
-        tag: 'Resume Screening',
-        tagColor: 'bg-[#fdf6e8] text-[#b8862a]',
-        name: 'Smart Resume Filter',
-        description: 'AI-powered screening for high-volume positions.',
-        price: '$2,000',
-    },
-    {
-        tag: 'Outreach',
-        tagColor: 'bg-[#fcecea] text-[#c0412b]',
-        name: 'Mass Outreach Engine',
-        description: 'Hundreds of thousands of personalized emails per month.',
-        price: '$3,000',
-    },
-];
-
-const saasModules = [
-    {
-        tag: 'Lead Generation',
-        tagColor: 'bg-[#e8f5ef] text-[#1a6b4a]',
-        name: 'Per-Lead Billing',
-        rows: [
-            ['Cost per lead', '$0.80'],
-            ['Monthly minimum', '$600/mo'],
-            ['Commitment', '3 months'],
-        ],
-    },
-    {
-        tag: 'Candidate to Customer',
-        tagColor: 'bg-[#eeebfb] text-[#3d2e7c]',
-        name: 'Per-Candidate Billing',
-        rows: [
-            ['Cost per match', '$1.00'],
-            ['Est. monthly', '~$1,200/mo'],
-            ['Commitment', '3 months'],
-        ],
-    },
-    {
-        tag: 'Resume Screening',
-        tagColor: 'bg-[#fdf6e8] text-[#b8862a]',
-        name: 'Volume-Based Billing',
-        rows: [
-            ['Per 1,000 resumes', '$10'],
-            ['Monthly minimum', '$300/mo'],
-            ['Commitment', '3 months'],
-        ],
-    },
-    {
-        tag: 'Outreach',
-        tagColor: 'bg-[#fcecea] text-[#c0412b]',
-        name: 'High-Volume Email',
-        rows: [
-            ['Volume', '100,000+/mo'],
-            ['Monthly minimum', '$300/mo'],
-            ['Commitment', '3 months'],
-        ],
-    },
-];
+import React from 'react';
 
 export default function Pricing() {
-    return (
-        <section className="py-20 md:py-28 bg-[#FAFAFA]" id="pricing">
-            <div className="max-w-[1100px] mx-auto px-6">
-                <div className="mb-16">
-                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Pricing</p>
-                    <h2 className="text-[#0A0A0A] max-w-[500px] mb-4">Pay only for what you need.</h2>
-                    <p className="text-sm text-[#6b7280] max-w-[520px]">
-                        Available as a one-time custom build or a scalable SaaS subscription. Mix, match, or take the full suite at a discount.
-                    </p>
-                </div>
+  return (
+    <div id="pricing-root" className="pricing-container fade-up delay-1">
+      <style dangerouslySetInnerHTML={{ __html: `
+        .pricing-container {
+          --ink: #0d0d0d;
+          --paper: #f5f2ec;
+          --paper-dark: #ede9e1;
+          --accent: #1a6b4a;
+          --accent-light: #e8f5ef;
+          --accent-mid: #2d9e6e;
+          --gold: #b8862a;
+          --gold-light: #fdf6e8;
+          --muted: #6b6860;
+          --border: rgba(13,13,13,0.12);
+          --border-strong: rgba(13,13,13,0.25);
+          --purple: #3d2e7c;
+          --purple-light: #eeebfb;
+          --coral: #c0412b;
+          --coral-light: #fcecea;
+          --blue: #1b4f8a;
+          --blue-light: #e8eef8;
+          font-family: 'Outfit', sans-serif;
+          background: var(--paper);
+          color: var(--ink);
+          font-size: 15px;
+          line-height: 1.6;
+          padding-bottom: 5rem;
+        }
 
-                {/* Custom Solution */}
-                <div className="mb-16">
-                    <div className="flex items-baseline gap-4 mb-6">
-                        <span className="text-xs font-mono text-[#9ca3af]">01</span>
-                        <h3 className="text-lg font-semibold text-[#0A0A0A]">Custom Solution</h3>
-                        <div className="flex-1 h-px bg-[#e5e5e5]" />
-                        <span className="text-xs text-[#9ca3af]">One-time build fee</span>
-                    </div>
+        .pricing-container h1, .pricing-container h2, .pricing-container .logo, .pricing-container .card-name, .pricing-container .bundle-title, .pricing-container .saas-name, .pricing-container .saas-bundle-title, .pricing-container .footer-left {
+          font-family: 'DM Serif Display', serif;
+        }
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#d4d4d4] border border-[#d4d4d4] rounded-xl overflow-hidden">
-                        {customModules.map((mod) => (
-                            <div key={mod.name} className="bg-white p-6 flex flex-col gap-3 hover:bg-[#FAFAFA] transition-colors">
-                                <span className={`inline-block text-[10px] font-medium uppercase tracking-wider px-2.5 py-0.5 rounded w-fit ${mod.tagColor}`}>
-                                    {mod.tag}
-                                </span>
-                                <div className="text-base font-semibold text-[#0A0A0A]">{mod.name}</div>
-                                <p className="text-xs text-[#6b7280] leading-relaxed flex-1">{mod.description}</p>
-                                <div className="text-2xl font-bold text-[#0A0A0A] mt-2">{mod.price}</div>
-                                <div className="text-[11px] text-[#9ca3af]">one-time custom build</div>
-                            </div>
-                        ))}
-                    </div>
+        .pricing-container .hero {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 6rem 2rem 3rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+          align-items: center;
+        }
 
-                    {/* Bundle banner */}
-                    <div className="mt-3 bg-[#0A0A0A] text-white rounded-xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <div>
-                            <div className="text-xs font-medium text-[#1a6b4a] uppercase tracking-wider mb-1">Full Suite Bundle</div>
-                            <div className="text-base font-semibold">All 4 modules, fully integrated</div>
-                            <div className="text-xs text-white/50 mt-1">Lead Gen + C2C + Resume Screening + Outreach</div>
-                        </div>
-                        <div className="sm:text-right">
-                            <div className="text-xs text-white/40 line-through">$12,500 separately</div>
-                            <div className="text-3xl font-bold">$10,000</div>
-                            <div className="text-xs text-[#1a6b4a] font-medium">Save $2,500 (20% off)</div>
-                        </div>
-                    </div>
-                </div>
+        .pricing-container .hero-headline {
+          font-size: 3.5rem;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
+          color: var(--ink);
+        }
 
-                {/* SaaS Subscription */}
-                <div className="mb-16">
-                    <div className="flex items-baseline gap-4 mb-6">
-                        <span className="text-xs font-mono text-[#9ca3af]">02</span>
-                        <h3 className="text-lg font-semibold text-[#0A0A0A]">SaaS Subscription</h3>
-                        <div className="flex-1 h-px bg-[#e5e5e5]" />
-                        <span className="text-xs text-[#9ca3af]">Pay as you grow</span>
-                    </div>
+        .pricing-container .hero-headline em {
+          font-style: italic;
+          color: var(--accent);
+        }
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {saasModules.map((mod) => (
-                            <div key={mod.name} className="bg-white border border-[#e5e5e5] rounded-xl p-6 hover:shadow-sm transition-shadow">
-                                <div className="flex items-start justify-between mb-4">
-                                    <div>
-                                        <span className={`inline-block text-[10px] font-medium uppercase tracking-wider px-2.5 py-0.5 rounded w-fit ${mod.tagColor}`}>
-                                            {mod.tag}
-                                        </span>
-                                        <div className="text-base font-semibold text-[#0A0A0A] mt-2">{mod.name}</div>
-                                    </div>
-                                    <span className="text-[10px] text-[#9ca3af] bg-[#f5f5f5] px-3 py-1 rounded-full uppercase tracking-wider">
-                                        3-month min.
-                                    </span>
-                                </div>
-                                <table className="w-full text-sm">
-                                    <tbody>
-                                        {mod.rows.map(([label, value]) => (
-                                            <tr key={label} className="border-b border-[#f5f5f5] last:border-0">
-                                                <td className="py-2.5 text-[#6b7280] text-xs">{label}</td>
-                                                <td className="py-2.5 text-right text-xs font-medium font-mono text-[#0A0A0A]">{value}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        ))}
-                    </div>
+        .pricing-container .hero-copy {
+          color: var(--muted);
+          font-size: 0.95rem;
+          line-height: 1.75;
+          max-width: 380px;
+          margin-top: 1.25rem;
+        }
 
-                    {/* SaaS Bundle */}
-                    <div className="mt-4 border-2 border-dashed border-[#d4d4d4] rounded-xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#FAFAFA]">
-                        <div>
-                            <div className="text-xs font-medium text-[#1a6b4a] uppercase tracking-wider mb-1">SaaS Full Suite</div>
-                            <div className="text-base font-semibold text-[#0A0A0A]">All 4 modules at a locked-in rate</div>
-                            <div className="text-xs text-[#9ca3af] mt-1">Lead Gen + C2C + Resume Screening + Outreach · 3-month minimum</div>
-                        </div>
-                        <div className="sm:text-right">
-                            <div className="text-xs text-[#9ca3af] line-through">~$2,400/mo combined</div>
-                            <div className="text-3xl font-bold text-[#0A0A0A]">$1,500<span className="text-sm font-normal text-[#9ca3af]"> /mo</span></div>
-                            <div className="text-xs text-[#1a6b4a] font-medium">Save ~$900/month (38% off)</div>
-                        </div>
-                    </div>
-                </div>
+        .pricing-container .hero-stats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1px;
+          background: var(--border-strong);
+          border: 1px solid var(--border-strong);
+          border-radius: 8px;
+          overflow: hidden;
+        }
 
-                {/* Comparison Table */}
-                <div>
-                    <div className="flex items-baseline gap-4 mb-6">
-                        <span className="text-xs font-mono text-[#9ca3af]">03</span>
-                        <h3 className="text-lg font-semibold text-[#0A0A0A]">Quick Comparison</h3>
-                        <div className="flex-1 h-px bg-[#e5e5e5]" />
-                    </div>
+        .pricing-container .stat-box {
+          background: var(--paper);
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
 
-                    <div className="overflow-x-auto border border-[#e5e5e5] rounded-xl">
-                        <table className="w-full text-sm bg-white">
-                            <thead>
-                                <tr className="bg-[#FAFAFA] border-b border-[#e5e5e5]">
-                                    <th className="text-left p-4 text-[10px] font-medium text-[#9ca3af] uppercase tracking-wider w-[30%]">Module</th>
-                                    <th className="text-center p-4 text-[10px] font-medium text-[#9ca3af] uppercase tracking-wider">Custom Build</th>
-                                    <th className="text-center p-4 text-[10px] font-medium text-[#9ca3af] uppercase tracking-wider">SaaS (per unit)</th>
-                                    <th className="text-center p-4 text-[10px] font-medium text-[#9ca3af] uppercase tracking-wider">SaaS (monthly min.)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {[
-                                    ['Lead Generation', '$4,000', '$0.80/lead', '$600/mo'],
-                                    ['Candidate to Customer', '$2,500', '$1.00/candidate', '~$1,200/mo'],
-                                    ['Resume Screening', '$2,000', '$10/1K resumes', '$300/mo'],
-                                    ['Outreach', '$3,000', 'Volume included', '$300/mo'],
-                                ].map(([module, custom, perUnit, monthly]) => (
-                                    <tr key={module} className="border-b border-[#f5f5f5] last:border-0 hover:bg-[#FAFAFA] transition-colors">
-                                        <td className="p-4 text-xs text-[#6b7280]">{module}</td>
-                                        <td className="p-4 text-center text-xs font-mono font-medium text-[#0A0A0A]">{custom}</td>
-                                        <td className="p-4 text-center text-xs font-mono font-medium text-[#0A0A0A]">{perUnit}</td>
-                                        <td className="p-4 text-center text-xs font-mono font-medium text-[#0A0A0A]">{monthly}</td>
-                                    </tr>
-                                ))}
-                                <tr className="bg-[#FAFAFA]">
-                                    <td className="p-4 text-xs font-medium text-[#0A0A0A]">Full Suite Bundle</td>
-                                    <td className="p-4 text-center text-xs font-mono font-semibold text-[#1a6b4a]">$10,000</td>
-                                    <td className="p-4 text-center text-xs text-[#d4d4d4]">—</td>
-                                    <td className="p-4 text-center text-xs font-mono font-semibold text-[#1a6b4a]">$1,500/mo</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        .pricing-container .stat-num {
+          font-size: 2rem;
+          color: var(--ink);
+          line-height: 1;
+        }
 
-                <div className="text-center mt-12">
-                    <Link
-                        href="https://cal.com/tusharm/30min?user=tusharm"
-                        target="_blank"
-                        className="inline-flex items-center bg-[#0A0A0A] text-white px-7 py-3.5 rounded-lg font-medium hover:bg-[#1a1a1a] transition-colors text-sm"
-                    >
-                        Get a Custom Quote
-                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </Link>
-                    <p className="text-xs text-[#9ca3af] mt-3">All prices in USD. Custom quotes available for enterprise.</p>
-                </div>
+        .pricing-container .stat-label {
+          font-size: 0.75rem;
+          color: var(--muted);
+        }
+
+        .pricing-container .section {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 3rem 2rem;
+        }
+
+        .pricing-container .section-header {
+          display: flex;
+          align-items: baseline;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .pricing-container .section-eyebrow {
+          font-family: 'DM Mono', monospace;
+          font-size: 0.65rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: var(--muted);
+        }
+
+        .pricing-container .section-title {
+          font-size: 1.8rem;
+          color: var(--ink);
+          letter-spacing: -0.01em;
+        }
+
+        .pricing-container .section-line {
+          flex: 1;
+          height: 1px;
+          background: var(--border-strong);
+        }
+
+        .pricing-container .cards-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0;
+          border: 1px solid var(--border-strong);
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        .pricing-container .product-card {
+          background: var(--paper);
+          padding: 1.75rem 1.5rem;
+          border-right: 1px solid var(--border-strong);
+          display: flex;
+          flex-direction: column;
+          transition: background 0.2s;
+        }
+
+        .pricing-container .product-card:last-child { border-right: none; }
+        .pricing-container .product-card:hover { background: #fff; }
+
+        .pricing-container .card-tag {
+          display: inline-block;
+          font-family: 'DM Mono', monospace;
+          font-size: 0.6rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          font-weight: 500;
+          padding: 3px 8px;
+          border-radius: 2px;
+          margin-bottom: 1rem;
+          width: fit-content;
+        }
+
+        .pricing-container .tag-green { background: var(--accent-light); color: var(--accent); }
+        .pricing-container .tag-purple { background: var(--purple-light); color: var(--purple); }
+        .pricing-container .tag-gold { background: var(--gold-light); color: var(--gold); }
+        .pricing-container .tag-coral { background: var(--coral-light); color: var(--coral); }
+
+        .pricing-container .card-name {
+          font-size: 1.15rem;
+          color: var(--ink);
+          line-height: 1.2;
+          margin-bottom: 6px;
+        }
+
+        .pricing-container .card-desc {
+          font-size: 0.8rem;
+          color: var(--muted);
+          line-height: 1.6;
+          flex: 1;
+          margin-bottom: 1.25rem;
+        }
+
+        .pricing-container .card-price {
+          font-size: 1.9rem;
+          color: var(--ink);
+          line-height: 1;
+        }
+
+        .pricing-container .card-price-unit {
+          font-size: 0.75rem;
+          color: var(--muted);
+          margin-top: 4px;
+        }
+
+        .pricing-container .bundle-banner {
+          margin-top: 1rem;
+          background: var(--ink);
+          color: var(--paper);
+          border-radius: 10px;
+          padding: 2rem 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+          flex-wrap: wrap;
+        }
+
+        .pricing-container .bundle-tag {
+          font-family: 'DM Mono', monospace;
+          font-size: 0.6rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: var(--accent-mid);
+          margin-bottom: 8px;
+        }
+
+        .pricing-container .bundle-title {
+          font-size: 1.5rem;
+          margin-bottom: 6px;
+        }
+
+        .pricing-container .bundle-sub {
+          font-size: 0.8rem;
+          opacity: 0.55;
+        }
+
+        .pricing-container .bundle-price {
+          font-size: 2.8rem;
+          line-height: 1;
+        }
+
+        .pricing-container .bundle-was {
+          font-size: 0.8rem;
+          opacity: 0.4;
+          text-decoration: line-through;
+          margin-bottom: 4px;
+        }
+
+        .pricing-container .bundle-save {
+          font-size: 0.8rem;
+          color: var(--accent-mid);
+          font-weight: 500;
+          margin-top: 4px;
+        }
+
+        .pricing-container .section-divider {
+          max-width: 1100px;
+          margin: 0 auto;
+          border: none;
+          border-top: 1px solid var(--border-strong);
+        }
+
+        .pricing-container .saas-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+        }
+
+        .pricing-container .saas-card {
+          background: #fff;
+          border: 1px solid var(--border-strong);
+          border-radius: 10px;
+          padding: 1.75rem;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .pricing-container .saas-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 1.25rem;
+        }
+
+        .pricing-container .commit-badge {
+          font-family: 'DM Mono', monospace;
+          font-size: 0.6rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          background: var(--paper-dark);
+          color: var(--muted);
+          padding: 4px 10px;
+          border-radius: 20px;
+        }
+
+        .pricing-container .metrics-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 1rem 0;
+          font-size: 0.8rem;
+        }
+
+        .pricing-container .metrics-table td {
+          padding: 7px 0;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .pricing-container .metrics-table td:first-child { color: var(--muted); width: 55%; }
+        .pricing-container .metrics-table td:last-child { text-align: right; font-weight: 500; font-family: 'DM Mono', monospace; }
+
+        .pricing-container .saas-price-row {
+          display: flex;
+          align-items: baseline;
+          gap: 6px;
+          margin-top: auto;
+          padding-top: 1rem;
+          border-top: 1px solid var(--border);
+        }
+
+        .pricing-container .saas-price { font-size: 1.7rem; font-family: 'DM Serif Display', serif; }
+        .pricing-container .saas-price-unit { font-size: 0.75rem; color: var(--muted); }
+
+        .pricing-container .saas-bundle {
+          margin-top: 1rem;
+          background: var(--paper-dark);
+          border: 2px dashed var(--border-strong);
+          border-radius: 10px;
+          padding: 2rem 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+          flex-wrap: wrap;
+        }
+
+        .pricing-container .saas-bundle-title { font-size: 1.4rem; margin-bottom: 5px; }
+
+        .pricing-container .compare-table-wrap { overflow-x: auto; border: 1px solid var(--border-strong); border-radius: 10px; }
+        .pricing-container .compare-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; background: #fff; }
+        .pricing-container .compare-table th { padding: 1rem 1.25rem; text-align: left; font-family: 'DM Mono', monospace; font-size: 0.6rem; text-transform: uppercase; background: var(--paper-dark); border-bottom: 1px solid var(--border-strong); }
+        .pricing-container .compare-table td { padding: 0.9rem 1.25rem; border-bottom: 1px solid var(--border); }
+        .pricing-container .compare-table td:not(:first-child) { text-align: center; }
+        .pricing-container .strong-val { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--ink); }
+
+        .pricing-container .cta-btn {
+          display: inline-block;
+          background: var(--accent);
+          color: #fff;
+          padding: 10px 22px;
+          border-radius: 4px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: background 0.2s;
+        }
+
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(18px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .pricing-container.fade-up { animation: fadeUp 0.55s ease both; }
+
+        @media (max-width: 900px) {
+          .pricing-container .hero { grid-template-columns: 1fr; }
+          .pricing-container .cards-grid { grid-template-columns: repeat(2, 1fr); }
+          .pricing-container .saas-grid { grid-template-columns: 1fr; }
+        }
+      `}} />
+
+      {/* HERO */}
+      <div className="hero">
+        <div>
+          <h1 className="hero-headline">Hire smarter.<br /><em>Pay only for</em><br />what you need.</h1>
+          <p className="hero-copy">Four specialized modules built for recruitment agencies — available as a custom build or as a scalable SaaS subscription.</p>
+        </div>
+        <div className="hero-stats">
+          <div className="stat-box">
+            <div className="stat-num">4</div>
+            <div className="stat-label">Core modules</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-num">20%</div>
+            <div className="stat-label">Custom bundle save</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-num">38%</div>
+            <div className="stat-label">SaaS bundle save</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-num">3mo</div>
+            <div className="stat-label">Min. SaaS commit</div>
+          </div>
+        </div>
+      </div>
+
+      {/* CUSTOM SECTION */}
+      <div className="section" id="custom-builds">
+        <div className="section-header">
+          <span className="section-eyebrow">01</span>
+          <h2 className="section-title">Custom Solution</h2>
+          <div className="section-line"></div>
+          <span className="section-eyebrow">One-time build fee</span>
+        </div>
+
+        <div className="cards-grid">
+          <div className="product-card">
+            <div className="card-tag tag-green">Lead Generation</div>
+            <div className="card-name">Find Qualified Leads</div>
+            <p className="card-desc">Automated sourcing and targeting system for your recruitment pipelines.</p>
+            <div className="card-price">$4,000</div>
+            <div className="card-price-unit">one-time build</div>
+          </div>
+          <div className="product-card">
+            <div className="card-tag tag-purple">Candidate to Customer</div>
+            <div className="card-name">Hybrid Model</div>
+            <p className="card-desc">Lead generation combined with resume screening in a single integrated system.</p>
+            <div className="card-price">$2,500</div>
+            <div className="card-price-unit">one-time build</div>
+          </div>
+          <div className="product-card">
+            <div className="card-tag tag-gold">Resume Screening</div>
+            <div className="card-name">Smart Resume Filter</div>
+            <p className="card-desc">AI-powered screening to shortlist the best-fit candidates fast.</p>
+            <div className="card-price">$2,000</div>
+            <div className="card-price-unit">one-time build</div>
+          </div>
+          <div className="product-card">
+            <div className="card-tag tag-coral">Outreach</div>
+            <div className="card-name">Mass Outreach Engine</div>
+            <p className="card-desc">Send hundreds of thousands of personalized emails with delivery built in.</p>
+            <div className="card-price">$3,000</div>
+            <div className="card-price-unit">one-time build</div>
+          </div>
+        </div>
+
+        <div className="bundle-banner">
+          <div>
+            <div className="bundle-tag">Full Suite Bundle — Best Value</div>
+            <div className="bundle-title">All 4 modules, fully integrated</div>
+            <div className="bundle-sub">Lead Gen + C2C + Resume Screening + Outreach</div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div className="bundle-was">$12,500 separately</div>
+            <div className="bundle-price">$10,000</div>
+            <div className="bundle-save">Save $2,500 &middot; 20% off</div>
+          </div>
+        </div>
+      </div>
+
+      <hr className="section-divider" />
+
+      {/* SAAS SECTION */}
+      <div className="section" id="saas-subscriptions">
+        <div className="section-header">
+          <span className="section-eyebrow">02</span>
+          <h2 className="section-title">SaaS Subscription</h2>
+          <div className="section-line"></div>
+          <span className="section-eyebrow">Pay as you grow</span>
+        </div>
+
+        <div className="saas-grid">
+          <div className="saas-card">
+            <div className="saas-card-header">
+              <div>
+                <div className="card-tag tag-green">Lead Generation</div>
+                <div className="saas-name">Per-Lead Billing</div>
+              </div>
+              <div className="commit-badge">3-mo min</div>
             </div>
-        </section>
-    );
+            <table className="metrics-table">
+              <tbody>
+                <tr><td>Cost per lead</td><td>$0.80 / lead</td></tr>
+                <tr><td>Leads per month</td><td>750 leads</td></tr>
+                <tr><td>Monthly minimum</td><td>$600 / mo</td></tr>
+              </tbody>
+            </table>
+            <div className="saas-price-row">
+              <div className="saas-price">$600</div>
+              <div className="saas-price-unit">/ mo minimum</div>
+            </div>
+          </div>
+
+          <div className="saas-card">
+            <div className="saas-card-header">
+              <div>
+                <div className="card-tag tag-purple">Candidate to Customer</div>
+                <div className="saas-name">Per-Candidate Billing</div>
+              </div>
+              <div className="commit-badge">3-mo min</div>
+            </div>
+            <table className="metrics-table">
+              <tbody>
+                <tr><td>Cost per match</td><td>$1.00</td></tr>
+                <tr><td>Monthly matches</td><td>1,200 matches</td></tr>
+                <tr><td>Est. monthly</td><td>~$1,200 / mo</td></tr>
+              </tbody>
+            </table>
+            <div className="saas-price-row">
+              <div className="saas-price">$1.200</div>
+              <div className="saas-price-unit">/ mo estimated</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="saas-bundle">
+          <div>
+            <div className="saas-bundle-title">SaaS Full Suite — Bulk Rate</div>
+            <div className="saas-bundle-sub">All 4 modules at a locked-in rate &middot; 3-month min.</div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div className="saas-bundle-was">~$2,400 / mo</div>
+            <div className="saas-bundle-price">$1,500 <span style={{fontSize:'1rem'}}> / mo</span></div>
+            <div className="saas-bundle-save">Save ~$900 / mo &middot; 38% off</div>
+          </div>
+        </div>
+      </div>
+
+      <hr className="section-divider" />
+
+      {/* COMPARISON */}
+      <div className="section">
+        <div className="section-header">
+          <span className="section-eyebrow">03</span>
+          <h2 className="section-title">Quick Comparison</h2>
+          <div className="section-line"></div>
+        </div>
+
+        <div className="compare-table-wrap">
+          <table className="compare-table">
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Custom Build</th>
+                <th>SaaS (unit)</th>
+                <th>SaaS (min)</th>
+                <th>Commit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Lead Generation</td><td><span className="strong-val">$4,000</span></td><td>$0.80</td><td>$600</td><td>3mo</td></tr>
+              <tr><td>C2C</td><td><span className="strong-val">$2,500</span></td><td>$1.00</td><td>$1,200</td><td>3mo</td></tr>
+              <tr><td>Resume Screening</td><td><span className="strong-val">$2,000</span></td><td>$10/1K</td><td>$300</td><td>3mo</td></tr>
+              <tr><td>Outreach</td><td><span className="strong-val">$3,000</span></td><td>Included</td><td>$300</td><td>3mo</td></tr>
+              <tr style={{ background: 'var(--paper-dark)' }}>
+                <td><strong>Full Suite</strong></td>
+                <td><span className="strong-val" style={{color:'var(--accent)'}}>$10,000</span></td>
+                <td>-</td>
+                <td><span className="strong-val" style={{color:'var(--accent)'}}>$1,500</span></td>
+                <td>3mo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
 }

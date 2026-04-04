@@ -1,0 +1,78 @@
+'use client';
+
+import React from 'react';
+
+const tools = [
+  { name: 'n8n', icon: '/logos/n8n.png' },
+  { name: 'Claude', icon: '/logos/claude.png' },
+  { name: 'Instantly', icon: '/logos/instantly.png' },
+  { name: 'Lemlist', icon: '/logos/lemlist.png' },
+  { name: 'LinkedIn', icon: '/logos/linkedin.png' },
+  { name: 'Lusha', icon: '/logos/lusha.png' },
+  { name: 'Hunter', icon: '/logos/hunter.png' },
+  { name: 'Apollo', icon: '/logos/apollo.png' },
+  { name: 'Indeed', icon: '/logos/indeed.png' },
+  { name: 'Stepstone', icon: '/logos/stepstone.png' },
+  { name: 'Clay', icon: '/logos/clay.png' },
+  { name: 'Apify', icon: '/logos/kaspr.png' },
+  { name: 'Glassdoor', icon: '/logos/salesnav.png' },
+  { name: 'Gemini', icon: '/logos/gemini.png' },
+  { name: 'Airtable', icon: '/logos/airtable.png' },
+];
+
+export default function ToolTicker() {
+  return (
+    <section className="py-20 bg-white overflow-hidden" id="workflow-tools">
+      <div className="max-w-[1100px] mx-auto px-6 mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] tracking-tight" style={{ fontFamily: "'Inter', sans-serif" }}>
+          Your workflow deserves better tools.
+        </h2>
+      </div>
+
+      <div className="relative flex overflow-hidden group">
+        {/* Gradient Mask for Edge Fade (15%) */}
+        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-white via-transparent to-white opacity-100" 
+             style={{ maskImage: 'linear-gradient(to right, white, transparent 15%, transparent 85%, white)' }} />
+        
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-r from-white via-transparent to-white" 
+               style={{ background: 'linear-gradient(90deg, #fff 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, #fff 100%)' }} />
+        </div>
+
+        {/* Marquee Wrapper */}
+        <div className="flex whitespace-nowrap animate-marquee py-4">
+          {[...tools, ...tools, ...tools, ...tools].map((tool, index) => (
+            <div key={index} className="flex items-center gap-4 mx-[30px]">
+              <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
+                <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" />
+              </div>
+              <span className="text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Duplicate for seamless loop */}
+        <div className="flex whitespace-nowrap animate-marquee py-4" aria-hidden="true">
+          {[...tools, ...tools, ...tools, ...tools].map((tool, index) => (
+            <div key={index} className="flex items-center gap-4 mx-[30px]">
+              <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
+                <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" />
+              </div>
+              <span className="text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <style jsx global>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+          animation: marquee 45s linear infinite;
+        }
+      `}</style>
+    </section>
+  );
+}

@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => void }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
         { name: 'How It Works', href: '#how-it-works' },
-        { name: 'Features', href: '#features' },
+        { name: 'Services', href: '#services' },
+        { name: 'Pricing', href: '/pricing' },
         { name: 'Results', href: '#results' },
-        { name: 'FAQ', href: '#faq' },
     ];
 
     return (
@@ -30,7 +30,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm text-[#6b7280] hover:text-[#0A0A0A] transition-colors"
+                                className="text-sm font-medium text-[#6b7280] hover:text-[#0A0A0A] transition-colors"
                             >
                                 {link.name}
                             </Link>
@@ -72,7 +72,7 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="block text-sm text-[#6b7280] hover:text-[#0A0A0A] transition-colors py-1"
+                                className="block text-sm font-medium text-[#6b7280] hover:text-[#0A0A0A] transition-colors py-1"
                             >
                                 {link.name}
                             </Link>

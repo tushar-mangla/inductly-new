@@ -5,13 +5,13 @@ export default function RetroGrid() {
         <div 
           className="absolute inset-[-200%] origin-top animate-grid-move"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px)`,
             backgroundSize: '40px 40px',
           }}
         />
       </div>
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_48%,transparent_80%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#F9FAFB_48%,transparent_80%)] pointer-events-none" />
     </div>
   );
 }

@@ -1,118 +1,176 @@
+'use client';
+
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
-const features = [
-    {
-        tag: 'Lead Generation',
-        tagColor: 'bg-[#e8f5ef] text-[#1a6b4a]',
-        title: 'Find every hiring manager in your niche — automatically',
-        description: 'RecruitmentOS scrapes LinkedIn, Indeed, Stepstone and 50+ job boards to surface active job postings in your target market. You get the hiring manager\'s name, email, title, and company intel — delivered daily.',
-        metrics: [
-            { value: '1M+', label: 'Jobs scraped monthly' },
-            { value: '50+', label: 'Job boards monitored' },
-        ],
-    },
-    {
-        tag: 'Candidate Matching',
-        tagColor: 'bg-[#eeebfb] text-[#3d2e7c]',
-        title: 'AI matches your candidates to open roles in seconds',
-        description: 'Upload your candidate database. The AI reads every job description, scores fit against your candidates, and surfaces the top matches — instantly. No more manual CV cross-referencing.',
-        metrics: [
-            { value: '<5s', label: 'Matching speed' },
-            { value: '95%', label: 'Match accuracy' },
-        ],
-    },
-    {
-        tag: 'Outreach Engine',
-        tagColor: 'bg-[#fcecea] text-[#c0412b]',
-        title: 'Hyper-personalized emails that hiring managers actually reply to',
-        description: 'Each email references a specific candidate who fits their open role. "We already have your Senior Python Engineer." Not a pitch — a solution. That\'s why the reply rate is 6x the industry average.',
-        metrics: [
-            { value: '6.3%', label: 'Avg. reply rate' },
-            { value: '30K+', label: 'Active contacts' },
-        ],
-    },
-    {
-        tag: 'Resume Screening',
-        tagColor: 'bg-[#fdf6e8] text-[#b8862a]',
-        title: 'Screen thousands of resumes in minutes, not days',
-        description: 'AI-powered screening eliminates manual review for high-volume positions. Candidates are ranked by fit, flagged for interview readiness, and matched to multiple open roles simultaneously.',
-        metrics: [
-            { value: '1,000+', label: 'Resumes per batch' },
-            { value: '80%', label: 'Time saved' },
-        ],
-    },
+const services = [
+  {
+    id: 'lead-gen',
+    tag: 'LEAD GENERATION',
+    tagColor: 'bg-[#e8f5ef] text-[#1a6b4a]',
+    headline: 'Find real hiring managers automatically',
+    description: 'AI scans job boards and uncovers the actual decision-makers behind every role with verified contact data.',
+    cta: 'Get sample leads →',
+    metrics: [
+      { value: '1M+', label: 'Jobs scraped monthly' },
+      { value: '50+', label: 'Job boards monitored' },
+    ]
+  },
+  {
+    id: 'job-intel',
+    tag: 'JOB INTELLIGENCE',
+    tagColor: 'bg-[#eeebfb] text-[#3d2e7c]',
+    headline: 'Only high-intent job opportunities',
+    description: 'Filters out recruiter spam and duplicates so you only see real openings with a direct path to hiring managers.',
+    cta: 'Explore jobs →',
+    metrics: [
+      { value: '95%', label: 'Match accuracy' },
+    ]
+  },
+  {
+    id: 'candidate-match',
+    tag: 'CANDIDATE MATCHING',
+    tagColor: 'bg-[#fdf6e8] text-[#b8862a]',
+    headline: 'Match candidates to roles in seconds',
+    description: 'AI ranks candidates against job requirements and builds ready-to-send shortlists instantly.',
+    cta: 'See matching →',
+    metrics: [
+      { value: '<5s', label: 'Matching speed' },
+    ]
+  },
+  {
+    id: 'outreach',
+    tag: 'OUTREACH ENGINE',
+    tagColor: 'bg-[#fcecea] text-[#c0412b]',
+    headline: 'Emails that actually get replies',
+    description: 'Hyper-personalized outreach based on role, company, and candidate context that feels human, not automated.',
+    cta: 'View demo →',
+    metrics: [
+      { value: '6.3%', label: 'Avg reply rate' },
+      { value: '30K+', label: 'Active contacts' },
+    ]
+  }
 ];
 
 export default function Features() {
-    return (
-        <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="features">
-            <div className="max-w-[1100px] mx-auto px-6">
-                <div className="mb-12 md:mb-16">
-                    <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Capabilities</p>
-                    <h2 className="text-[#0A0A0A] max-w-[500px]">Everything your team needs to place more candidates, faster.</h2>
-                </div>
+  const [activeStep, setActiveStep] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-                <div className="space-y-4">
-                    {features.map((feature, index) => (
-                        <div
-                            key={feature.title}
-                            className="border border-[#e5e5e5] rounded-xl p-8 md:p-10 hover:border-[#d4d4d4] transition-all hover:shadow-sm bg-white"
-                        >
-                            <div className={`grid grid-cols-1 md:grid-cols-[1fr_240px] gap-8 items-start ${index % 2 !== 0 ? 'md:grid-cols-[240px_1fr]' : ''}`}>
-                                {index % 2 !== 0 && (
-                                    <div className="hidden md:flex flex-col gap-4">
-                                        {feature.metrics.map((metric) => (
-                                            <div key={metric.label} className="bg-[#FAFAFA] border border-[#e5e5e5] rounded-lg p-4">
-                                                <div className="text-2xl font-bold text-[#0A0A0A] tracking-tight">{metric.value}</div>
-                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider mt-0.5">{metric.label}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                                <div>
-                                    <span className={`inline-block text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded w-fit mb-4 ${feature.tagColor}`}>
-                                        {feature.tag}
-                                    </span>
-                                    <h3 className="text-xl font-semibold text-[#0A0A0A] mb-3 max-w-[480px]">{feature.title}</h3>
-                                    <p className="text-sm text-[#6b7280] leading-relaxed max-w-[520px]">{feature.description}</p>
-                                    {/* Mobile metrics */}
-                                    <div className="flex gap-6 mt-6 md:hidden">
-                                        {feature.metrics.map((metric) => (
-                                            <div key={metric.label}>
-                                                <div className="text-xl font-bold text-[#0A0A0A]">{metric.value}</div>
-                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider">{metric.label}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                {index % 2 === 0 && (
-                                    <div className="hidden md:flex flex-col gap-4">
-                                        {feature.metrics.map((metric) => (
-                                            <div key={metric.label} className="bg-[#FAFAFA] border border-[#e5e5e5] rounded-lg p-4">
-                                                <div className="text-2xl font-bold text-[#0A0A0A] tracking-tight">{metric.value}</div>
-                                                <div className="text-[11px] text-[#9ca3af] uppercase tracking-wider mt-0.5">{metric.label}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const sections = containerRef.current.querySelectorAll('.service-card');
+      const scrollPos = window.scrollY + window.innerHeight / 2;
 
-                <div className="text-center mt-12">
-                    <Link
-                        href="https://cal.com/tusharm/30min?user=tusharm"
-                        target="_blank"
-                        className="inline-flex items-center text-sm font-medium text-[#0A0A0A] hover:text-[#6b7280] transition-colors"
-                    >
-                        See all capabilities in a live demo
-                        <svg className="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </Link>
-                </div>
+      sections.forEach((section, index) => {
+        const element = section as HTMLElement;
+        if (scrollPos > element.offsetTop && scrollPos < element.offsetTop + element.offsetHeight) {
+          setActiveStep(index);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <section className="py-24 md:py-32 bg-[#FFFFFF] overflow-hidden" id="services">
+      <div className="max-w-[1100px] mx-auto px-6" ref={containerRef}>
+        
+        {/* Header Section */}
+        <div className="mb-24">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter mb-6">Our Services</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-0">
+          
+          {/* LEFT SIDE: Vertical Timeline (Hidden on Mobile) */}
+          <div className="hidden md:flex flex-col items-center relative pt-4">
+            <div className="w-[1px] h-full bg-[#E5E5E5] absolute top-4 bottom-4 left-1/2 -translate-x-1/2">
+              <div 
+                className="w-full bg-[#0A0A0A] transition-all duration-700 ease-out origin-top"
+                style={{ height: `${(activeStep + 1) * 25}%` }}
+              />
             </div>
-        </section>
-    );
+            {services.map((_, index) => (
+              <div 
+                key={index}
+                className={`w-10 h-10 rounded-full border-2 bg-white z-10 flex items-center justify-center transition-all duration-300 mb-[450px] last:mb-0
+                  ${activeStep >= index ? 'border-[#0A0A0A] scale-110 shadow-sm' : 'border-[#E5E5E5] scale-100 opacity-50'}
+                `}
+              >
+                <div className={`w-2 h-2 rounded-full ${activeStep >= index ? 'bg-[#0A0A0A]' : 'bg-[#E5E5E5]'}`} />
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT SIDE: Content Cards */}
+          <div className="space-y-12 md:space-y-32">
+            {services.map((service, index) => (
+              <div 
+                key={service.id}
+                className="service-card group relative"
+              >
+                <div className="flex flex-col lg:grid lg:grid-cols-[1fr_280px] gap-12 items-start">
+                  
+                  {/* Card Content */}
+                  <div className="transition-all duration-500 hover:translate-y-[-4px]">
+                    <span className={`inline-block text-[12px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6 ${service.tagColor}`}>
+                      {service.tag}
+                    </span>
+                    
+                    <h3 className="text-4xl md:text-[40px] font-black text-[#0A0A0A] leading-[1.3] mb-6 max-w-[550px] tracking-tight">
+                      <span className="bg-[#FFE014] px-4 py-2 rounded-xl inline-block -rotate-1 group-hover:rotate-0 transition-transform duration-300 shadow-sm">
+                        {service.headline}
+                      </span>
+                    </h3>
+
+                    <p className="text-[16px] text-[#666666] leading-relaxed mb-8 max-w-[450px] font-medium">
+                      {service.description}
+                    </p>
+
+                    <Link 
+                      href="https://cal.com/tusharm/30min?user=tusharm"
+                      target="_blank"
+                      className="inline-flex items-center text-[15px] font-bold text-[#0A0A0A] hover:gap-2 transition-all group/cta"
+                    >
+                      {service.cta}
+                      <span className="ml-2 transition-transform duration-300 group-hover/cta:translate-x-1"></span>
+                    </Link>
+                  </div>
+
+                  {/* Floating Metric Cards */}
+                  <div className="flex flex-col gap-4 w-full">
+                    {service.metrics.map((metric, mIdx) => (
+                      <div 
+                        key={mIdx}
+                        className="bg-white border border-[#E5E5E5] rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] hover:translate-y-[-2px] transition-all duration-300 group/metric"
+                      >
+                        <div className="text-3xl font-black text-[#0A0A0A] tracking-tighter mb-1">{metric.value}</div>
+                        <div className="text-[12px] font-bold text-[#9CA3AF] uppercase tracking-widest">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      <style jsx>{`
+        .service-card {
+          opacity: 1;
+        }
+        @media (max-width: 768px) {
+          h3 {
+            font-size: 28px !important;
+          }
+        }
+      `}</style>
+    </section>
+  );
 }
