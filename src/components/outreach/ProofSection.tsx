@@ -19,7 +19,7 @@ export default function ProofSection() {
                     {/* Screenshot */}
                     <div className="relative overflow-hidden rounded-xl border-2 border-[#1E293B]/20 mb-6">
                         <img
-                            src="/instantly.png"
+                            src="/instantly.webp"
                             alt="Live campaign showing 6.3% reply rate"
                             className="w-full h-auto"
                         />

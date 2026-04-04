@@ -17,7 +17,7 @@ export default function Proof() {
                     {/* Screenshot */}
                     <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#1E293B]/20 mb-4 sm:mb-6">
                         <img
-                            src="/instantly.png"
+                            src="/instantly.webp"
                             alt="Instantly.ai campaign showing 6.3% reply rate"
                             className="w-full h-auto"
                         />

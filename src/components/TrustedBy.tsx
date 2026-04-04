@@ -11,7 +11,7 @@ export default function TrustedBy() {
                     {/* Call It Recruiting */}
                     <div className="flex items-center opacity-75 hover:opacity-100 transition-opacity">
                         <Image
-                            src="/logos/call-it-recruiting-logo.png"
+                            src="/logos/call-it-recruiting-logo.webp"
                             alt="Call It Recruiting"
                             width={160}
                             height={48}

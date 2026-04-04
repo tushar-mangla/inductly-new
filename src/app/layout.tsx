@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     description: "The only Recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
     icons: {
         icon: "/favicon.svg",
-        apple: "/logos/recruitmentos_logo.png",
+        apple: "/logos/recruitmentos_logo.webp",
     },
     openGraph: {
         title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
         description: "The only Recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
-        images: ["/logos/recruitmentos_logo.png"],
+        images: ["/logos/recruitmentos_logo.webp"],
     },
 };
 

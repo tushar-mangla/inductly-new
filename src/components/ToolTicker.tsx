@@ -3,21 +3,21 @@
 import React from 'react';
 
 const tools = [
-  { name: 'n8n', icon: '/logos/n8n.png' },
-  { name: 'Claude', icon: '/logos/claude.png' },
-  { name: 'Instantly', icon: '/logos/instantly.png' },
-  { name: 'Lemlist', icon: '/logos/lemlist.png' },
-  { name: 'LinkedIn', icon: '/logos/linkedin.png' },
-  { name: 'Lusha', icon: '/logos/lusha.png' },
-  { name: 'Hunter', icon: '/logos/hunter.png' },
-  { name: 'Apollo', icon: '/logos/apollo.png' },
-  { name: 'Indeed', icon: '/logos/indeed.png' },
-  { name: 'Stepstone', icon: '/logos/stepstone.png' },
-  { name: 'Clay', icon: '/logos/clay.png' },
-  { name: 'Apify', icon: '/logos/kaspr.png' },
-  { name: 'Glassdoor', icon: '/logos/salesnav.png' },
-  { name: 'Gemini', icon: '/logos/gemini.png' },
-  { name: 'Airtable', icon: '/logos/airtable.png' },
+  { name: 'n8n', icon: '/logos/n8n.webp' },
+  { name: 'Claude', icon: '/logos/claude.webp' },
+  { name: 'Instantly', icon: '/logos/instantly.webp' },
+  { name: 'Lemlist', icon: '/logos/lemlist.webp' },
+  { name: 'LinkedIn', icon: '/logos/linkedin.webp' },
+  { name: 'Lusha', icon: '/logos/lusha.webp' },
+  { name: 'Hunter', icon: '/logos/hunter.webp' },
+  { name: 'Apollo', icon: '/logos/apollo.webp' },
+  { name: 'Indeed', icon: '/logos/indeed.webp' },
+  { name: 'Stepstone', icon: '/logos/stepstone.webp' },
+  { name: 'Clay', icon: '/logos/clay.webp' },
+  { name: 'Apify', icon: '/logos/kaspr.webp' },
+  { name: 'Glassdoor', icon: '/logos/salesnav.webp' },
+  { name: 'Gemini', icon: '/logos/gemini.webp' },
+  { name: 'Airtable', icon: '/logos/airtable.webp' },
 ];
 
 export default function ToolTicker() {

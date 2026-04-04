@@ -135,7 +135,7 @@ export default function FeaturesDiagram() {
                                     Recruitment<span className="text-[#FF6A00]">OS</span>
                                 </div>
                                 <img
-                                    src="/logos/robot.jpg"
+                                    src="/logos/robot.webp"
                                     alt="RecruitmentOS AI Bot"
                                     className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-lg mix-blend-multiply"
                                 />
