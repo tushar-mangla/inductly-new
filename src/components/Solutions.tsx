@@ -28,7 +28,7 @@ const modules = [
 export default function Solutions() {
     return (
         <section className="py-20 md:py-28 bg-[#FAFAFA]" id="solutions">
-            <div className="max-w-[1100px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-6">
                 <div className="mb-12 md:mb-16">
                     <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Modules</p>
                     <h2 className="text-[#0A0A0A] max-w-[480px]">Four systems. One platform. Zero manual work.</h2>

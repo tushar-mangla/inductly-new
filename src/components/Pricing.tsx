@@ -8,8 +8,8 @@ export default function Pricing() {
       <style dangerouslySetInnerHTML={{ __html: `
         .pricing-container {
           --ink: #0d0d0d;
-          --paper: #f5f2ec;
-          --paper-dark: #ede9e1;
+          --paper: #ffffff;
+          --paper-dark: #f5f5f5;
           --accent: #1a6b4a;
           --accent-light: #e8f5ef;
           --accent-mid: #2d9e6e;
@@ -27,17 +27,22 @@ export default function Pricing() {
           font-family: 'Outfit', sans-serif;
           background: var(--paper);
           color: var(--ink);
-          font-size: 15px;
+          font-size: 19.5px;
           line-height: 1.6;
           padding-bottom: 5rem;
         }
 
-        .pricing-container h1, .pricing-container h2, .pricing-container .logo, .pricing-container .card-name, .pricing-container .bundle-title, .pricing-container .saas-name, .pricing-container .saas-bundle-title, .pricing-container .footer-left {
+        .pricing-container h2, .pricing-container .logo, .pricing-container .card-name, .pricing-container .bundle-title, .pricing-container .saas-name, .pricing-container .saas-bundle-title, .pricing-container .footer-left {
           font-family: 'DM Serif Display', serif;
         }
 
+        .pricing-container h1 {
+          font-family: 'Outfit', sans-serif;
+          font-weight: 500;
+        }
+
         .pricing-container .hero {
-          max-width: 1100px;
+          max-width: 1280px;
           margin: 0 auto;
           padding: 6rem 2rem 3rem;
           display: grid;
@@ -47,20 +52,20 @@ export default function Pricing() {
         }
 
         .pricing-container .hero-headline {
-          font-size: 3.5rem;
+          font-size: 4.55rem;
           line-height: 1.1;
           letter-spacing: -0.02em;
           color: var(--ink);
         }
 
         .pricing-container .hero-headline em {
-          font-style: italic;
-          color: var(--accent);
+          font-style: normal;
+          color: #F97316;
         }
 
         .pricing-container .hero-copy {
           color: var(--muted);
-          font-size: 0.95rem;
+          font-size: 1.235rem;
           line-height: 1.75;
           max-width: 380px;
           margin-top: 1.25rem;
@@ -85,18 +90,18 @@ export default function Pricing() {
         }
 
         .pricing-container .stat-num {
-          font-size: 2rem;
+          font-size: 2.6rem;
           color: var(--ink);
           line-height: 1;
         }
 
         .pricing-container .stat-label {
-          font-size: 0.75rem;
+          font-size: 0.975rem;
           color: var(--muted);
         }
 
         .pricing-container .section {
-          max-width: 1100px;
+          max-width: 1280px;
           margin: 0 auto;
           padding: 3rem 2rem;
         }
@@ -110,14 +115,14 @@ export default function Pricing() {
 
         .pricing-container .section-eyebrow {
           font-family: 'DM Mono', monospace;
-          font-size: 0.65rem;
+          font-size: 0.845rem;
           letter-spacing: 0.16em;
           text-transform: uppercase;
           color: var(--muted);
         }
 
         .pricing-container .section-title {
-          font-size: 1.8rem;
+          font-size: 2.34rem;
           color: var(--ink);
           letter-spacing: -0.01em;
         }
@@ -152,7 +157,7 @@ export default function Pricing() {
         .pricing-container .card-tag {
           display: inline-block;
           font-family: 'DM Mono', monospace;
-          font-size: 0.6rem;
+          font-size: 0.78rem;
           letter-spacing: 0.14em;
           text-transform: uppercase;
           font-weight: 500;
@@ -162,20 +167,24 @@ export default function Pricing() {
           width: fit-content;
         }
 
-        .pricing-container .tag-green { background: var(--accent-light); color: var(--accent); }
-        .pricing-container .tag-purple { background: var(--purple-light); color: var(--purple); }
-        .pricing-container .tag-gold { background: var(--gold-light); color: var(--gold); }
-        .pricing-container .tag-coral { background: var(--coral-light); color: var(--coral); }
+        .pricing-container .tag-green { background: var(--ink); color: #fff; font-weight: 700; }
+        .pricing-container .tag-purple { background: var(--ink); color: #fff; font-weight: 700; }
+        .pricing-container .tag-gold { background: var(--ink); color: #fff; font-weight: 700; }
+        .pricing-container .tag-coral { background: var(--ink); color: #fff; font-weight: 700; }
 
         .pricing-container .card-name {
-          font-size: 1.15rem;
+          font-size: 1.5rem;
           color: var(--ink);
           line-height: 1.2;
           margin-bottom: 6px;
+          background: #FDEDD3;
+          display: inline-block;
+          padding: 4px 10px;
+          border-radius: 6px;
         }
 
         .pricing-container .card-desc {
-          font-size: 0.8rem;
+          font-size: 1.04rem;
           color: var(--muted);
           line-height: 1.6;
           flex: 1;
@@ -183,21 +192,21 @@ export default function Pricing() {
         }
 
         .pricing-container .card-price {
-          font-size: 1.9rem;
+          font-size: 2.47rem;
           color: var(--ink);
           line-height: 1;
         }
 
         .pricing-container .card-price-unit {
-          font-size: 0.75rem;
+          font-size: 0.975rem;
           color: var(--muted);
           margin-top: 4px;
         }
 
         .pricing-container .bundle-banner {
           margin-top: 1rem;
-          background: var(--ink);
-          color: var(--paper);
+          background: #FDEDD3;
+          color: var(--ink);
           border-radius: 10px;
           padding: 2rem 2.5rem;
           display: flex;
@@ -209,44 +218,44 @@ export default function Pricing() {
 
         .pricing-container .bundle-tag {
           font-family: 'DM Mono', monospace;
-          font-size: 0.6rem;
+          font-size: 0.78rem;
           letter-spacing: 0.16em;
           text-transform: uppercase;
-          color: var(--accent-mid);
+          color: var(--ink);
           margin-bottom: 8px;
         }
 
         .pricing-container .bundle-title {
-          font-size: 1.5rem;
+          font-size: 1.95rem;
           margin-bottom: 6px;
         }
 
         .pricing-container .bundle-sub {
-          font-size: 0.8rem;
-          opacity: 0.55;
+          font-size: 1.04rem;
+          opacity: 0.7;
         }
 
         .pricing-container .bundle-price {
-          font-size: 2.8rem;
+          font-size: 3.64rem;
           line-height: 1;
         }
 
         .pricing-container .bundle-was {
-          font-size: 0.8rem;
-          opacity: 0.4;
+          font-size: 1.04rem;
+          opacity: 0.6;
           text-decoration: line-through;
           margin-bottom: 4px;
         }
 
         .pricing-container .bundle-save {
-          font-size: 0.8rem;
+          font-size: 1.04rem;
           color: var(--accent-mid);
           font-weight: 500;
           margin-top: 4px;
         }
 
         .pricing-container .section-divider {
-          max-width: 1100px;
+          max-width: 1280px;
           margin: 0 auto;
           border: none;
           border-top: 1px solid var(--border-strong);
@@ -276,7 +285,7 @@ export default function Pricing() {
 
         .pricing-container .commit-badge {
           font-family: 'DM Mono', monospace;
-          font-size: 0.6rem;
+          font-size: 0.78rem;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           background: var(--paper-dark);
@@ -289,7 +298,7 @@ export default function Pricing() {
           width: 100%;
           border-collapse: collapse;
           margin: 1rem 0;
-          font-size: 0.8rem;
+          font-size: 1.04rem;
         }
 
         .pricing-container .metrics-table td {
@@ -309,8 +318,8 @@ export default function Pricing() {
           border-top: 1px solid var(--border);
         }
 
-        .pricing-container .saas-price { font-size: 1.7rem; font-family: 'DM Serif Display', serif; }
-        .pricing-container .saas-price-unit { font-size: 0.75rem; color: var(--muted); }
+        .pricing-container .saas-price { font-size: 2.21rem; font-family: 'DM Serif Display', serif; }
+        .pricing-container .saas-price-unit { font-size: 0.975rem; color: var(--muted); }
 
         .pricing-container .saas-bundle {
           margin-top: 1rem;
@@ -325,11 +334,11 @@ export default function Pricing() {
           flex-wrap: wrap;
         }
 
-        .pricing-container .saas-bundle-title { font-size: 1.4rem; margin-bottom: 5px; }
+        .pricing-container .saas-bundle-title { font-size: 1.82rem; margin-bottom: 5px; }
 
         .pricing-container .compare-table-wrap { overflow-x: auto; border: 1px solid var(--border-strong); border-radius: 10px; }
-        .pricing-container .compare-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; background: #fff; }
-        .pricing-container .compare-table th { padding: 1rem 1.25rem; text-align: left; font-family: 'DM Mono', monospace; font-size: 0.6rem; text-transform: uppercase; background: var(--paper-dark); border-bottom: 1px solid var(--border-strong); }
+        .pricing-container .compare-table { width: 100%; border-collapse: collapse; font-size: 1.07rem; background: #fff; }
+        .pricing-container .compare-table th { padding: 1rem 1.25rem; text-align: left; font-family: 'DM Mono', monospace; font-size: 0.78rem; text-transform: uppercase; background: var(--paper-dark); border-bottom: 1px solid var(--border-strong); }
         .pricing-container .compare-table td { padding: 0.9rem 1.25rem; border-bottom: 1px solid var(--border); }
         .pricing-container .compare-table td:not(:first-child) { text-align: center; }
         .pricing-container .strong-val { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--ink); }

@@ -55,7 +55,7 @@ export default function Hero() {
     return (
         <section className="relative overflow-hidden pt-12 pb-24 md:pt-20 md:pb-40 bg-[#F9FAFB]" id="hero">
             <RetroGrid />
-            <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
+            <div className="relative z-10 max-w-[1280px] mx-auto px-6 text-center">
                 <div className="flex flex-col items-center justify-center">
                     <div className="inline-flex items-center justify-center gap-2 bg-[#e8f5ef] rounded-full px-4 py-1.5 text-xs font-semibold text-[#1a6b4a] uppercase tracking-wider mb-8">
                         <span className="w-2 h-2 rounded-full bg-[#1a6b4a] animate-pulse shrink-0" />

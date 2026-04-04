@@ -32,7 +32,7 @@ const phases = [
 export default function Timeline() {
     return (
         <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="timeline">
-            <div className="max-w-[1100px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-6">
                 <div className="mb-12 md:mb-16">
                     <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Implementation</p>
                     <h2 className="text-[#0A0A0A] max-w-[500px]">Ready in 7 days. Results by day 60. Yours forever.</h2>

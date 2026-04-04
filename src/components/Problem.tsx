@@ -3,9 +3,9 @@ const painPoints = [
         number: '01',
         accent: 'border-l-[#c0412b]',
         title: 'Recruiters waste 4+ hours a day on manual sourcing',
-        description: 'Scrolling job boards, copying contacts into spreadsheets, cross-referencing LinkedIn — all before a single email goes out. That\'s $60K+/year per recruiter burned on busywork.',
+        description: 'Scrolling job boards, copying contacts into spreadsheets, cross-referencing LinkedIn — all before a single email goes out. That\'s $60K+/year per Recruiter burned on busywork.',
         stat: '$60K+',
-        statLabel: 'wasted per recruiter/year',
+        statLabel: 'wasted per Recruiter/year',
     },
     {
         number: '02',
@@ -19,16 +19,16 @@ const painPoints = [
         number: '03',
         accent: 'border-l-[#3d2e7c]',
         title: 'Scaling requires hiring — and margins shrink',
-        description: 'Every new recruiter needs onboarding, tools, salary, and months to ramp. Growth is linear, costs compound, and your margins compress with every hire.',
+        description: 'Every new Recruiter needs onboarding, tools, salary, and months to ramp. Growth is linear, costs compound, and your margins compress with every hire.',
         stat: '6+ mo',
-        statLabel: 'avg ramp time per recruiter',
+        statLabel: 'avg ramp time per Recruiter',
     },
 ];
 
 export default function Problem() {
     return (
         <section className="py-20 md:py-28 bg-white">
-            <div className="max-w-[1100px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-6">
                 <div className="mb-12 md:mb-16 max-w-[520px]">
                     <p className="text-xs font-medium text-[#c0412b] uppercase tracking-widest mb-3">The Problem</p>
                     <h2 className="text-[#0A0A0A]">Your pipeline is leaking revenue at every stage.</h2>

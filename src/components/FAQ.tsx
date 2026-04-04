@@ -16,8 +16,8 @@ const faqs = [
         answer: 'Every module works independently. Start with lead generation only, add outreach later, or jump straight to the full suite. We price each module separately so you pay only for what you need.',
     },
     {
-        question: 'How is this different from using a VA or hiring another recruiter?',
-        answer: 'A recruiter costs $60K+/year, needs onboarding, and handles maybe 20-30 leads per day. RecruitmentOS processes 500+ jobs daily, runs 24/7, and costs a fraction. It doesn\'t replace your team — it amplifies them.',
+        question: 'How is this different from using a VA or hiring another Recruiter?',
+        answer: 'A Recruiter costs $60K+/year, needs onboarding, and handles maybe 20-30 leads per day. RecruitmentOS processes 500+ jobs daily, runs 24/7, and costs a fraction. It doesn\'t replace your team — it amplifies them.',
     },
     {
         question: 'Why is there a 3-month minimum?',

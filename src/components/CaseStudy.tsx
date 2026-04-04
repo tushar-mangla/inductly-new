@@ -1,7 +1,7 @@
 export default function CaseStudy() {
     return (
         <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="case-study">
-            <div className="max-w-[1100px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-6">
                 <div className="mb-12 md:mb-16">
                     <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Case Study</p>
                     <h2 className="text-[#0A0A0A] max-w-[500px]">From struggling pipeline to predictable revenue.</h2>

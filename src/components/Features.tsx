@@ -21,7 +21,7 @@ const services = [
     tag: 'JOB INTELLIGENCE',
     tagColor: 'bg-[#eeebfb] text-[#3d2e7c]',
     headline: 'Only high-intent job opportunities',
-    description: 'Filters out recruiter spam and duplicates so you only see real openings with a direct path to hiring managers.',
+    description: 'Filters out Recruiter spam and duplicates so you only see real openings with a direct path to hiring managers.',
     cta: 'Explore jobs →',
     metrics: [
       { value: '95%', label: 'Match accuracy' },
@@ -75,11 +75,11 @@ export default function Features() {
   }, []);
 
   return (
-    <section className="py-24 md:py-32 bg-[#FFFFFF] overflow-hidden" id="services">
-      <div className="max-w-[1100px] mx-auto px-6" ref={containerRef}>
+    <section className="py-16 md:py-20 bg-[#FFFFFF] overflow-hidden" id="services">
+      <div className="max-w-[1280px] mx-auto px-6" ref={containerRef}>
         
         {/* Header Section */}
-        <div className="mb-24">
+        <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter mb-6">Our Services</h2>
         </div>
 
@@ -96,7 +96,7 @@ export default function Features() {
             {services.map((_, index) => (
               <div 
                 key={index}
-                className={`w-10 h-10 rounded-full border-2 bg-white z-10 flex items-center justify-center transition-all duration-300 mb-[450px] last:mb-0
+                className={`w-10 h-10 rounded-full border-2 bg-white z-10 flex items-center justify-center transition-all duration-300 mb-[280px] last:mb-0
                   ${activeStep >= index ? 'border-[#0A0A0A] scale-110 shadow-sm' : 'border-[#E5E5E5] scale-100 opacity-50'}
                 `}
               >
@@ -106,7 +106,7 @@ export default function Features() {
           </div>
 
           {/* RIGHT SIDE: Content Cards */}
-          <div className="space-y-12 md:space-y-32">
+          <div className="space-y-12 md:space-y-20">
             {services.map((service, index) => (
               <div 
                 key={service.id}
@@ -120,8 +120,8 @@ export default function Features() {
                       {service.tag}
                     </span>
                     
-                    <h3 className="text-4xl md:text-[40px] font-black text-[#0A0A0A] leading-[1.3] mb-6 max-w-[550px] tracking-tight">
-                      <span className="bg-[#FFE014] px-4 py-2 rounded-xl inline-block -rotate-1 group-hover:rotate-0 transition-transform duration-300 shadow-sm">
+                    <h3 className="text-2xl md:text-[26px] font-semibold text-[#0A0A0A] leading-[1.3] mb-6 max-w-[550px] tracking-tight">
+                      <span className="bg-[#FDEDD3] text-[#111827] px-2.5 py-1 rounded-md inline-block -rotate-1 group-hover:rotate-0 transition-transform duration-300">
                         {service.headline}
                       </span>
                     </h3>

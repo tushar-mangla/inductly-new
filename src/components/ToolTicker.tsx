@@ -23,7 +23,7 @@ const tools = [
 export default function ToolTicker() {
   return (
     <section className="py-20 bg-white overflow-hidden" id="workflow-tools">
-      <div className="max-w-[1100px] mx-auto px-6 mb-12 text-center">
+      <div className="max-w-[1280px] mx-auto px-6 mb-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] tracking-tight" style={{ fontFamily: "'Inter', sans-serif" }}>
           Your workflow deserves better tools.
         </h2>

@@ -12,7 +12,7 @@ const platforms = [
 export default function Integrations() {
     return (
         <section className="py-16 md:py-20 bg-[#FAFAFA] border-t border-[#e5e5e5]">
-            <div className="max-w-[1100px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     <div className="md:w-[240px] shrink-0">
                         <p className="text-xs font-medium text-[#9ca3af] uppercase tracking-widest mb-1">Integrations</p>

@@ -9,7 +9,6 @@ import BeforeAfter from '@/components/BeforeAfter';
 import HowItWorks from '@/components/HowItWorks';
 import Features from '@/components/Features';
 import Results from '@/components/Results';
-import CaseStudy from '@/components/CaseStudy';
 import ToolTicker from '@/components/ToolTicker';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
@@ -24,7 +23,6 @@ export default function Home() {
             <HowItWorks />
             <Features />
             <Results />
-            <CaseStudy />
             <ToolTicker />
             <FinalCTA />
             <Footer />

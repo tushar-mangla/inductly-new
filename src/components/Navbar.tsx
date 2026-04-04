@@ -7,15 +7,15 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: 'How It Works', href: '#how-it-works' },
-        { name: 'Services', href: '#services' },
+        { name: 'How It Works', href: '/#how-it-works' },
+        { name: 'Services', href: '/#services' },
         { name: 'Pricing', href: '/pricing' },
-        { name: 'Results', href: '#results' },
+        { name: 'Results', href: '/#results' },
     ];
 
     return (
         <header className="sticky top-0 z-[100] bg-white/90 backdrop-blur-md border-b border-[#e5e5e5]">
-            <div className="max-w-[1100px] mx-auto px-6 py-4">
+            <div className="max-w-[1280px] mx-auto px-6 py-4">
                 <nav className="flex items-center justify-between">
                     <Link href="/" className="flex items-center font-black text-3xl tracking-tight">
                         <span className="text-[#0A0A0A]">Recruitment</span>
@@ -30,7 +30,7 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm font-medium text-[#6b7280] hover:text-[#0A0A0A] transition-colors"
+                                className="text-base font-bold text-[#111827] hover:text-[#0A0A0A] transition-colors"
                             >
                                 {link.name}
                             </Link>

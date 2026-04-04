@@ -11,14 +11,14 @@ const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
     title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
-    description: "The only recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
+    description: "The only Recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
     icons: {
         icon: "/favicon.svg",
         apple: "/logos/recruitmentos_logo.png",
     },
     openGraph: {
         title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
-        description: "The only recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
+        description: "The only Recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
         images: ["/logos/recruitmentos_logo.png"],
     },
 };

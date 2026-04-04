@@ -58,7 +58,7 @@ export default function HowItWorks() {
 
   return (
     <section ref={sectionRef} className="py-8 bg-white" id="how-it-works">
-      <div className="max-w-[1128px] mx-auto px-6">
+      <div className="max-w-[1280px] mx-auto px-6">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold text-[#111] tracking-tight" style={{ fontFamily: "'Inter', sans-serif" }}>
             How it works
@@ -113,7 +113,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Tight Text Grid Directly Below */}
-        <div className="max-w-[1128px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 mt-2">
+        <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 mt-2">
           {steps.map((step) => (
             <div key={step.id} className="text-center px-6">
               <h3 className="text-lg font-bold text-[#111] mb-2 leading-none">

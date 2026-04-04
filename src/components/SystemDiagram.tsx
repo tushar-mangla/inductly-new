@@ -30,7 +30,7 @@ const steps = [
 export default function SystemDiagram() {
     return (
         <section className="py-16 md:py-28 bg-white" id="system">
-            <div className="max-w-[1100px] mx-auto px-5">
+            <div className="max-w-[1280px] mx-auto px-5">
                 {/* Header */}
                 <div className="text-center mb-12 sm:mb-16">
                     <div className="inline-block bg-[#7C6EF5]/10 border border-[#7C6EF5]/30 text-[#7C6EF5] px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-black text-[10px] sm:text-xs uppercase tracking-widest mb-5">
@@ -75,7 +75,7 @@ export default function SystemDiagram() {
                 {/* Result callout */}
                 <div className="mt-10 sm:mt-12 p-6 sm:p-8 bg-[#E0F2FE] rounded-[2rem] border-2 border-[#1E293B] text-center">
                     <p className="text-lg sm:text-2xl font-black text-[#1E293B] mb-2">
-                        Result: Agencies running RecruitmentOS see <span className="text-orange-500">5x more placements</span> per recruiter — with zero new headcount.
+                        Result: Agencies running RecruitmentOS see <span className="text-orange-500">5x more placements</span> per Recruiter — with zero new headcount.
                     </p>
                     <p className="text-sm text-[#475569] font-medium">
                         Setup in &lt;7 days · Works with your existing ATS · No hiring required

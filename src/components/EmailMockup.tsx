@@ -1,7 +1,7 @@
 export default function EmailMockup() {
     return (
         <section className="py-16 md:py-32 bg-white" id="email-example">
-            <div className="max-w-[1100px] mx-auto px-5">
+            <div className="max-w-[1280px] mx-auto px-5">
                 <div className="text-center mb-12 sm:mb-20">
                     <div className="inline-block bg-orange-100 text-orange-600 px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-black text-[10px] sm:text-xs uppercase tracking-widest mb-6 sm:mb-8 border-2 border-orange-200">
                         📬 Why It Works

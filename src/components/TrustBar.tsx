@@ -8,7 +8,7 @@ const stats = [
 export default function TrustBar() {
     return (
         <section className="border-y border-[#e5e5e5] bg-[#FAFAFA]">
-            <div className="max-w-[1100px] mx-auto px-6 py-8 md:py-10">
+            <div className="max-w-[1280px] mx-auto px-6 py-8 md:py-10">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
                     {stats.map((stat) => (
                         <div key={stat.label} className="text-center">

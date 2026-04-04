@@ -18,8 +18,8 @@ const rows = [
     },
     {
         aspect: 'Cost',
-        oldWay: '$60,000+/year per senior recruiter + commission',
-        RecruitmentOS: 'From $500/mo — a fraction of one recruiter\'s salary',
+        oldWay: '$60,000+/year per senior Recruiter + commission',
+        RecruitmentOS: 'From $500/mo — a fraction of one Recruiter\'s salary',
     },
     {
         aspect: 'Working Hours',
@@ -36,7 +36,7 @@ const rows = [
 export default function ComparisonTable() {
     return (
         <section className="py-16 md:py-32 bg-[#F8FAFC]" id="comparison">
-            <div className="max-w-[1100px] mx-auto px-5">
+            <div className="max-w-[1280px] mx-auto px-5">
                 <div className="text-center mb-12 sm:mb-16">
                     <div className="inline-block bg-[#1E293B] text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-black text-[10px] sm:text-xs uppercase tracking-widest mb-6">
                         📊 Side by Side
@@ -86,7 +86,7 @@ export default function ComparisonTable() {
                             Total Cost & Savings
                         </div>
                         <div className="px-5 py-5 text-sm sm:text-base text-[#475569] font-bold leading-snug border-r-2 border-[#1E293B]/10 flex flex-col justify-center">
-                            $60,000+ /year per recruiter
+                            $60,000+ /year per Recruiter
                         </div>
                         <div className="px-5 py-5 text-sm sm:text-base text-[#1E293B] font-black leading-snug flex flex-col justify-center gap-1">
                             <div>$6,000-$8,328/year (Full Autopilot)</div>

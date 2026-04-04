@@ -1,7 +1,7 @@
 export default function SocialProof() {
     return (
         <section className="py-20 md:py-28 bg-[#0A0A0A]" id="proof">
-            <div className="max-w-[1100px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
                     <div>
                         <p className="text-xs font-medium text-[#6b7280] uppercase tracking-widest mb-3">Results</p>
