@@ -15,9 +15,9 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
 
     return (
         <header className="sticky top-0 z-[100] bg-white/90 backdrop-blur-md border-b border-[#e5e5e5]">
-            <div className="max-w-[1280px] mx-auto px-6 py-4">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-4">
                 <nav className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center font-black text-3xl tracking-tight">
+                    <Link href="/" className="flex items-center font-black text-2xl sm:text-3xl tracking-tight">
                         <span className="text-[#0A0A0A]">Recruitment</span>
                         <span className="flex items-center text-orange-500 ml-2">
                             <span className="animate-[spin_4s_linear_infinite] inline-block leading-none">O</span>
@@ -46,7 +46,7 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
 
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="p-2 md:hidden text-[#0A0A0A]"
+                        className="p-2.5 md:hidden text-[#0A0A0A]"
                         aria-label="Toggle menu"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

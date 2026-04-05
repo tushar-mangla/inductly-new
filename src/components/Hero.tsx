@@ -55,7 +55,7 @@ export default function Hero() {
     return (
         <section className="relative overflow-hidden pt-12 pb-24 md:pt-20 md:pb-40 bg-[#F9FAFB]" id="hero">
             <RetroGrid />
-            <div className="relative z-10 max-w-[1280px] mx-auto px-6 text-center">
+            <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 text-center">
                 <div className="flex flex-col items-center justify-center">
                     <div className="inline-flex items-center justify-center gap-2 bg-[#e8f5ef] rounded-full px-4 py-1.5 text-xs font-semibold text-[#1a6b4a] uppercase tracking-wider mb-8">
                         <span className="w-2 h-2 rounded-full bg-[#1a6b4a] animate-pulse shrink-0" />
@@ -70,7 +70,7 @@ export default function Hero() {
                         style={{ minHeight: 'auto' }}
                     >
                         <h1
-                            className="text-7xl md:text-[7.6rem] lg:text-[8.3rem] tracking-[-0.04em] mb-6 leading-[0.9] mx-auto"
+                            className="text-[2.5rem] sm:text-5xl md:text-7xl lg:text-[7.6rem] xl:text-[8.3rem] tracking-[-0.04em] mb-6 leading-[0.9] mx-auto"
                             style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
                         >
                             <span
@@ -97,7 +97,7 @@ export default function Hero() {
                             href="https://cal.com/tusharm/30min?user=tusharm"
                             target="_blank"
                             onClick={() => trackCTAClick('Book a Demo', 'Hero')}
-                            className="inline-flex items-center justify-center bg-[#0A0A0A] text-white px-8 py-4 rounded-full font-medium hover:bg-[#222222] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 text-lg group"
+                            className="inline-flex items-center justify-center bg-[#0A0A0A] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium hover:bg-[#222222] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 text-base sm:text-lg group"
                         >
                             Book a Demo
                             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -106,7 +106,7 @@ export default function Hero() {
                         </Link>
                         <Link
                             href="#how-it-works"
-                            className="inline-flex items-center justify-center bg-white text-[#0A0A0A] border border-[#e5e5e5] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#f9fafb] hover:-translate-y-1 hover:shadow-md active:scale-95 transition-all duration-300"
+                            className="inline-flex items-center justify-center bg-white text-[#0A0A0A] border border-[#e5e5e5] px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-[#f9fafb] hover:-translate-y-1 hover:shadow-md active:scale-95 transition-all duration-300"
                         >
                             See How It Works
                             <svg className="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

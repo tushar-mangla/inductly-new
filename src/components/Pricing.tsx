@@ -362,8 +362,47 @@ export default function Pricing() {
 
         @media (max-width: 900px) {
           .pricing-container .hero { grid-template-columns: 1fr; }
+          .pricing-container .hero-headline { font-size: 3.5rem; }
           .pricing-container .cards-grid { grid-template-columns: repeat(2, 1fr); }
           .pricing-container .saas-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+          .pricing-container .hero { padding: 4rem 1.5rem 2.5rem; gap: 2rem; }
+          .pricing-container .hero-headline { font-size: 2.75rem; }
+          .pricing-container .hero-copy { font-size: 1.05rem; }
+          .pricing-container .section { padding: 2.5rem 1.5rem; }
+          .pricing-container .section-title { font-size: 1.75rem; }
+          .pricing-container .cards-grid { grid-template-columns: repeat(2, 1fr); }
+          .pricing-container .card-name { font-size: 1.25rem; }
+          .pricing-container .stat-num { font-size: 2rem; }
+          .pricing-container .bundle-banner { padding: 1.5rem 1.75rem; flex-direction: column; text-align: center; gap: 1.25rem; }
+          .pricing-container .bundle-banner > div:last-child { text-align: center; }
+          .pricing-container .bundle-price { font-size: 2.75rem; }
+          .pricing-container .saas-bundle { padding: 1.5rem 1.75rem; flex-direction: column; text-align: center; gap: 1.25rem; }
+          .pricing-container .saas-bundle > div:last-child { text-align: center; }
+        }
+
+        @media (max-width: 640px) {
+          .pricing-container { font-size: 16px; }
+          .pricing-container .hero { padding: 3rem 1.25rem 2rem; gap: 1.5rem; }
+          .pricing-container .hero-headline { font-size: 2.25rem; }
+          .pricing-container .hero-copy { font-size: 1rem; }
+          .pricing-container .section { padding: 2rem 1.25rem; }
+          .pricing-container .cards-grid { grid-template-columns: 1fr; }
+          .pricing-container .product-card { border-right: none; border-bottom: 1px solid var(--border-strong); }
+          .pricing-container .product-card:last-child { border-bottom: none; }
+          .pricing-container .card-price { font-size: 1.75rem; }
+          .pricing-container .card-name { font-size: 1.2rem; }
+          .pricing-container .stat-num { font-size: 1.75rem; }
+          .pricing-container .section-title { font-size: 1.5rem; }
+          .pricing-container .section-header { flex-wrap: wrap; }
+          .pricing-container .bundle-banner { padding: 1.25rem; }
+          .pricing-container .bundle-price { font-size: 2.25rem; }
+          .pricing-container .bundle-title { font-size: 1.4rem; }
+          .pricing-container .saas-bundle { padding: 1.25rem; }
+          .pricing-container .compare-table { font-size: 0.85rem; }
+          .pricing-container .compare-table th, .pricing-container .compare-table td { padding: 0.6rem 0.5rem; }
         }
       `}} />
 

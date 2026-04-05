@@ -22,8 +22,8 @@ const tools = [
 
 export default function ToolTicker() {
   return (
-    <section className="py-20 bg-white overflow-hidden" id="workflow-tools">
-      <div className="max-w-[1280px] mx-auto px-6 mb-12 text-center">
+    <section className="py-12 sm:py-20 bg-white overflow-hidden" id="workflow-tools">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 mb-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] tracking-tight" style={{ fontFamily: "'Inter', sans-serif" }}>
           Your workflow deserves better tools.
         </h2>
@@ -42,11 +42,11 @@ export default function ToolTicker() {
         {/* Marquee Wrapper */}
         <div className="flex whitespace-nowrap animate-marquee py-4">
           {[...tools, ...tools, ...tools, ...tools].map((tool, index) => (
-            <div key={index} className="flex items-center gap-4 mx-[30px]">
-              <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
+            <div key={index} className="flex items-center gap-3 sm:gap-4 mx-[18px] sm:mx-[30px]">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
                 <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" />
               </div>
-              <span className="text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
+              <span className="text-base sm:text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
             </div>
           ))}
         </div>
@@ -54,11 +54,11 @@ export default function ToolTicker() {
         {/* Duplicate for seamless loop */}
         <div className="flex whitespace-nowrap animate-marquee py-4" aria-hidden="true">
           {[...tools, ...tools, ...tools, ...tools].map((tool, index) => (
-            <div key={index} className="flex items-center gap-4 mx-[30px]">
-              <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
+            <div key={index} className="flex items-center gap-3 sm:gap-4 mx-[18px] sm:mx-[30px]">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
                 <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" />
               </div>
-              <span className="text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
+              <span className="text-base sm:text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
             </div>
           ))}
         </div>

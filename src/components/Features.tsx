@@ -75,12 +75,12 @@ export default function Features() {
   }, []);
 
   return (
-    <section className="py-16 md:py-20 bg-[#FFFFFF] overflow-hidden" id="services">
-      <div className="max-w-[1280px] mx-auto px-6" ref={containerRef}>
+    <section className="py-10 sm:py-16 md:py-20 bg-[#FFFFFF] overflow-hidden" id="services">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6" ref={containerRef}>
         
         {/* Header Section */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter mb-6">Our Services</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter mb-6">Our Services</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-0">
@@ -112,8 +112,8 @@ export default function Features() {
                 key={service.id}
                 className="service-card group relative"
               >
-                <div className="flex flex-col lg:grid lg:grid-cols-[1fr_280px] gap-12 items-start">
-                  
+                <div className="flex flex-col md:grid md:grid-cols-[1fr_240px] lg:grid-cols-[1fr_280px] gap-8 md:gap-12 items-start">
+
                   {/* Card Content */}
                   <div className="transition-all duration-500 hover:translate-y-[-4px]">
                     <span className={`inline-block text-[12px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6 ${service.tagColor}`}>

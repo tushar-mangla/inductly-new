@@ -58,19 +58,17 @@ export default function HowItWorks() {
 
   return (
     <section ref={sectionRef} className="py-8 bg-white" id="how-it-works">
-      <div className="max-w-[1280px] mx-auto px-6">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold text-[#111] tracking-tight" style={{ fontFamily: "'Inter', sans-serif" }}>
             How it works
           </h2>
         </div>
 
-        {/* The Precision Compact Graphic (1128px x 191px) */}
-        <div className="w-full h-[191px] relative flex items-center justify-center">
-          {/* Connecting Curved Line (Continuous Energy Flow) */}
+        {/* Desktop: Horizontal layout with SVG connector */}
+        <div className="hidden md:block w-full h-[191px] relative">
           <div className="absolute inset-0 z-0 pointer-events-none">
             <svg width="100%" height="100%" viewBox="0 0 1128 191" fill="none" preserveAspectRatio="none">
-              {/* Thin Base Path */}
               <path
                 d="M188,95 Q423,135 564,95 T940,95"
                 stroke="#FF6A00"
@@ -78,7 +76,6 @@ export default function HowItWorks() {
                 strokeOpacity="0.1"
                 fill="none"
               />
-              {/* Animated Glowing Segment */}
               <path
                 d="M188,95 Q423,135 564,95 T940,95"
                 stroke="#FF6A00"
@@ -98,7 +95,7 @@ export default function HowItWorks() {
             </svg>
           </div>
 
-          <div className="w-full grid grid-cols-3 relative z-10">
+          <div className="w-full grid grid-cols-3 relative z-10 h-full items-center">
             {steps.map((step) => (
               <div key={step.id} className="flex flex-col items-center justify-center">
                 <div className="w-[72px] h-[72px] rounded-full border border-[#FF6A00]/25 bg-white flex items-center justify-center text-[#FF6A00] shadow-sm relative overflow-hidden group hover:scale-105 transition-transform duration-300">
@@ -112,8 +109,8 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        {/* Tight Text Grid Directly Below */}
-        <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 mt-2">
+        {/* Desktop: Text row */}
+        <div className="hidden md:grid max-w-[1280px] mx-auto grid-cols-3 gap-0 mt-2">
           {steps.map((step) => (
             <div key={step.id} className="text-center px-6">
               <h3 className="text-lg font-bold text-[#111] mb-2 leading-none">
@@ -122,6 +119,28 @@ export default function HowItWorks() {
               <p className="text-[#666] leading-snug text-xs max-w-[240px] mx-auto">
                 {step.description}
               </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: Vertical stacked layout */}
+        <div className="md:hidden flex flex-col gap-6 mt-2">
+          {steps.map((step) => (
+            <div key={step.id} className="flex items-start gap-4">
+              <div className="w-14 h-14 rounded-full border border-[#FF6A00]/25 bg-white flex items-center justify-center text-[#FF6A00] shadow-sm shrink-0 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[#FF6A00]/5" />
+                <div className="relative z-10 scale-[0.6]">
+                  {step.icon}
+                </div>
+              </div>
+              <div className="pt-1">
+                <h3 className="text-base font-bold text-[#111] mb-1 leading-none">
+                  {step.id}. {step.title}
+                </h3>
+                <p className="text-[#666] leading-snug text-sm">
+                  {step.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

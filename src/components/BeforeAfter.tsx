@@ -105,10 +105,10 @@ const afterItems = [
 
 export default function BeforeAfter() {
     return (
-        <section className="py-20 md:py-32 bg-[#FAFAFA]" id="before-after">
-            <div className="max-w-[1280px] mx-auto px-6">
+        <section className="py-14 md:py-32 bg-[#FAFAFA]" id="before-after">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
                 {/* Section Header */}
-                <div className="text-center mb-14 md:mb-20">
+                <div className="text-center mb-10 md:mb-20">
                     <p className="text-xs font-semibold text-[#6B7280] uppercase tracking-[0.2em] mb-4">
                         The Transformation
                     </p>
@@ -120,7 +120,7 @@ export default function BeforeAfter() {
                 {/* Comparison Container */}
                 <div className="relative">
                     {/* Floating Pills — outside overflow-hidden container */}
-                    <div className="absolute top-0 left-0 right-0 z-20 flex justify-between pointer-events-none px-6 md:px-12 -translate-y-1/2">
+                    <div className="absolute top-0 left-0 right-0 z-20 flex justify-between pointer-events-none px-4 md:px-12 -translate-y-1/2">
                         <span className="bg-[#3B82F6] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
                             Before
                         </span>
@@ -142,15 +142,15 @@ export default function BeforeAfter() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         {/* LEFT — Before */}
-                        <div className="relative bg-[#EBF4FF] p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(59,130,246,0.08)] group">
+                        <div className="relative bg-[#EBF4FF] p-6 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(59,130,246,0.08)] group">
                             {/* Vertical Divider (desktop) */}
                             <div className="hidden md:block absolute right-0 top-8 bottom-8 w-px bg-[#CBD5E1]" />
 
-                            <h3 className="text-[28px] md:text-[34px] font-extrabold text-[#1A1A1A] leading-snug mb-8 tracking-tight">
+                            <h3 className="text-[22px] md:text-[34px] font-extrabold text-[#1A1A1A] leading-snug mb-6 md:mb-8 tracking-tight">
                                 Old Way of Recruiting
                             </h3>
 
-                            <div className="space-y-5">
+                            <div className="space-y-3 md:space-y-5">
                                 {beforeItems.map((item) => (
                                     <div key={item.text} className="flex items-start gap-3.5">
                                         <div className="w-8 h-8 rounded-lg bg-[#DBEAFE] flex items-center justify-center shrink-0 mt-0.5 text-[#6B7280] group-hover:text-[#3B82F6] transition-colors duration-300">
@@ -174,12 +174,12 @@ export default function BeforeAfter() {
                         </div>
 
                         {/* RIGHT — After */}
-                        <div className="bg-[#FFF4EB] p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(249,115,22,0.08)] group">
-                            <h3 className="text-[28px] md:text-[34px] font-extrabold text-[#1A1A1A] leading-snug mb-8 tracking-tight">
+                        <div className="bg-[#FFF4EB] p-6 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(249,115,22,0.08)] group">
+                            <h3 className="text-[22px] md:text-[34px] font-extrabold text-[#1A1A1A] leading-snug mb-6 md:mb-8 tracking-tight">
                                 With Recruitment<span className="text-[#F97316]">OS</span>
                             </h3>
 
-                            <div className="space-y-5">
+                            <div className="space-y-3 md:space-y-5">
                                 {afterItems.map((item) => (
                                     <div key={item.text} className="flex items-start gap-3.5">
                                         <div className="w-8 h-8 rounded-lg bg-[#FFEDD5] flex items-center justify-center shrink-0 mt-0.5 text-[#9A6B3A] group-hover:text-[#F97316] transition-colors duration-300">

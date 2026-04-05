@@ -55,8 +55,8 @@ const arrowPaths = [
 
 export default function FeaturesDiagram() {
     return (
-        <section className="py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="solution-overview">
-            <div className="max-w-[1280px] mx-auto px-6">
+        <section className="py-12 sm:py-20 md:py-28 bg-white border-t border-[#e5e5e5]" id="solution-overview">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
                 <div className="text-center mb-16">
                     <p className="text-xs font-medium text-[#FF6A00] uppercase tracking-widest mb-3"></p>
                     <h2 className="text-[#0A0A0A] text-3xl md:text-4xl font-bold tracking-tight">
@@ -64,7 +64,46 @@ export default function FeaturesDiagram() {
                     </h2>
                 </div>
 
-                <div className="relative bg-[#FAFAFA] border border-[#e5e5e5] rounded-3xl p-8 md:p-12 overflow-hidden">
+                {/* Mobile Layout: stacked cards */}
+                <div className="md:hidden relative bg-[#FAFAFA] border border-[#e5e5e5] rounded-3xl p-6 overflow-hidden">
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+                        <div className="absolute inset-0 bg-[radial-gradient(#FF6A00_1px,transparent_1px)] [background-size:20px_20px]" />
+                    </div>
+
+                    {/* Center Hub */}
+                    <div className="relative z-10 flex flex-col items-center mb-8">
+                        <div className="text-base font-extrabold text-[#0A0A0A] tracking-tight leading-none mb-1">
+                            Recruitment<span className="text-[#FF6A00]">OS</span>
+                        </div>
+                        <img
+                            src="/logos/robot.webp"
+                            alt="RecruitmentOS AI Bot"
+                            className="w-20 h-20 object-contain drop-shadow-lg mix-blend-multiply"
+                        />
+                    </div>
+
+                    {/* Feature Cards Grid */}
+                    <div className="relative z-10 grid grid-cols-2 gap-3">
+                        {features.map((feature) => (
+                            <div key={feature.title} className="group">
+                                <div className="bg-white border border-[#E5E5E5] rounded-2xl p-4 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+                                    <div className="w-10 h-10 rounded-xl bg-[#FFF4EB] flex items-center justify-center text-[#FF6A00] mb-3">
+                                        {feature.icon}
+                                    </div>
+                                    <h4 className="text-sm font-bold text-[#0A0A0A] leading-snug mb-1">
+                                        {feature.title}
+                                    </h4>
+                                    <p className="text-[11px] text-[#9CA3AF] font-medium leading-snug">
+                                        {feature.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Desktop Layout: diagram with SVG arrows */}
+                <div className="hidden md:block relative bg-[#FAFAFA] border border-[#e5e5e5] rounded-3xl p-8 md:p-12 overflow-hidden">
                     {/* Background decoration */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
                         <div className="absolute inset-0 bg-[radial-gradient(#FF6A00_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -131,13 +170,13 @@ export default function FeaturesDiagram() {
                         {/* Center Hub - Robot / Logo */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                             <div className="flex flex-col items-center justify-center animate-pulse-slow">
-                                <div className="text-base md:text-xl font-extrabold text-[#0A0A0A] tracking-tight leading-none mb-1">
+                                <div className="text-xl font-extrabold text-[#0A0A0A] tracking-tight leading-none mb-1">
                                     Recruitment<span className="text-[#FF6A00]">OS</span>
                                 </div>
                                 <img
                                     src="/logos/robot.webp"
                                     alt="RecruitmentOS AI Bot"
-                                    className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-lg mix-blend-multiply"
+                                    className="w-32 h-32 object-contain drop-shadow-lg mix-blend-multiply"
                                 />
                             </div>
                         </div>
@@ -145,24 +184,24 @@ export default function FeaturesDiagram() {
                         {/* Feature Cards */}
                         {features.map((feature, i) => {
                             const positionClasses = [
-                                'top-0 left-0',          // top-left
-                                'top-0 right-0',         // top-right
-                                'bottom-0 left-0',       // bottom-left
-                                'bottom-0 right-0',      // bottom-right
+                                'top-0 left-0',
+                                'top-0 right-0',
+                                'bottom-0 left-0',
+                                'bottom-0 right-0',
                             ];
                             return (
                                 <div
                                     key={feature.title}
-                                    className={`absolute ${positionClasses[i]} z-20 w-[140px] md:w-[200px] group`}
+                                    className={`absolute ${positionClasses[i]} z-20 w-[160px] lg:w-[200px] group`}
                                 >
-                                    <div className="bg-white border border-[#E5E5E5] rounded-2xl p-4 md:p-5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(255,106,0,0.1)] hover:-translate-y-1 transition-all duration-300">
-                                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#FFF4EB] flex items-center justify-center text-[#FF6A00] mb-3 group-hover:scale-110 transition-transform duration-300">
+                                    <div className="bg-white border border-[#E5E5E5] rounded-2xl p-5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(255,106,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+                                        <div className="w-12 h-12 rounded-xl bg-[#FFF4EB] flex items-center justify-center text-[#FF6A00] mb-3 group-hover:scale-110 transition-transform duration-300">
                                             {feature.icon}
                                         </div>
-                                        <h4 className="text-sm md:text-[15px] font-bold text-[#0A0A0A] leading-snug mb-1">
+                                        <h4 className="text-[15px] font-bold text-[#0A0A0A] leading-snug mb-1">
                                             {feature.title}
                                         </h4>
-                                        <p className="text-[11px] md:text-xs text-[#9CA3AF] font-medium leading-snug">
+                                        <p className="text-xs text-[#9CA3AF] font-medium leading-snug">
                                             {feature.description}
                                         </p>
                                     </div>

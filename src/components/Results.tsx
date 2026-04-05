@@ -148,13 +148,13 @@ function StatCard({ metric }: { metric: (typeof metrics)[number] }) {
 /* ───── main component ───── */
 export default function Results() {
     return (
-        <section className="relative py-24 md:py-32 overflow-hidden" id="results">
+        <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden" id="results">
             {/* background */}
             <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/40 to-orange-50/30 -z-10" />
             <div className="absolute top-20 -left-40 w-[500px] h-[500px] rounded-full bg-blue-100/40 blur-3xl -z-10" />
             <div className="absolute bottom-10 -right-32 w-[400px] h-[400px] rounded-full bg-orange-100/30 blur-3xl -z-10" />
 
-            <div className="max-w-[1280px] mx-auto px-6">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
                 {/* header */}
                 <div className="text-center mb-16 md:mb-20">
                     <p className="text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-[0.2em] mb-4">
@@ -166,7 +166,7 @@ export default function Results() {
                 </div>
 
                 {/* stats grid */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-20 md:mb-28">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-20 md:mb-28">
                     {metrics.map((m) => (
                         <StatCard key={m.label} metric={m} />
                     ))}
@@ -244,7 +244,7 @@ export default function Results() {
                     <Link
                         href="https://cal.com/tusharm/30min?user=tusharm"
                         target="_blank"
-                        className="inline-flex items-center gap-3 bg-[#0A0A0A] text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition-all duration-300"
+                        className="inline-flex items-center gap-3 bg-[#0A0A0A] text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-semibold text-base sm:text-lg hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition-all duration-300"
                     >
                         See It In Action
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

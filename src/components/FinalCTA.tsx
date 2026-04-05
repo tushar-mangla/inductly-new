@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function FinalCTA() {
     return (
-        <section className="py-28 md:py-40 bg-[#FAFAFA] border-t border-[#e5e5e5]" id="contact">
-            <div className="max-w-[900px] mx-auto px-6 text-center">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#0A0A0A] tracking-tight leading-[1.1] mb-6">Ready to Scale Your Pipeline Fast?</h2>
+        <section className="py-16 sm:py-28 md:py-40 bg-[#FAFAFA] border-t border-[#e5e5e5]" id="contact">
+            <div className="max-w-[900px] mx-auto px-4 sm:px-6 text-center">
+                <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#0A0A0A] tracking-tight leading-[1.1] mb-6">Ready to Scale Your Pipeline Fast?</h2>
                 <p className="text-lg md:text-xl text-[#6b7280] mb-12 max-w-[560px] mx-auto leading-relaxed">
                     Join 10+ agencies already using RecruitmentOS to automate their pipeline and grow revenue — without hiring more people.
                 </p>
@@ -13,7 +13,7 @@ export default function FinalCTA() {
                     <Link
                         href="https://cal.com/tusharm/30min?user=tusharm"
                         target="_blank"
-                        className="inline-flex items-center bg-[#0A0A0A] text-white px-10 py-5 rounded-xl font-semibold hover:bg-[#1a1a1a] transition-colors text-lg"
+                        className="inline-flex items-center bg-[#0A0A0A] text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-semibold hover:bg-[#1a1a1a] transition-colors text-base sm:text-lg"
                     >
                         Book a Demo
                         <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
