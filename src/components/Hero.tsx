@@ -61,7 +61,6 @@ export default function Hero() {
                         <span className="w-2 h-2 rounded-full bg-[#1a6b4a] animate-pulse shrink-0" />
                         <span>
                             {typedText}
-                            <span className="inline-block animate-[pulse_1s_ease-in-out_infinite] ml-0.5">|</span>
                         </span>
                     </div>
 
