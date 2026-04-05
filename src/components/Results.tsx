@@ -70,7 +70,7 @@ const metrics = [
         ),
     },
     {
-        end: 7,
+        end: 14,
         suffix: ' days',
         prefix: '<',
         label: 'To first warm reply',

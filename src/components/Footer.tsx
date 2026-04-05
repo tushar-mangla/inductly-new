@@ -14,9 +14,9 @@ export default function Footer() {
                     </div>
 
                     <div className="flex items-center gap-6 text-xs text-[#9ca3af]">
-                        <Link href="#features" className="hover:text-[#0A0A0A] transition-colors">Features</Link>
-                        <Link href="#results" className="hover:text-[#0A0A0A] transition-colors">Results</Link>
-                        <Link href="#faq" className="hover:text-[#0A0A0A] transition-colors">FAQ</Link>
+                        <Link href="/#services" className="hover:text-[#0A0A0A] transition-colors">Services</Link>
+                        <Link href="/#results" className="hover:text-[#0A0A0A] transition-colors">Results</Link>
+                        <Link href="/pricing" className="hover:text-[#0A0A0A] transition-colors">Pricing</Link>
                         <Link href="https://smallgrp.com" target="_blank" className="hover:text-[#0A0A0A] transition-colors">About</Link>
                     </div>
 

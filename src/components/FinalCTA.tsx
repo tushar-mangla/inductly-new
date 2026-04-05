@@ -29,7 +29,7 @@ export default function FinalCTA() {
                 </div>
 
                 <p className="text-sm text-[#9ca3af]">
-                    Setup in &lt;7 days &middot; No long-term contract &middot; First warm reply within a week
+                    Setup in &lt;7 days &middot; No long-term contract &middot; First warm reply within 2 weeks
                 </p>
             </div>
         </section>
