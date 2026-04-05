@@ -10,16 +10,16 @@ const dmMono = DM_Mono({ weight: '400', subsets: ["latin"], variable: '--font-mo
 const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://recruitmentos.smallgrp.com"),
     title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
     description: "The only Recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
     icons: {
         icon: "/favicon.svg",
-        apple: "/logos/recruitmentos_logo.webp",
     },
     openGraph: {
         title: "RecruitmentOS - The Automated Lead Engine for Recruiting Agencies",
         description: "The only Recruiting agency lead generation platform that guarantees quality with a 6%+ reply rate.",
-        images: ["/logos/recruitmentos_logo.webp"],
+        type: "website",
     },
 };
 
