@@ -70,7 +70,7 @@ export default function ToolTicker() {
           100% { transform: translateX(-100%); }
         }
         .animate-marquee {
-          animation: marquee 45s linear infinite;
+          animation: marquee 90s linear infinite;
         }
       `}</style>
     </section>

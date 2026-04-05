@@ -55,16 +55,18 @@ const services = [
 export default function Features() {
   const [activeStep, setActiveStep] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
-      const sections = containerRef.current.querySelectorAll('.service-card');
       const scrollPos = window.scrollY + window.innerHeight / 2;
 
-      sections.forEach((section, index) => {
-        const element = section as HTMLElement;
-        if (scrollPos > element.offsetTop && scrollPos < element.offsetTop + element.offsetHeight) {
+      cardRefs.current.forEach((card, index) => {
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        const top = rect.top + window.scrollY;
+        if (scrollPos > top && scrollPos < top + rect.height) {
           setActiveStep(index);
         }
       });
@@ -76,101 +78,76 @@ export default function Features() {
 
   return (
     <section className="py-10 sm:py-16 md:py-20 bg-[#FFFFFF] overflow-hidden" id="services">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6" ref={containerRef}>
-        
+      <div className="max-w-[1000px] mx-auto px-4 sm:px-6" ref={containerRef}>
+
         {/* Header Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter mb-6">Our Services</h2>
+        <div className="mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0A0A0A] tracking-tighter">Our Services</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-0">
-          
-          {/* LEFT SIDE: Vertical Timeline (Hidden on Mobile) */}
-          <div className="hidden md:flex flex-col items-center relative pt-4">
-            <div className="w-[1px] h-full bg-[#E5E5E5] absolute top-4 bottom-4 left-1/2 -translate-x-1/2">
-              <div 
-                className="w-full bg-[#0A0A0A] transition-all duration-700 ease-out origin-top"
-                style={{ height: `${(activeStep + 1) * 25}%` }}
-              />
-            </div>
-            {services.map((_, index) => (
-              <div 
-                key={index}
-                className={`w-10 h-10 rounded-full border-2 bg-white z-10 flex items-center justify-center transition-all duration-300 mb-[280px] last:mb-0
-                  ${activeStep >= index ? 'border-[#0A0A0A] scale-110 shadow-sm' : 'border-[#E5E5E5] scale-100 opacity-50'}
-                `}
-              >
-                <div className={`w-2 h-2 rounded-full ${activeStep >= index ? 'bg-[#0A0A0A]' : 'bg-[#E5E5E5]'}`} />
+        {/* Service Cards */}
+        <div className="space-y-6 md:space-y-8">
+          {services.map((service, index) => (
+            <div
+              key={service.id}
+              ref={(el) => { cardRefs.current[index] = el; }}
+              className="service-card group relative bg-white border border-[#E5E5E5] rounded-2xl p-6 sm:p-8 md:p-10 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-[#d4d4d4] transition-all duration-300"
+            >
+              {/* Step indicator */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center shrink-0 transition-all duration-300 ${
+                  activeStep >= index ? 'border-[#0A0A0A] bg-[#0A0A0A]' : 'border-[#E5E5E5]'
+                }`}>
+                  <span className={`text-xs font-bold ${activeStep >= index ? 'text-white' : 'text-[#9CA3AF]'}`}>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <span className={`inline-block text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${service.tagColor}`}>
+                  {service.tag}
+                </span>
               </div>
-            ))}
-          </div>
 
-          {/* RIGHT SIDE: Content Cards */}
-          <div className="space-y-12 md:space-y-20">
-            {services.map((service, index) => (
-              <div 
-                key={service.id}
-                className="service-card group relative"
-              >
-                <div className="flex flex-col md:grid md:grid-cols-[1fr_240px] lg:grid-cols-[1fr_280px] gap-8 md:gap-12 items-start">
-
-                  {/* Card Content */}
-                  <div className="transition-all duration-500 hover:translate-y-[-4px]">
-                    <span className={`inline-block text-[12px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6 ${service.tagColor}`}>
-                      {service.tag}
+              {/* Content + Metrics */}
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-10">
+                {/* Left: Content */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl sm:text-2xl md:text-[26px] font-semibold text-[#0A0A0A] leading-[1.3] mb-4 tracking-tight">
+                    <span className="bg-[#FDEDD3] text-[#111827] px-2 py-0.5 rounded-md inline-block -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+                      {service.headline}
                     </span>
-                    
-                    <h3 className="text-2xl md:text-[26px] font-semibold text-[#0A0A0A] leading-[1.3] mb-6 max-w-[550px] tracking-tight">
-                      <span className="bg-[#FDEDD3] text-[#111827] px-2.5 py-1 rounded-md inline-block -rotate-1 group-hover:rotate-0 transition-transform duration-300">
-                        {service.headline}
-                      </span>
-                    </h3>
+                  </h3>
 
-                    <p className="text-[16px] text-[#666666] leading-relaxed mb-8 max-w-[450px] font-medium">
-                      {service.description}
-                    </p>
+                  <p className="text-[15px] text-[#666666] leading-relaxed mb-5 max-w-[480px] font-medium">
+                    {service.description}
+                  </p>
 
-                    <Link 
-                      href="https://cal.com/tusharm/30min?user=tusharm"
-                      target="_blank"
-                      className="inline-flex items-center text-[15px] font-bold text-[#0A0A0A] hover:gap-2 transition-all group/cta"
+                  <Link
+                    href="https://cal.com/tusharm/30min?user=tusharm"
+                    target="_blank"
+                    className="inline-flex items-center text-[14px] font-bold text-[#0A0A0A] hover:text-[#FF6A00] transition-colors group/cta"
+                  >
+                    {service.cta}
+                  </Link>
+                </div>
+
+                {/* Right: Inline Metric Cards */}
+                <div className="flex flex-row md:flex-col gap-3 shrink-0">
+                  {service.metrics.map((metric, mIdx) => (
+                    <div
+                      key={mIdx}
+                      className="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl px-5 py-4 min-w-[140px] hover:bg-white hover:shadow-sm transition-all duration-300"
                     >
-                      {service.cta}
-                      <span className="ml-2 transition-transform duration-300 group-hover/cta:translate-x-1"></span>
-                    </Link>
-                  </div>
-
-                  {/* Floating Metric Cards */}
-                  <div className="flex flex-col gap-4 w-full">
-                    {service.metrics.map((metric, mIdx) => (
-                      <div 
-                        key={mIdx}
-                        className="bg-white border border-[#E5E5E5] rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] hover:translate-y-[-2px] transition-all duration-300 group/metric"
-                      >
-                        <div className="text-3xl font-black text-[#0A0A0A] tracking-tighter mb-1">{metric.value}</div>
-                        <div className="text-[12px] font-bold text-[#9CA3AF] uppercase tracking-widest">{metric.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
+                      <div className="text-2xl md:text-3xl font-black text-[#0A0A0A] tracking-tighter mb-0.5">{metric.value}</div>
+                      <div className="text-[10px] md:text-[11px] font-bold text-[#9CA3AF] uppercase tracking-widest">{metric.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
       </div>
-
-      <style jsx>{`
-        .service-card {
-          opacity: 1;
-        }
-        @media (max-width: 768px) {
-          h3 {
-            font-size: 28px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }
