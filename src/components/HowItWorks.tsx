@@ -61,7 +61,8 @@ export default function HowItWorks() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold text-[#111] tracking-tight" style={{ fontFamily: "'Inter', sans-serif" }}>
-            How it works
+            How its Work
+
           </h2>
         </div>
 

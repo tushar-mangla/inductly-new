@@ -68,7 +68,7 @@ export default function EmailMockup() {
                     <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                         {[
                             { label: 'Time to send', value: '0 min', sub: 'fully automated' },
-                            { label: 'Reply rate', value: '6.3%', sub: 'vs 1% industry avg' },
+                            { label: 'Reply rate', value: '5.3%', sub: 'vs 1% industry avg' },
                             { label: 'Why it works', value: 'Solution', sub: 'not a pitch' },
                         ].map((item, i) => (
                             <div key={i} className="bg-[#F8FAFC] border-2 border-[#1E293B] rounded-2xl p-4 sm:p-6 btn-shadow">

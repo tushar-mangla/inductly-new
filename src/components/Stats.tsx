@@ -1,7 +1,7 @@
 const stats = [
     { number: '10+', label: 'Agencies Automated' },
     { number: '500+', label: 'Jobs/Day Automated' },
-    { number: '6.3%', label: 'Proven Reply Rate' },
+    { number: '5.3%', label: 'Proven Reply Rate' },
     { number: '+30%', label: 'Revenue in 60 Days' },
     { number: '$0.50', label: 'Per Quality Lead' },
 ];

@@ -3,6 +3,8 @@ import { Inter, DM_Serif_Display, DM_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
 import UTMTracker from "@/components/UTMTracker";
+import ConsultationPopup from "@/components/ConsultationPopup";
+import SiteHeader from "@/components/SiteHeader";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const dmSerif = DM_Serif_Display({ weight: '400', subsets: ["latin"], variable: '--font-serif' });
@@ -31,8 +33,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.variable} ${dmSerif.variable} ${dmMono.variable} ${outfit.variable} antialiased font-sans`}>
+                <SiteHeader />
                 <Analytics />
                 <UTMTracker />
+                <ConsultationPopup />
                 {children}
             </body>
         </html>

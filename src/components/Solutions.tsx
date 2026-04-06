@@ -21,7 +21,7 @@ const modules = [
         tag: 'Outreach',
         tagColor: 'bg-[#fcecea] text-[#c0412b]',
         name: 'Mass Outreach Engine',
-        description: 'Send hundreds of thousands of personalized, targeted emails per month with delivery tracking built in. Proven 6.3% reply rate.',
+        description: 'Send hundreds of thousands of personalized, targeted emails per month with delivery tracking built in. Proven 5.3% reply rate.',
     },
 ];
 

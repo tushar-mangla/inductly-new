@@ -1,7 +1,7 @@
 const stats = [
     { value: '10+', label: 'Agencies automated' },
     { value: '500+', label: 'Jobs processed daily' },
-    { value: '6.3%', label: 'Avg. reply rate' },
+    { value: '5.3%', label: 'Avg. reply rate' },
     { value: '+30%', label: 'Revenue growth' },
 ];
 

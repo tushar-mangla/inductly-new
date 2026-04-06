@@ -14,7 +14,7 @@ const rows = [
     {
         aspect: 'Cold Outreach',
         oldWay: 'Generic "Hi, we\'re a great agency" emails — 1% reply rate',
-        RecruitmentOS: '"We already have your hire" — hyper-personalized, 6.3% reply rate',
+        RecruitmentOS: '"We already have your hire" — hyper-personalized, 5.3% reply rate',
     },
     {
         aspect: 'Cost',

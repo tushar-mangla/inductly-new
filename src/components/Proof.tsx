@@ -18,7 +18,7 @@ export default function Proof() {
                     <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#1E293B]/20 mb-4 sm:mb-6">
                         <img
                             src="/instantly.webp"
-                            alt="Instantly.ai campaign showing 6.3% reply rate"
+                            alt="Instantly.ai campaign showing 5.3% reply rate"
                             className="w-full h-auto"
                         />
                     </div>
@@ -26,7 +26,7 @@ export default function Proof() {
                     {/* Caption below screenshot */}
                     <p className="text-center text-xs sm:text-sm text-[#475569] mb-6 sm:mb-8 font-bold leading-relaxed">
                         <span className="text-[#1E293B]">Live Campaign Dashboard</span> • Updated Daily<br />
-                        <span className="text-[10px] sm:text-xs">3,543 sent • 145 replies • 6.3% rate • Active now</span>
+                        <span className="text-[10px] sm:text-xs">3,543 sent • 145 replies • 5.3% rate • Active now</span>
                     </p>
 
                     {/* Metrics Bar */}
@@ -40,7 +40,7 @@ export default function Proof() {
                             <div className="text-[10px] sm:text-sm font-black text-[#1E293B] uppercase tracking-widest">Direct Replies</div>
                         </div>
                         <div className="bg-[#1E293B] p-5 sm:p-6 rounded-2xl border-2 border-[#1E293B]">
-                            <div className="text-2xl sm:text-3xl md:text-[48px] font-black text-white mb-1 leading-none tracking-tighter">6.3%</div>
+                            <div className="text-2xl sm:text-3xl md:text-[48px] font-black text-white mb-1 leading-none tracking-tighter">5.3%</div>
                             <div className="text-[10px] sm:text-sm font-black text-white uppercase tracking-widest">Reply Rate</div>
                         </div>
                     </div>

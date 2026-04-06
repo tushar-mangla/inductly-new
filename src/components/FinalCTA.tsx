@@ -28,9 +28,21 @@ export default function FinalCTA() {
                     </Link>
                 </div>
 
-                <p className="text-sm text-[#9ca3af]">
+                <p className="text-sm text-[#9ca3af] mb-12">
                     Setup in &lt;7 days &middot; No long-term contract &middot; First warm reply within 2 weeks
                 </p>
+
+                {/* Cal.com Embed */}
+                <div className="w-full max-w-[1000px] mx-auto rounded-2xl overflow-hidden border border-[#e5e5e5] h-[700px] bg-white shadow-sm ring-1 ring-black/5">
+                    <iframe
+                        src="https://cal.com/tusharm/30min?overlayCalendar=true"
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        title="Schedule a Demo"
+                        className="w-full h-full"
+                    />
+                </div>
             </div>
         </section>
     );

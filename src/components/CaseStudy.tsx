@@ -21,13 +21,13 @@ export default function CaseStudy() {
                                 { label: 'Lead Generation', result: '100% automated' },
                                 { label: 'Pipeline Predictability', result: 'First time achieved' },
                                 { label: 'Recruiter Time Saved', result: '4+ hrs/day per person' },
-                                { label: 'Reply Rate', result: '6.3% (from <1%)' },
+                                { label: 'Reply Rate', result: 'From < 1%' },
                             ].map((item) => (
-                                <div key={item.label} className="flex items-center justify-between py-4 border-b border-[#f0f0f0] last:border-0">
-                                    <span className="text-sm text-[#6b7280]">{item.label}</span>
-                                    <span className="text-sm font-semibold text-[#0A0A0A]">{item.result}</span>
-                                </div>
-                            ))}
+                                    <div key={item.label} className="flex items-center justify-between py-4 border-b border-[#f0f0f0] last:border-0">
+                                        <span className="text-sm text-[#6b7280]">{item.label}</span>
+                                        <span className="text-sm font-semibold text-[#0A0A0A]">{item.result}</span>
+                                    </div>
+                                ))}
                         </div>
                     </div>
 

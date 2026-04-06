@@ -5,7 +5,6 @@ import Footer from '@/components/Footer';
 export default function PricingPage() {
   return (
     <main className="min-h-screen">
-      <Navbar />
       <Pricing />
       <Footer />
     </main>

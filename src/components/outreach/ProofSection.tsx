@@ -20,7 +20,7 @@ export default function ProofSection() {
                     <div className="relative overflow-hidden rounded-xl border-2 border-[#1E293B]/20 mb-6">
                         <img
                             src="/instantly.webp"
-                            alt="Live campaign showing 6.3% reply rate"
+                            alt="Live campaign showing 5.3% reply rate"
                             className="w-full h-auto"
                         />
                     </div>
@@ -36,7 +36,7 @@ export default function ProofSection() {
                             <div className="text-[10px] sm:text-xs font-black text-[#1E293B] uppercase tracking-widest">Replies</div>
                         </div>
                         <div className="bg-[#1E293B] p-4 sm:p-6 rounded-xl sm:rounded-2xl border-2 border-[#1E293B] text-center">
-                            <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-1 leading-none tracking-tighter">6.3%</div>
+                            <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-1 leading-none tracking-tighter">5.3%</div>
                             <div className="text-[10px] sm:text-xs font-black text-white uppercase tracking-widest">Rate</div>
                         </div>
                     </div>

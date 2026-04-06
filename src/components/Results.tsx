@@ -96,7 +96,7 @@ const comparisons = [
     {
         aspect: 'Outreach',
         manual: 'Generic templates, 1% reply rate',
-        ai: 'Hyper-personalized, 6.3% reply rate',
+        ai: 'Hyper-personalized, 5.3% reply rate',
     },
     {
         aspect: 'Cost',

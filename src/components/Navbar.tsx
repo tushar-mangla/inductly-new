@@ -7,17 +7,17 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: 'How It Works', href: '/#how-it-works' },
+        { name: 'Case Studies', href: '/#case-studies' },
         { name: 'Services', href: '/#services' },
         { name: 'Pricing', href: '/pricing' },
-        { name: 'Results', href: '/#results' },
+        { name: 'Resources', href: '/resources' },
     ];
 
     return (
-        <header className="sticky top-0 z-[100] bg-white/90 backdrop-blur-md border-b border-[#e5e5e5]">
+        <header className="bg-white/90 backdrop-blur-md border-b border-[#e5e5e5] w-full">
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-4">
                 <nav className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center font-black text-2xl sm:text-3xl tracking-tight">
+                    <Link href="/" className="flex items-center font-bold text-2xl sm:text-3xl tracking-tight">
                         <span className="text-[#0A0A0A]">Recruitment</span>
                         <span className="flex items-center text-orange-500 ml-2">
                             <span className="animate-[spin_4s_linear_infinite] inline-block leading-none">O</span>
@@ -30,7 +30,7 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-base font-bold text-[#111827] hover:text-[#0A0A0A] transition-colors"
+                                className="text-base font-medium text-[#111827] hover:text-[#0A0A0A] transition-colors"
                             >
                                 {link.name}
                             </Link>

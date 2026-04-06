@@ -11,7 +11,7 @@ export default function SocialProof() {
 
                         <div className="grid grid-cols-3 gap-4">
                             <div className="border border-white/10 rounded-lg p-4">
-                                <div className="text-lg font-semibold text-white">6.3%</div>
+                                <div className="text-lg font-semibold text-white">5.3%</div>
                                 <div className="text-[11px] text-[#6b7280]">Reply rate</div>
                             </div>
                             <div className="border border-white/10 rounded-lg p-4">
