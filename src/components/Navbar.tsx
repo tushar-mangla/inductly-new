@@ -7,7 +7,7 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: 'Case Studies', href: '/case-studies/client-growth-ai' },
+        { name: 'Case Studies', href: '/case-studies' },
         { name: 'Services', href: '/#services' },
         { name: 'Pricing', href: '/pricing' },
         { name: 'Resources', href: '/resources' },
