@@ -9,8 +9,8 @@ const resources = [
         description: "A complete system to automate and scale recruitment with AI. Includes 25+ frameworks and 15+ workflows.",
         type: "Guide",
         li_duration: "30+ Pages",
-        link: "https://shy-bottle-afc.notion.site/Recruitment-AI-solutions-playbook-32ab18f67e3c80ab9b02e4840c2143af",
-        image: "/resources/playbook.webp",
+        link: "https://recruitement-os.netlify.app/",
+        image: "/resources/ai-hiring-blueprint.webp",
         cta: "Download Free Guide",
         icon: undefined
     },
@@ -21,7 +21,7 @@ const resources = [
         li_duration: "Get Free Access",
         link: "https://long-streetcar-093.notion.site/Recruitment-AI-System-Free-Audit-Resources-336434e7ef8c8037be1ed5df3f5d8f1d?pvs=73",
         cta: "Get Free Access",
-        image: "/resources/template.webp",
+        image: "/resources/ai-systems-template.webp",
         icon: undefined
     },
     {
@@ -31,7 +31,7 @@ const resources = [
         li_duration: "5 min prep",
         link: "https://recruitment-audit.netlify.app/",
         cta: "Scan Now",
-        image: "/resources/audit.png",
+        image: "/resources/ai-audit.webp",
         icon: undefined
     }
 ];
@@ -47,15 +47,6 @@ export default function Resources() {
                             Resources to Scale Your Agency
                         </h2>
                     </div>
-                    <Link
-                        href="#"
-                        className="text-[#0A0A0A] font-semibold hover:text-[#FF6A00] transition-colors flex items-center group text-sm sm:text-base border-b border-[#0A0A0A]/10 pb-1"
-                    >
-                        View All Resources
-                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 mb-32">

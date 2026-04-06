@@ -10,7 +10,7 @@ export default function ConsultationPopup() {
         const initialTimer = setTimeout(() => {
             setShouldRender(true);
             requestAnimationFrame(() => setIsVisible(true));
-        }, 15000); // 15 seconds initial
+        }, 25000); // 25 seconds initial
 
         return () => clearTimeout(initialTimer);
     }, []);
@@ -92,7 +92,7 @@ export default function ConsultationPopup() {
                         <div className="flex items-center gap-3">
                             <div className="relative w-8 h-8 shrink-0">
                                 <img 
-                                    src="/testimonials/tushar.png" 
+                                    src="/testimonials/tushar.webp" 
                                     alt="Tushar mangla" 
                                     className="w-full h-full rounded-full object-cover border border-[#FF6A00]/10 shadow-sm"
                                 />

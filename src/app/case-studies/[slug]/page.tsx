@@ -23,7 +23,7 @@ export default function CaseStudyPage({ params }: PageProps) {
         
         {/* Back Link */}
         <Link 
-          href="/#case-studies" 
+          href="/" 
           className="inline-flex items-center text-sm text-black hover:text-[#FF6A00] transition-colors mb-16"
         >
           <svg className="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
