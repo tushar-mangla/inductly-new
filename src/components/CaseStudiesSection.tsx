@@ -34,7 +34,7 @@ export default function CaseStudiesSection() {
                     {study.cardStats.split(' ')[0]}
                   </div>
                   <div className="text-xs font-bold text-gray-500 uppercase tracking-widest">
-                    {study.cardStats.split(' ').slice(1).join(' ')}
+                    {study.cardStats.includes(' ') ? study.cardStats.split(' ').slice(1).join(' ') : 'Scale'}
                   </div>
                 </div>
 
@@ -54,6 +54,7 @@ export default function CaseStudiesSection() {
             </Link>
           ))}
         </div>
+
 
       </div>
     </section>

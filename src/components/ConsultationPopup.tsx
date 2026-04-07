@@ -10,7 +10,7 @@ export default function ConsultationPopup() {
         const initialTimer = setTimeout(() => {
             setShouldRender(true);
             requestAnimationFrame(() => setIsVisible(true));
-        }, 25000); // 25 seconds initial
+        }, 120000); // 2 minutes initial
 
         return () => clearTimeout(initialTimer);
     }, []);
@@ -37,15 +37,11 @@ export default function ConsultationPopup() {
     if (!shouldRender) return null;
 
     return (
-        <div className={`fixed inset-0 z-[200] flex items-center justify-center p-4 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            {/* Backdrop */}
-            <div 
-                className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-                onClick={closePopup}
-            />
+        <div className={`fixed bottom-6 right-6 z-[200] p-4 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+            {/* Removed full-screen backdrop for corner placement */}
 
             {/* Popup Content */}
-            <div className={`relative bg-white w-full max-w-[420px] rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 ease-out p-6 md:p-8 ${isVisible ? 'translate-y-0 scale-100' : 'translate-y-12 scale-95'}`}>
+            <div className={`relative bg-white w-full max-w-[300px] rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden transition-all duration-500 ease-out p-5`}>
                 {/* Close Button */}
                 <button 
                     onClick={closePopup}
@@ -67,13 +63,13 @@ export default function ConsultationPopup() {
                         </div>
                     </div>
                     <div>
-                        <h3 className="text-xl font-extrabold text-[#0A0A0A] tracking-tight">Stay Connected!</h3>
-                        <p className="text-[#6B7280] font-medium leading-tight text-xs">Get exclusive insights and updates</p>
+                        <h3 className="text-lg font-extrabold text-[#0A0A0A] tracking-tight leading-none mb-1">Stay Connected!</h3>
+                        <p className="text-[#6B7280] font-medium text-[10px]">Get exclusive insights</p>
                     </div>
                 </div>
 
-                <div className="text-center mb-6">
-                    <h2 className="text-xl font-extrabold text-[#0A0A0A] tracking-tight mb-2 border-b border-[#E5E5E5] pb-2">
+                <div className="text-center mb-4">
+                    <h2 className="text-lg font-extrabold text-[#0A0A0A] tracking-tight mb-2 border-b border-[#E5E5E5] pb-2">
                         Live chat with CEO
                     </h2>
                 </div>
@@ -94,7 +90,7 @@ export default function ConsultationPopup() {
                                 <img 
                                     src="/testimonials/tushar.webp" 
                                     alt="Tushar mangla" 
-                                    className="w-full h-full rounded-full object-cover border border-[#FF6A00]/10 shadow-sm"
+                                    className="w-full h-full rounded-lg object-cover border border-[#FF6A00]/10 shadow-sm"
                                 />
                             </div>
                             <div>
@@ -106,16 +102,16 @@ export default function ConsultationPopup() {
                 </div>
 
                 {/* Buttons Section */}
-                <div className="flex flex-col gap-3 mb-6">
+                <div className="flex flex-col gap-2 mb-4">
                     <button 
                         onClick={handleConsultation}
-                        className="w-full bg-[#FF6A00] text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-orange-500/20 hover:bg-[#E55F00] transition-all hover:-translate-y-0.5 active:translate-y-0"
+                        className="w-full bg-[#FF6A00] text-white py-3 rounded-xl font-bold text-base shadow-lg shadow-orange-500/10 hover:bg-[#E55F00] transition-all"
                     >
                         Get AI Consultation
                     </button>
                     <button 
                         onClick={closePopup}
-                        className="w-full bg-[#F1F3F5] text-[#374151] py-4 rounded-2xl font-bold text-lg hover:bg-[#E9ECEF] transition-colors"
+                        className="w-full bg-[#F1F3F5] text-[#374151] py-3 rounded-xl font-bold text-base hover:bg-[#E9ECEF] transition-colors"
                     >
                         Maybe Later
                     </button>

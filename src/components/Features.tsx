@@ -35,6 +35,14 @@ const services = [
     headline: 'Emails that actually get replies',
     description: 'Hyper-personalized outreach based on role, company, and company context that feels human, not automated.',
     cta: 'View demo →'
+  },
+  {
+    id: 'custom-ai',
+    tag: 'CUSTOM AI SOLUTIONS',
+    tagColor: 'bg-[#e3f2fd] text-[#0d47a1]',
+    headline: 'Custom AI built around your recruitment workflow',
+    description: "We dig into your agency's specific bottlenecks — whether it's sourcing, screening, or client reporting — and engineer AI solutions tailored to how you actually work, not generic templates.",
+    cta: 'Book a discovery call →'
   }
 ];
 

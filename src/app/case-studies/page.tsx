@@ -4,65 +4,53 @@ import React from 'react';
 import Link from 'next/link';
 import { caseStudies } from '@/lib/case-studies-data';
 
-export default function CaseStudyPage() {
-  const study = caseStudies[0];
-
+export default function CaseStudiesListPage() {
   return (
     <div className="min-h-screen bg-white pt-24 pb-32 animate-fadeIn">
       <div className="max-w-[1240px] mx-auto px-6 sm:px-10">
 
-        {/* Back Link */}
-        <Link
-          href="/"
-          className="inline-flex items-center text-sm text-black hover:text-[#FF6A00] transition-colors mb-16 animate-slideUp"
-        >
-          <svg className="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          BACK
-        </Link>
+        {/* Header */}
+        <div className="mb-20 animate-slideUp">
+          <h1 className="text-3xl font-black text-black tracking-tighter mb-4">
+            Case Studies
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl">
+            What We Discovered During Free AI Audit Sessions with Recruitment Agencies
+          </p>
+        </div>
 
-        {/* Two Column Layout (40/60) */}
-        <div className="grid grid-cols-1 lg:grid-cols-[40fr_60fr] gap-12 lg:gap-24 items-start">
+        {/* Case Studies List */}
+        <div className="space-y-16">
+          {caseStudies.map((study, index) => (
+            <div 
+              key={study.slug} 
+              className="border-b border-gray-100 pb-16 last:border-0 animate-slideUp"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="max-w-4xl">
+                {/* Simplified Title - Small Font */}
+                <h2 className="text-xl md:text-2xl font-bold mb-4 leading-tight">
+                  {study.title}
+                </h2>
+                
+                {/* Short Excerpt */}
+                <p className="text-gray-600 text-lg leading-relaxed line-clamp-3 mb-6">
+                  {study.problem}
+                </p>
 
-          {/* Left: Simple Image */}
-          <div className="rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 animate-slideUp" style={{ animationDelay: '100ms' }}>
-            <img
-              src={study.image}
-              alt={study.title}
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
-          {/* Right: Plain Text Content */}
-          <div className="space-y-12 text-black text-lg leading-relaxed antialiased" style={{ color: '#000000' }}>
-
-            <div className="animate-slideUp" style={{ animationDelay: '200ms' }}>
-              <p className="font-bold mb-4">THE PROBLEM</p>
-              <p>{study.problem}</p>
+                {/* Learn More Link */}
+                <Link
+                  href={`/case-studies/${study.slug}`}
+                  className="inline-flex items-center text-sm font-bold text-[#FF6A00] hover:translate-x-1 transition-transform"
+                >
+                  LEARN MORE
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
-
-            <div className="animate-slideUp" style={{ animationDelay: '300ms' }}>
-              <p className="font-bold mb-4">THE ROOT CAUSE</p>
-              <p>{study.rootCause}</p>
-            </div>
-
-            <div className="animate-slideUp" style={{ animationDelay: '400ms' }}>
-              <p className="font-bold mb-4">THE SOLUTION</p>
-              <p>{study.solution}</p>
-            </div>
-
-            <div className="animate-slideUp" style={{ animationDelay: '500ms' }}>
-              <p className="font-bold mb-4 text-[#FF6A00]">THE RESULT</p>
-              <p className="font-bold">{study.result}</p>
-            </div>
-
-            <div className="animate-slideUp" style={{ animationDelay: '600ms' }}>
-              <p className="font-bold mb-4">THE TAKEAWAY</p>
-              <p>{study.takeaway}</p>
-            </div>
-
-          </div>
+          ))}
         </div>
 
       </div>
