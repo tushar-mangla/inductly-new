@@ -10,10 +10,12 @@ import Features from '@/components/Features';
 import ToolTicker from '@/components/ToolTicker';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import ProductDemo from '@/components/ProductDemo';
 export default function Home() {
     return (
         <main className="min-h-screen">
             <Hero />
+            <ProductDemo />
             <TrustBar />
             <FeaturesDiagram />
             <BeforeAfter />
