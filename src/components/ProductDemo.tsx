@@ -21,9 +21,9 @@ export default function ProductDemo() {
                 </div>
 
                 {/* Video Container */}
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-6xl mx-auto">
                     <div className="bg-white border border-[#E5E5E5] rounded-2xl p-3 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_55px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 ease-out">
-                        <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
+                        <div className="relative aspect-video rounded-xl overflow-hidden bg-black min-h-[400px] md:min-h-[560px]">
                             <iframe
                                 src="https://fast.wistia.com/embed/iframe/qimej8fhke?seo=true&videoFoam=true"
                                 className="absolute inset-0 w-full h-full"
