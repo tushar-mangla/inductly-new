@@ -21,9 +21,9 @@ export default function ProductDemo() {
                 </div>
 
                 {/* Video Container */}
-                <div className="max-w-6xl mx-auto">
+                <div className="w-full">
                     <div className="bg-white border border-[#E5E5E5] rounded-2xl p-3 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_55px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 ease-out">
-                        <div className="relative aspect-video rounded-xl overflow-hidden bg-black min-h-[400px] md:min-h-[560px]">
+                        <div className="relative w-full rounded-xl overflow-hidden bg-black" style={{ paddingTop: '56.25%' }}>
                             <iframe
                                 src="https://fast.wistia.com/embed/iframe/qimej8fhke?seo=true&videoFoam=true"
                                 className="absolute inset-0 w-full h-full"
