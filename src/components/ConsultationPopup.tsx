@@ -37,11 +37,9 @@ export default function ConsultationPopup() {
     if (!shouldRender) return null;
 
     return (
-        <div className={`fixed bottom-6 right-6 z-[200] p-4 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            {/* Removed full-screen backdrop for corner placement */}
-
+        <div className={`fixed bottom-4 left-4 right-4 sm:bottom-6 sm:left-auto sm:right-6 sm:w-auto z-[200] sm:p-4 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             {/* Popup Content */}
-            <div className={`relative bg-white w-full max-w-[300px] rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden transition-all duration-500 ease-out p-5`}>
+            <div className={`relative bg-white w-full sm:max-w-[300px] rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden transition-all duration-500 ease-out p-5`}>
                 {/* Close Button */}
                 <button 
                     onClick={closePopup}
