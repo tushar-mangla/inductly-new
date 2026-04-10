@@ -3,13 +3,13 @@ import { Inter, DM_Serif_Display, DM_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
 import UTMTracker from "@/components/UTMTracker";
-import ConsultationPopup from "@/components/ConsultationPopup";
 import SiteHeader from "@/components/SiteHeader";
+import ConsultationPopup from "@/components/ConsultationPopup";
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
-const dmSerif = DM_Serif_Display({ weight: '400', subsets: ["latin"], variable: '--font-serif' });
-const dmMono = DM_Mono({ weight: '400', subsets: ["latin"], variable: '--font-mono' });
-const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter', display: 'swap' });
+const dmSerif = DM_Serif_Display({ weight: '400', subsets: ["latin"], variable: '--font-serif', display: 'swap' });
+const dmMono = DM_Mono({ weight: '400', subsets: ["latin"], variable: '--font-mono', display: 'swap' });
+const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit', display: 'swap' });
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://recruitmentos.smallgrp.com"),

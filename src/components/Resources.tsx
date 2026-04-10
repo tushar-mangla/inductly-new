@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const resources = [
@@ -33,8 +33,54 @@ const resources = [
         cta: "Scan Now",
         image: "/resources/ai-audit.webp",
         icon: undefined
-    }
+    },
 ];
+
+function LazyIframe({ src, height, title, allow, allowFullScreen, className, style }: {
+    src: string;
+    height?: string | number;
+    title: string;
+    allow?: string;
+    allowFullScreen?: boolean;
+    className?: string;
+    style?: React.CSSProperties;
+}) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: '300px' }
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <div ref={ref} style={{ height: height ? `${height}px` : undefined }} className="w-full">
+            {visible ? (
+                <iframe
+                    src={src}
+                    height={height}
+                    width="100%"
+                    title={title}
+                    allow={allow}
+                    allowFullScreen={allowFullScreen}
+                    className={className}
+                    style={{ border: 'none', ...style }}
+                />
+            ) : (
+                <div className="w-full h-full min-h-[200px] bg-[#FAFAFA] animate-pulse rounded-xl" />
+            )}
+        </div>
+    );
+}
 
 export default function Resources() {
     return (
@@ -65,6 +111,7 @@ export default function Resources() {
                                     <img
                                         src={resource.image}
                                         alt={resource.title}
+                                        loading="lazy"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                 ) : (
@@ -99,6 +146,37 @@ export default function Resources() {
                     ))}
                 </div>
 
+                {/* Claude AI + MCP Feature Section */}
+                <div className="mb-32 border border-[#E5E5E5] rounded-3xl overflow-hidden">
+                    <div className="flex flex-col px-10 py-14 sm:px-14 sm:py-16">
+                        <span className="text-[10px] font-bold tracking-widest uppercase text-[#FF6A00] bg-[#FFF4EB] px-2.5 py-1 rounded-md w-fit mb-4">
+                            7-Step System
+                        </span>
+                        <h2 className="text-[#0A0A0A] text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-[1.15] mb-5 max-w-2xl">
+                            How Recruiters Can Use Claude AI + MCP to Build a Full Recruitment Engine
+                        </h2>
+                        <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed font-medium mb-8 max-w-xl">
+                            Think of Claude with MCP as your "AI recruiter brain" that connects with multiple tools and does the work for you. Instead of switching between 10 tools, you give instructions in plain English — and the system executes everything.
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-10">
+                            {["Apify", "Exa.ai", "Prospeo", "Lemlist", "Airtable", "RapidAPI"].map((tool) => (
+                                <span key={tool} className="text-[10px] font-bold tracking-widest uppercase bg-[#F9FAFB] border border-[#E5E5E5] text-[#374151] px-2.5 py-1 rounded-md">
+                                    {tool}
+                                </span>
+                            ))}
+                        </div>
+                        <Link
+                            href="/resources/claude-mcp-recruitment-engine"
+                            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#0A0A0A] text-white text-sm font-bold hover:bg-[#FF6A00] transition-colors w-fit group"
+                        >
+                            Read More
+                            <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                    </div>
+                </div>
+
                 {/* YouTube Video Section */}
                 <div className="mb-32">
                     <div className="mb-12">
@@ -114,12 +192,12 @@ export default function Resources() {
                         ].map((video, idx) => (
                             <div key={idx} className="bg-white border-[0.5px] border-[#E5E5E5] rounded-2xl p-3 shadow-[0_4px_25px_rgba(0,0,0,0.02)] hover:shadow-[0_25px_55px_rgba(0,0,0,0.07)] hover:-translate-y-3 transition-all duration-500 ease-out group">
                                 <div className="relative aspect-video rounded-xl overflow-hidden border-[0.5px] border-[#F3F4F6] bg-black shadow-inner">
-                                    <iframe
+                                    <LazyIframe
                                         src={video}
-                                        className="absolute inset-0 w-full h-full opacity-90 group-hover:opacity-100 transition-opacity"
                                         title={`YouTube video ${idx + 1}`}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
+                                        className="absolute inset-0 w-full h-full opacity-90 group-hover:opacity-100 transition-opacity"
                                     />
                                 </div>
                             </div>
@@ -135,7 +213,7 @@ export default function Resources() {
                             Straight from LinkedIn
                         </h2>
                         <p className="text-[#6B7280] text-base sm:text-lg max-w-2xl font-medium">
-                            What we’re building, learning, and achieving—shared openly with you.
+                            What we're building, learning, and achieving—shared openly with you.
                         </p>
                     </div>
 
@@ -153,11 +231,9 @@ export default function Resources() {
                         ].map((post, idx) => (
                             <div key={idx} className="bg-white border border-[#E5E5E5] rounded-[2rem] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-3 transition-all duration-500 ease-out flex flex-col group">
                                 <div className="rounded-[1.5rem] overflow-hidden border border-[#F3F4F6] bg-[#FAFAFA]">
-                                    <iframe
+                                    <LazyIframe
                                         src={post.src}
                                         height={post.h}
-                                        width="100%"
-                                        frameBorder="0"
                                         title={`LinkedIn post ${idx + 1}`}
                                         className="w-full opacity-90 group-hover:opacity-100 transition-opacity"
                                     />

@@ -44,7 +44,7 @@ export default function ToolTicker() {
           {[...tools, ...tools, ...tools, ...tools].map((tool, index) => (
             <div key={index} className="flex items-center gap-4 mx-[30px]">
               <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
-                <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" />
+                <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" loading="lazy" />
               </div>
               <span className="text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
             </div>
@@ -56,7 +56,7 @@ export default function ToolTicker() {
           {[...tools, ...tools, ...tools, ...tools].map((tool, index) => (
             <div key={index} className="flex items-center gap-4 mx-[30px]">
               <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-transparent shrink-0">
-                <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" />
+                <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" loading="lazy" />
               </div>
               <span className="text-xl font-bold text-[#0A0A0A] tracking-tight">{tool.name}</span>
             </div>
