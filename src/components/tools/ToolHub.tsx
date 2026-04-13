@@ -20,25 +20,24 @@ export default function ToolHub({ tools }: { tools: Tool[] }) {
   // Show spinner while checking localStorage or while redirecting
   if (!isHydrated || !isUnlocked) {
     return (
-      <main className="min-h-screen flex items-center justify-center" style={{ background: '#f5f2ec' }}>
-        <span className="w-8 h-8 rounded-full border-2 border-[#1a6b4a] border-t-transparent animate-spin" />
+      <main className="min-h-screen flex items-center justify-center bg-white">
+        <span className="w-8 h-8 rounded-full border-2 border-[#0A0A0A] border-t-transparent animate-spin" />
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen" style={{ background: '#f5f2ec' }}>
+    <main className="min-h-screen bg-[#F9FAFB]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
 
-        <div className="text-center mb-12">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-[2px] mb-4"
-            style={{ background: '#e8f5ef', color: '#1a6b4a', fontFamily: 'var(--font-mono)' }}>
+        <div className="mb-12">
+          <p className="text-xs font-bold text-[#FF6A00] uppercase tracking-widest mb-3">
             Free Resources
-          </span>
-          <h1 className="text-4xl sm:text-5xl text-[#0d0d0d] mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+          </p>
+          <h1 className="text-[#0A0A0A] text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
             Free Recruitment Tools
           </h1>
-          <p className="text-lg text-[#6b7280] max-w-xl mx-auto" style={{ fontFamily: 'var(--font-outfit)' }}>
+          <p className="text-[#6B7280] text-base sm:text-lg mt-3 max-w-xl font-medium">
             Unlock once. Access everything.
           </p>
         </div>

@@ -69,38 +69,38 @@ export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools' }: {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-16" style={{ background: '#f5f2ec' }}>
+    <div className="min-h-screen flex items-center justify-center px-4 py-16 bg-[#F9FAFB]">
       <div className="w-full max-w-md">
 
         {/* Logo */}
         <div className="text-center mb-8">
-          <span className="font-bold text-2xl tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>
-            Recruitment<span style={{ color: '#1a6b4a', fontStyle: 'italic' }}>OS</span>
+          <span className="font-bold text-2xl tracking-tight text-[#0A0A0A]">
+            Recruitment<span className="text-[#FF6A00]">OS</span>
           </span>
-          <p className="text-xs uppercase tracking-widest mt-1" style={{ fontFamily: 'var(--font-mono)', color: '#6b7280' }}>
+          <p className="text-xs uppercase tracking-widest mt-1 text-[#9CA3AF] font-medium">
             Intelligent Hiring Infrastructure
           </p>
         </div>
 
-        <div className="bg-white rounded-[10px] shadow-lg overflow-hidden border border-[#e5e5e5]">
+        <div className="bg-white rounded-3xl shadow-sm overflow-hidden border border-[#E5E5E5]">
 
           {/* Step indicator */}
-          <div className="px-8 pt-7 pb-5 border-b border-[#e5e5e5]">
+          <div className="px-8 pt-7 pb-5 border-b border-[#E5E5E5]">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-xs font-semibold uppercase tracking-widest px-2 py-0.5 rounded-[2px]"
-                style={{ background: '#e8f5ef', color: '#1a6b4a', fontFamily: 'var(--font-mono)' }}>
+              <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md"
+                style={{ background: '#FFF4EB', color: '#FF6A00' }}>
                 Free Access
               </span>
               {step === 2 && (
-                <span className="text-xs font-medium" style={{ color: '#9ca3af', fontFamily: 'var(--font-outfit)' }}>
+                <span className="text-xs font-medium text-[#9CA3AF]">
                   Step 2 of 2
                 </span>
               )}
             </div>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.45rem', color: '#0d0d0d', lineHeight: 1.2 }}>
+            <h2 className="text-2xl font-bold text-[#0A0A0A] tracking-tight leading-tight">
               {step === 1 ? 'Unlock Free Access' : "What's your biggest headache?"}
             </h2>
-            <p className="text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)', color: '#6b7280' }}>
+            <p className="text-sm text-[#6B7280] mt-1 font-medium">
               {step === 1
                 ? 'Fill in your details once to unlock all tools — forever.'
                 : 'Select all that apply — we tailor resources to what matters most.'}
@@ -113,35 +113,30 @@ export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools' }: {
             {step === 1 && (
               <form onSubmit={handleStep1} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wide mb-1.5"
-                    style={{ color: '#0d0d0d', fontFamily: 'var(--font-outfit)' }}>
+                  <label className="block text-xs font-bold uppercase tracking-wide mb-1.5 text-[#0A0A0A]">
                     Full Name
                   </label>
                   <input
                     type="text" required value={name} onChange={(e) => setName(e.target.value)}
                     placeholder="Jane Smith" autoComplete="name"
-                    className="w-full border border-[#e5e5e5] rounded-[4px] px-4 py-2.5 text-sm outline-none focus:border-[#1a6b4a] transition-colors"
-                    style={{ fontFamily: 'var(--font-outfit)', color: '#0d0d0d' }}
+                    className="w-full border border-[#E5E5E5] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[#0A0A0A] transition-colors text-[#0A0A0A]"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wide mb-1.5"
-                    style={{ color: '#0d0d0d', fontFamily: 'var(--font-outfit)' }}>
+                  <label className="block text-xs font-bold uppercase tracking-wide mb-1.5 text-[#0A0A0A]">
                     Work Email
                   </label>
                   <input
                     type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
                     placeholder="jane@youragency.com" autoComplete="email"
-                    className="w-full border border-[#e5e5e5] rounded-[4px] px-4 py-2.5 text-sm outline-none focus:border-[#1a6b4a] transition-colors"
-                    style={{ fontFamily: 'var(--font-outfit)', color: '#0d0d0d' }}
+                    className="w-full border border-[#E5E5E5] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[#0A0A0A] transition-colors text-[#0A0A0A]"
                   />
                 </div>
                 <button type="submit"
-                  className="w-full py-3 rounded-[4px] text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                  style={{ background: '#1a6b4a', fontFamily: 'var(--font-outfit)' }}>
+                  className="w-full py-3 rounded-xl text-sm font-bold text-white bg-[#0A0A0A] hover:bg-[#1a1a1a] transition-colors">
                   Continue →
                 </button>
-                <p className="text-center text-xs" style={{ color: '#9ca3af', fontFamily: 'var(--font-outfit)' }}>
+                <p className="text-center text-xs text-[#9CA3AF]">
                   No spam. Unsubscribe anytime.
                 </p>
               </form>
@@ -154,12 +149,11 @@ export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools' }: {
                   const active = selected.includes(h);
                   return (
                     <button key={h} type="button" onClick={() => toggle(h)}
-                      className="w-full text-left px-4 py-3 rounded-[4px] border text-sm font-medium transition-all"
+                      className="w-full text-left px-4 py-3 rounded-xl border text-sm font-medium transition-all"
                       style={{
-                        borderColor: active ? '#1a6b4a' : '#e5e5e5',
-                        background: active ? '#e8f5ef' : '#fff',
-                        color: active ? '#1a6b4a' : '#374151',
-                        fontFamily: 'var(--font-outfit)',
+                        borderColor: active ? '#FF6A00' : '#E5E5E5',
+                        background: active ? '#FFF4EB' : '#fff',
+                        color: active ? '#FF6A00' : '#374151',
                       }}>
                       {active ? '✓ ' : ''}{h}
                     </button>
@@ -169,12 +163,11 @@ export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools' }: {
                 {error && <p className="text-xs text-red-500 pt-1">{error}</p>}
 
                 <button type="submit" disabled={loading || selected.length === 0}
-                  className="w-full py-3 rounded-[4px] text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-40 !mt-4"
-                  style={{ background: '#1a6b4a', fontFamily: 'var(--font-outfit)' }}>
+                  className="w-full py-3 rounded-xl text-sm font-bold text-white bg-[#0A0A0A] hover:bg-[#1a1a1a] transition-colors disabled:opacity-40 !mt-4">
                   {loading ? 'Unlocking…' : 'Get My Free Access →'}
                 </button>
 
-                <p className="text-center text-xs pt-1" style={{ color: '#9ca3af', fontFamily: 'var(--font-outfit)' }}>
+                <p className="text-center text-xs pt-1 text-[#9CA3AF]">
                   Select at least one option to continue
                 </p>
               </form>
@@ -184,19 +177,18 @@ export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools' }: {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-4 mt-4 border border-[#e5e5e5] rounded-[10px] overflow-hidden">
+        <div className="grid grid-cols-4 mt-4 border border-[#E5E5E5] rounded-3xl overflow-hidden bg-white">
           {[
             { num: '10+', lbl: 'Agencies using this' },
             { num: '500+', lbl: 'Jobs tracked daily' },
             { num: '5.3%', lbl: 'Avg reply rate' },
             { num: '+30%', lbl: 'Revenue growth' },
           ].map((s) => (
-            <div key={s.lbl} className="py-3 px-2 text-center border-r border-[#e5e5e5] last:border-r-0"
-              style={{ background: '#ede9e1' }}>
-              <span className="block text-sm font-medium" style={{ fontFamily: 'var(--font-mono)', color: '#0d0d0d' }}>
+            <div key={s.lbl} className="py-3 px-2 text-center border-r border-[#E5E5E5] last:border-r-0">
+              <span className="block text-sm font-bold text-[#0A0A0A]">
                 {s.num}
               </span>
-              <span className="text-[10px] leading-tight block mt-0.5" style={{ color: '#6b7280', fontFamily: 'var(--font-outfit)' }}>
+              <span className="text-[10px] leading-tight block mt-0.5 text-[#6B7280] font-medium">
                 {s.lbl}
               </span>
             </div>
