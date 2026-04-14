@@ -42,7 +42,7 @@ export default function ToolHub({ tools }: { tools: Tool[] }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-2xl flex flex-col gap-3">
           {tools.map((tool) => (
             <ToolCard key={tool.slug} tool={tool} />
           ))}

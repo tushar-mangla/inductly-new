@@ -1,58 +1,71 @@
 'use client';
 
-import Link from 'next/link';
+import { useToolGate } from '@/hooks/useToolGate';
 import { Tool } from '@/lib/tools-data';
 
-const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
-  Outreach:   { bg: '#FFF4EB', text: '#FF6A00' },
-  Assessment: { bg: '#FFF4EB', text: '#FF6A00' },
-  Strategy:   { bg: '#FFF4EB', text: '#FF6A00' },
-};
-
 export default function ToolCard({ tool }: { tool: Tool }) {
-  const cat = CATEGORY_COLORS[tool.category] ?? { bg: '#FFF4EB', text: '#FF6A00' };
+  const { isUnlocked } = useToolGate();
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (isUnlocked) {
+      e.preventDefault();
+      window.open(tool.resourceUrl, '_blank', 'noopener,noreferrer');
+    }
+    // if not unlocked, let the Link navigate to /tools/${tool.slug} which will redirect to gate
+  };
 
   return (
-    <Link href={`/tools/${tool.slug}`}
-      className="group flex flex-col bg-white border border-[#E5E5E5] rounded-3xl p-6 hover:border-[#FF6A00]/30 hover:shadow-md transition-all duration-300">
-
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md"
-          style={{ background: cat.bg, color: cat.text }}>
-          {tool.category}
-        </span>
-        <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md text-[#9CA3AF]"
-          style={{ background: '#F3F4F6' }}>
-          {tool.badge}
-        </span>
-        {tool.isNew && (
-          <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md"
-            style={{ background: '#FF6A00', color: '#fff' }}>
-            New
-          </span>
-        )}
+    <a
+      href={isUnlocked ? tool.resourceUrl : `/tools/${tool.slug}`}
+      onClick={handleClick}
+      target={isUnlocked ? '_blank' : '_self'}
+      rel={isUnlocked ? 'noopener noreferrer' : undefined}
+      className="group flex items-center gap-4 bg-white border border-[#E5E5E5] rounded-2xl px-5 py-4 hover:border-[#FF6A00]/40 hover:shadow-sm transition-all duration-200 cursor-pointer"
+    >
+      {/* Icon box */}
+      <div
+        className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
+        style={{ background: '#FFF4EB' }}
+      >
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+        </svg>
       </div>
 
-      <h3 className="text-xl font-bold text-[#0A0A0A] mb-2 group-hover:text-[#FF6A00] transition-colors leading-snug">
-        {tool.title}
-      </h3>
+      {/* Text */}
+      <div className="flex-grow min-w-0">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <span className="text-[10px] font-bold uppercase tracking-widest"
+            style={{ color: '#FF6A00' }}>
+            {tool.category}
+          </span>
+          {tool.isNew && (
+            <span className="text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded"
+              style={{ background: '#FF6A00', color: '#fff' }}>
+              New
+            </span>
+          )}
+        </div>
+        <p className="text-sm font-bold text-[#0A0A0A] truncate leading-tight">
+          {tool.title}
+        </p>
+      </div>
 
-      <p className="text-sm text-[#6B7280] leading-relaxed mb-6 flex-grow font-medium">
-        {tool.description}
-      </p>
-
-      <div className="flex items-center justify-between mt-auto">
-        <span className="text-sm font-bold text-[#0A0A0A] group-hover:text-[#FF6A00] transition-colors flex items-center gap-1">
-          View tool
-          <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </span>
-        <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md"
+      {/* CTA Button */}
+      <div className="flex-shrink-0 flex items-center gap-2">
+        <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded"
           style={{ background: '#FFF4EB', color: '#FF6A00' }}>
           Free
         </span>
+        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#0A0A0A] group-hover:bg-[#FF6A00] transition-colors">
+          Open
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
       </div>
-    </Link>
+    </a>
   );
 }
+

@@ -83,6 +83,50 @@ export default function ToolPageClient({ tool }: { tool: Tool }) {
                 ))}
               </ul>
             </div>
+
+            {/* Launch Tool CTA if embedUrl is set */}
+            {tool.embedUrl && (
+              <div className="mt-10 rounded-3xl border border-[#E5E5E5] bg-white shadow-sm overflow-hidden">
+                {/* Header bar */}
+                <div className="px-6 py-4 border-b border-[#E5E5E5] flex items-center gap-3">
+                  <div className="flex gap-1.5">
+                    <span className="w-3 h-3 rounded-full bg-[#FF5F57]" />
+                    <span className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
+                    <span className="w-3 h-3 rounded-full bg-[#28C840]" />
+                  </div>
+                  <span className="text-xs text-[#9CA3AF] font-medium truncate">
+                    claude.site · AI Cold Email Writer
+                  </span>
+                </div>
+                {/* Body */}
+                <div className="flex flex-col items-center justify-center py-16 px-6 text-center gap-5">
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center"
+                    style={{ background: '#FFF4EB' }}>
+                    <svg className="w-8 h-8 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-base font-bold text-[#0A0A0A] mb-1">Open in Claude</p>
+                    <p className="text-sm text-[#6B7280] max-w-xs">
+                      This AI tool runs on Claude — click below to launch it in a new tab and start writing personalized outreach instantly.
+                    </p>
+                  </div>
+                  <a
+                    href={tool.embedUrl.replace('/embed', '')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-[#0A0A0A] hover:bg-[#1a1a1a] transition-colors"
+                  >
+                    Launch AI Cold Email Writer
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </a>
+                  <p className="text-xs text-[#9CA3AF]">Opens on Claude · Free to use</p>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right: CTA */}
@@ -96,14 +140,19 @@ export default function ToolPageClient({ tool }: { tool: Tool }) {
                 Access Unlocked
               </div>
 
-              <h3 className="text-base font-bold text-[#0A0A0A] mb-4 tracking-tight">
-                Your free resource
-              </h3>
+              {/* Only show the external resource button if there is NO embedded tool */}
+              {!tool.embedUrl && (
+                <>
+                  <h3 className="text-base font-bold text-[#0A0A0A] mb-4 tracking-tight">
+                    Your free resource
+                  </h3>
 
-              <a href={tool.resourceUrl} target="_blank" rel="noopener noreferrer"
-                className="block w-full text-center py-3 rounded-xl text-sm font-bold text-white bg-[#0A0A0A] hover:bg-[#1a1a1a] transition-colors mb-3">
-                Open {tool.title} →
-              </a>
+                  <a href={tool.resourceUrl} target="_blank" rel="noopener noreferrer"
+                    className="block w-full text-center py-3 rounded-xl text-sm font-bold text-white bg-[#0A0A0A] hover:bg-[#1a1a1a] transition-colors mb-3">
+                    Open {tool.title} →
+                  </a>
+                </>
+              )}
 
               {tool.videoUrl && (
                 <a href={tool.videoUrl} target="_blank" rel="noopener noreferrer"
@@ -112,7 +161,7 @@ export default function ToolPageClient({ tool }: { tool: Tool }) {
                 </a>
               )}
 
-              <div className="border-t border-[#E5E5E5] pt-4 flex flex-col gap-2">
+              <div className={!tool.embedUrl && !tool.videoUrl ? "pt-2 flex flex-col gap-2" : "border-t border-[#E5E5E5] pt-4 flex flex-col gap-2"}>
                 {tool.communityUrl && (
                   <a href={tool.communityUrl} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-bold"
