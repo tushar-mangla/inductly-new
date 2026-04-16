@@ -39,7 +39,7 @@ export const tools: Tool[] = [
     category: 'Strategy',
     badge: 'Tool',
     isNew: true,
-    resourceUrl: 'https://github.com/tushar-mangla/recruiting-skills',
+    resourceUrl: 'https://github.com/tushar-mangla/recruitment-skills',
     communityUrl: 'https://chat.whatsapp.com/I9PLSmDMJ06B6qYYVsRb0q?mode=gi_t',
     whatsInside: [
       '6 free AI skills purpose-built for recruiters',
