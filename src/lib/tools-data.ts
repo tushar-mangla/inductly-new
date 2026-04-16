@@ -31,21 +31,4 @@ export const tools: Tool[] = [
       '4 email types built for different outreach scenarios',
     ],
   },
-  {
-    slug: 'ai-recruiting-skills',
-    title: '6 Free AI Skills for Recruiters',
-    description:
-      'Recruiters: I just released 6 free AI skills built to handle the most time-consuming parts of your workflow — sourcing, screening, outreach, and more.',
-    category: 'Strategy',
-    badge: 'Tool',
-    isNew: true,
-    resourceUrl: 'https://github.com/tushar-mangla/recruitment-skills',
-    communityUrl: 'https://chat.whatsapp.com/I9PLSmDMJ06B6qYYVsRb0q?mode=gi_t',
-    whatsInside: [
-      '6 free AI skills purpose-built for recruiters',
-      'Automates the most time-consuming parts of the recruitment workflow',
-      'Covers sourcing, screening, outreach, and more',
-      'Open-source and ready to use immediately',
-    ],
-  },
 ];

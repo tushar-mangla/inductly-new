@@ -14,7 +14,7 @@ const HEADACHES = [
 
 const WEB3FORMS_KEY = '0e7ac89b-a20a-4df5-a7b9-b5fc081df584';
 
-export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools' }: { toolTitle?: string }) {
+export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools', redirectUrl }: { toolTitle?: string; redirectUrl?: string }) {
   const { unlock } = useToolGate();
   const router = useRouter();
 
@@ -57,7 +57,11 @@ export default function ToolGateForm({ toolTitle = 'Free Recruitment Tools' }: {
       const data = await res.json();
       if (data.success) {
         unlock();
-        router.push('/tools');
+        if (redirectUrl) {
+          window.location.href = redirectUrl;
+        } else {
+          router.push('/tools');
+        }
       } else {
         setError('Something went wrong. Please try again.');
       }
