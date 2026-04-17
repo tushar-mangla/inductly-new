@@ -17,6 +17,7 @@ export default function SkillsGateModal({ onClose, redirectUrl }: { onClose: () 
   const [step, setStep] = useState<1 | 2>(1);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [website, setWebsite] = useState('');
   const [selected, setSelected] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -28,7 +29,7 @@ export default function SkillsGateModal({ onClose, redirectUrl }: { onClose: () 
 
   function handleStep1(e: React.FormEvent) {
     e.preventDefault();
-    if (!name.trim() || !email.trim()) return;
+    if (!name.trim() || !email.trim() || !website.trim()) return;
     setStep(2);
   }
 
@@ -50,6 +51,7 @@ export default function SkillsGateModal({ onClose, redirectUrl }: { onClose: () 
           subject: 'New Lead — 6 Free AI Skills for Recruiters',
           name,
           email,
+          website,
           headaches: selected.join(', '),
           submitted_at: new Date().toLocaleString('en-IN', { hour12: true }),
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -121,6 +123,14 @@ export default function SkillsGateModal({ onClose, redirectUrl }: { onClose: () 
                 <input
                   type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
                   placeholder="jane@youragency.com" autoComplete="email"
+                  className="w-full border border-[#E5E5E5] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[#0A0A0A] transition-colors text-[#0A0A0A]"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wide mb-1.5 text-[#0A0A0A]">Website</label>
+                <input
+                  type="text" required value={website} onChange={(e) => setWebsite(e.target.value)}
+                  placeholder="e.g. youragency.com or linkedin.com/in/yourname" autoComplete="url"
                   className="w-full border border-[#E5E5E5] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[#0A0A0A] transition-colors text-[#0A0A0A]"
                 />
               </div>
