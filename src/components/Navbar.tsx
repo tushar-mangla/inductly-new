@@ -9,7 +9,7 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
     const navLinks = [
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Services', href: '/#services' },
-        { name: 'Pricing', href: '/pricing' },
+        // { name: 'Pricing', href: '/pricing' },
         { name: 'Tools', href: '/tools' },
         { name: 'Resources', href: '/resources' },
     ];
