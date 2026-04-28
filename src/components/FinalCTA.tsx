@@ -33,6 +33,7 @@ export default function FinalCTA() {
                     <Link
                         href="https://cal.com/tusharm/30min?user=tusharm"
                         target="_blank"
+                        onClick={() => (window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.('track', 'Contact', { content_name: 'Book a Demo' })}
                         className="inline-flex items-center bg-[#0A0A0A] text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-semibold hover:bg-[#1a1a1a] transition-colors text-base sm:text-lg"
                     >
                         Book a Demo

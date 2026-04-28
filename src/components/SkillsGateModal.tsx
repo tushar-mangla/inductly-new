@@ -60,6 +60,7 @@ export default function SkillsGateModal({ onClose, redirectUrl }: { onClose: () 
       const data = await res.json();
       if (data.success) {
         localStorage.setItem(STORAGE_KEY, 'true');
+        (window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.('track', 'Lead', { content_name: 'Tools Gate', email });
         window.open(redirectUrl, '_blank');
         onClose();
       } else {
