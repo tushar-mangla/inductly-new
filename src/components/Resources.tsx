@@ -4,8 +4,9 @@ import React, { useRef, useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import SkillsGateModal from './SkillsGateModal';
 import { articles } from '@/lib/articles-data';
+import { tools } from '@/lib/tools-data';
 
-type TabId = 'resources' | 'articles';
+type TabId = 'resources' | 'tools' | 'articles';
 
 const resources = [
     {
@@ -101,6 +102,7 @@ const STORAGE_KEY = 'rOS_unlocked';
 
 const TABS: { id: TabId; label: string; count: number }[] = [
     { id: 'resources', label: 'Free Resources', count: resources.length },
+    { id: 'tools', label: 'Tools', count: tools.length },
     { id: 'articles', label: 'Articles', count: articles.length },
 ];
 
@@ -226,6 +228,72 @@ export default function Resources() {
                                 );
                             })}
                         </div>
+                    )}
+                </div>
+
+                {/* Panel: Tools */}
+                <div
+                    id="panel-tools"
+                    role="tabpanel"
+                    aria-labelledby="tab-tools"
+                    hidden={activeTab !== 'tools'}
+                    className={activeTab === 'tools' ? 'mb-16 sm:mb-24 md:mb-32' : ''}
+                >
+                    {activeTab === 'tools' && (
+                        <>
+                            <p className="text-sm text-[#6B7280] font-medium mb-8 max-w-2xl">
+                                Free interactive tools. One email unlocks all of them.
+                            </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+                                {tools.map((tool) => (
+                                    <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex flex-col group">
+                                        <div className="relative aspect-[4/3] bg-[#FAFAFA] border border-[#E5E5E5] rounded-2xl sm:rounded-3xl mb-4 sm:mb-5 overflow-hidden flex items-center justify-center group-hover:border-[#FF6A00]/20 transition-all duration-300 p-6">
+                                            <div className="absolute inset-0 opacity-[0.04] group-hover:opacity-[0.08] transition-opacity duration-300">
+                                                <div className="absolute inset-0 bg-[radial-gradient(#FF6A00_1.5px,transparent_1.5px)] [background-size:24px_24px]" />
+                                            </div>
+                                            <div className="relative text-center">
+                                                <p className="text-[10px] font-bold tracking-widest uppercase text-[#FF6A00] mb-2">{tool.category}</p>
+                                                <p className="text-2xl font-black text-[#0A0A0A] leading-tight">{tool.title}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-3 mb-2 sm:mb-3">
+                                            <span className="text-[10px] font-bold tracking-widest uppercase text-[#FF6A00] bg-[#FFF4EB] px-2 py-1 rounded-md">
+                                                {tool.badge}
+                                            </span>
+                                            {tool.isNew && (
+                                                <span className="text-[10px] font-bold tracking-widest uppercase text-white bg-[#FF6A00] px-2 py-1 rounded-md">
+                                                    New
+                                                </span>
+                                            )}
+                                        </div>
+                                        <h3 className="text-base sm:text-lg font-bold text-[#0A0A0A] mb-2 leading-snug group-hover:text-[#FF6A00] transition-colors">
+                                            {tool.title}
+                                        </h3>
+                                        <p className="text-[#6B7280] text-sm leading-relaxed font-medium line-clamp-3 mb-3">
+                                            {tool.description}
+                                        </p>
+                                        <span className="mt-auto inline-flex items-center text-sm font-bold text-[#0A0A0A] group-hover:gap-1 transition-all">
+                                            Launch tool
+                                            <svg className="ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-3 group-hover:translate-x-0 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </span>
+                                    </Link>
+                                ))}
+                            </div>
+
+                            <div className="mt-10 sm:mt-12 flex justify-center">
+                                <Link
+                                    href="/tools"
+                                    className="inline-flex items-center text-sm font-bold text-[#0A0A0A] hover:text-[#FF6A00] transition-colors group"
+                                >
+                                    Open tools hub
+                                    <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </Link>
+                            </div>
+                        </>
                     )}
                 </div>
 
