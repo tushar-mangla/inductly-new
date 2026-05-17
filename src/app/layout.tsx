@@ -5,6 +5,7 @@ import Analytics from "@/components/Analytics";
 import UTMTracker from "@/components/UTMTracker";
 import SiteHeader from "@/components/SiteHeader";
 import ConsultationPopup from "@/components/ConsultationPopup";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter', display: 'swap' });
 const dmSerif = DM_Serif_Display({ weight: '400', subsets: ["latin"], variable: '--font-serif', display: 'swap' });
@@ -38,6 +39,7 @@ export default function RootLayout({
                 <UTMTracker />
                 <ConsultationPopup />
                 {children}
+                <WhatsAppButton />
             </body>
         </html>
     );

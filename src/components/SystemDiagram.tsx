@@ -21,7 +21,7 @@ const steps = [
         icon: '💼',
         label: 'Output',
         title: 'Warm Replies & Placements',
-        desc: 'Hiring managers reply. You close. Rinse and repeat on autopilot.',
+        desc: 'Hiring managers reply. You close. Rinse and repeat — operated for you.',
         color: 'bg-orange-500 border-orange-500',
         textColor: 'text-white',
     },
@@ -96,7 +96,7 @@ export default function SystemDiagram() {
                         target="_blank"
                         className="bg-white text-[#1E293B] px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] border-2 border-[#1E293B] text-lg inline-flex items-center justify-center gap-2"
                     >
-                        Get 5x Placement System
+                        Get the BD System
                     </Link>
                 </div>
             </div>

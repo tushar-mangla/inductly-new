@@ -24,7 +24,7 @@ const rows = [
     {
         aspect: 'Working Hours',
         oldWay: '8 hours/day, 5 days/week — misses weekend job postings',
-        RecruitmentOS: '24/7/365 autopilot — catches every role the moment it posts',
+        RecruitmentOS: '24/7/365 operation — catches every role the moment it posts',
     },
     {
         aspect: 'Scalability',
@@ -89,7 +89,7 @@ export default function ComparisonTable() {
                             $60,000+ /year per Recruiter
                         </div>
                         <div className="px-5 py-5 text-sm sm:text-base text-[#1E293B] font-black leading-snug flex flex-col justify-center gap-1">
-                            <div>$6,000-$8,328/year (Full Autopilot)</div>
+                            <div>$6,000-$8,328/year (Full Service)</div>
                             <div className="text-orange-500 text-base sm:text-lg">Save $52,000+/year (87% reduction)</div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ export default function ComparisonTable() {
                         target="_blank"
                         className="bg-white text-[#1E293B] px-8 py-4 rounded-xl font-black transition-all hover:translate-y-[-2px] border-2 border-[#1E293B] text-lg inline-flex items-center justify-center gap-2"
                     >
-                        Get 5x Placement System
+                        Get the BD System
                     </Link>
                 </div>
             </div>

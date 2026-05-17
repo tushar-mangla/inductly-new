@@ -15,7 +15,7 @@ const modules = [
         tag: 'Resume Screening',
         tagColor: 'bg-[#fdf6e8] text-[#b8862a]',
         name: 'Smart Resume Filter',
-        description: 'AI-powered screening to shortlist best-fit candidates fast. Eliminates manual review for high-volume positions.',
+        description: 'Automated screening to shortlist best-fit candidates fast. Eliminates manual review for high-volume positions.',
     },
     {
         tag: 'Outreach',

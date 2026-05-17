@@ -459,7 +459,7 @@ export default function Pricing() {
           <div className="product-card">
             <div className="card-tag tag-gold">Resume Screening</div>
             <div className="card-name">Smart Resume Filter</div>
-            <p className="card-desc">AI-powered screening to shortlist the best-fit candidates fast.</p>
+            <p className="card-desc">Automated screening to shortlist the best-fit candidates fast.</p>
             <div className="card-price">$2,000</div>
             <div className="card-price-unit">one-time build</div>
           </div>

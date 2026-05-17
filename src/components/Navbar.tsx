@@ -7,11 +7,11 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'How it works', href: '/methodology' },
         { name: 'Services', href: '/#services' },
-        // { name: 'Pricing', href: '/pricing' },
-        { name: 'Tools', href: '/tools' },
+        { name: 'Case Studies', href: '/case-studies' },
         { name: 'Resources', href: '/resources' },
+        { name: 'Pricing', href: '/pricing' },
     ];
 
     return (
@@ -41,7 +41,7 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
                             target="_blank"
                             className="bg-[#0A0A0A] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#1a1a1a] transition-colors"
                         >
-                            Book a Demo
+                            Book a fit call
                         </Link>
                     </div>
 
@@ -83,7 +83,7 @@ export default function Navbar({ onPricingToggle }: { onPricingToggle?: () => vo
                             target="_blank"
                             className="block bg-[#0A0A0A] text-white px-5 py-2.5 rounded-lg text-sm font-medium text-center mt-2"
                         >
-                            Book a Demo
+                            Book a fit call
                         </Link>
                     </div>
                 )}
